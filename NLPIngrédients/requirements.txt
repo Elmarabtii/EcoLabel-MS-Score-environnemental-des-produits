@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+spacy
+transformers
+torch
+SQLAlchemy
+psycopg2-binary
+python-dotenv
+httpx

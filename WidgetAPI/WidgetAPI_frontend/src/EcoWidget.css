@@ -1,0 +1,138 @@
+/* Responsive styles for EcoWidget */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .ecowidget-shell {
+    width: 100% !important;
+    padding: 8px !important;
+  }
+
+  .ecowidget-card {
+    padding: 16px !important;
+  }
+
+  .ecowidget-header {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .ecowidget-title {
+    font-size: 20px !important;
+  }
+
+  .ecowidget-product-info {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  .ecowidget-summary-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ecowidget-impact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ecowidget-weights-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ecowidget-comparison-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ecowidget-actions-section {
+    flex-direction: column !important;
+  }
+
+  .ecowidget-action-button {
+    width: 100% !important;
+  }
+
+  .ecowidget-packaging-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .ecowidget-modal-content {
+    padding: 16px !important;
+    margin: 10px !important;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ecowidget-summary-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .ecowidget-impact-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Sticky score on mobile scroll */
+@media (max-width: 768px) {
+  .ecowidget-sticky-score {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #ffffff;
+    padding: 12px;
+    border-bottom: 1px solid #e6e8ee;
+    margin-bottom: 16px;
+  }
+}
+
+/* Accessibility improvements */
+.ecowidget-button:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
+}
+
+.ecowidget-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.ecowidget-button:active {
+  transform: translateY(0);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .ecowidget-card {
+    border: 2px solid #0f172a !important;
+  }
+
+  .ecowidget-button {
+    border: 2px solid #0f172a !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ecowidget-bar-fill,
+  .ecowidget-impact-bar-fill {
+    transition: none !important;
+  }
+
+  .ecowidget-skeleton {
+    animation: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .ecowidget-mode-switcher,
+  .ecowidget-action-button,
+  .ecowidget-modal-overlay {
+    display: none !important;
+  }
+
+  .ecowidget-card {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}
+
