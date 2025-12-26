@@ -426,7 +426,11 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 👥 Auteurs
 
-- Votre nom / Équipe
+- Mohamed Ouledelabd
+- Ayoub Elmarabti
+- Sofyan Elghazzali
+- Mouad Zaouia
+- Reda Hnikich
 
 ## 🙏 Remerciements
 
