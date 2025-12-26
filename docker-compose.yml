@@ -1,0 +1,313 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # BASES DE DONNÉES
+  # ============================================
+  
+  db-parser:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-parser
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ecolabel_ms
+    volumes:
+      - db-parser-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  db-nlp:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-nlp
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ecolabel_nlp
+    volumes:
+      - db-nlp-data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  db-lca:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-lca
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: eco_lca
+    volumes:
+      - db-lca-data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  db-scoring:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-scoring
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ecolabel_scoring
+    volumes:
+      - db-scoring-data:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  db-widget:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-widget
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ecolabel_widget
+    volumes:
+      - db-widget-data:/var/lib/postgresql/data
+    ports:
+      - "5437:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  db-provenance:
+    image: postgres:15-alpine
+    container_name: ecolabel-db-provenance
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: provenance_db
+    volumes:
+      - db-provenance-data:/var/lib/postgresql/data
+    ports:
+      - "5438:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecolabel-network
+
+  # ============================================
+  # STOCKAGE OBJET (MinIO - Optionnel)
+  # ============================================
+  
+  minio:
+    image: minio/minio:latest
+    container_name: ecolabel-minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - ecolabel-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  # ============================================
+  # MICROSERVICES
+  # ============================================
+
+  parser-produit:
+    build:
+      context: ./ParserProduit
+      dockerfile: Dockerfile
+    container_name: ecolabel-parser
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-parser:5432/ecolabel_ms
+      - NLP_SERVICE_URL=http://nlp-ingredients:8001/nlp/extract-and-lca
+    ports:
+      - "${PARSER_PORT:-8000}:8000"
+    depends_on:
+      db-parser:
+        condition: service_healthy
+      nlp-ingredients:
+        condition: service_started
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./ParserProduit:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  nlp-ingredients:
+    build:
+      context: ./NLPIngrédients
+      dockerfile: Dockerfile
+    container_name: ecolabel-nlp
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-nlp:5432/ecolabel_nlp
+      - LCA_SERVICE_URL=http://lca-lite:8002/lca/calc
+    ports:
+      - "${NLP_PORT:-8001}:8001"
+    depends_on:
+      db-nlp:
+        condition: service_healthy
+      lca-lite:
+        condition: service_started
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./NLPIngrédients:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+    restart: unless-stopped
+
+  lca-lite:
+    build:
+      context: ./LCALite
+      dockerfile: Dockerfile
+    container_name: ecolabel-lca
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-lca:5432/eco_lca
+      - SCORING_SERVICE_URL=http://scoring:8004/score/compute
+    ports:
+      - "${LCA_PORT:-8002}:8002"
+    depends_on:
+      db-lca:
+        condition: service_healthy
+      scoring:
+        condition: service_started
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./LCALite:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload
+    restart: unless-stopped
+
+  scoring:
+    build:
+      context: ./Scoring
+      dockerfile: Dockerfile
+    container_name: ecolabel-scoring
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-scoring:5432/ecolabel_scoring
+    ports:
+      - "${SCORING_PORT:-8004}:8004"
+    depends_on:
+      db-scoring:
+        condition: service_healthy
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./Scoring:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8004 --reload
+    restart: unless-stopped
+
+  widget-api:
+    build:
+      context: ./WidgetAPI
+      dockerfile: Dockerfile
+    container_name: ecolabel-widget-api
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-widget:5432/ecolabel_widget
+      - CORS_ORIGINS=*
+    ports:
+      - "${WIDGET_PORT:-8005}:8005"
+    depends_on:
+      db-widget:
+        condition: service_healthy
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./WidgetAPI:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8005 --reload
+    restart: unless-stopped
+
+  provenance:
+    build:
+      context: ./Provenance
+      dockerfile: Dockerfile
+    container_name: ecolabel-provenance
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@db-provenance:5432/provenance_db
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET=provenance
+      - SCORING_BASE_URL=http://scoring:8004
+      - MLFLOW_TRACKING_URI=http://127.0.0.1:5000
+    ports:
+      - "${PROVENANCE_PORT:-8006}:8003"
+    depends_on:
+      db-provenance:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    networks:
+      - ecolabel-network
+    volumes:
+      - ./Provenance:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8003 --reload
+    restart: unless-stopped
+
+  # ============================================
+  # FRONTEND (Optionnel - si vous voulez le servir via Docker)
+  # ============================================
+  
+  widget-frontend:
+    build:
+      context: ./WidgetAPI/WidgetAPI_frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:8005
+    container_name: ecolabel-frontend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      - widget-api
+    networks:
+      - ecolabel-network
+    restart: unless-stopped
+
+networks:
+  ecolabel-network:
+    driver: bridge
+
+volumes:
+  db-parser-data:
+  db-nlp-data:
+  db-lca-data:
+  db-scoring-data:
+  db-widget-data:
+  db-provenance-data:
+  minio-data:
+

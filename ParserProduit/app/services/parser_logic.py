@@ -1,25 +1,50 @@
 # app/services/parser_logic.py
 import re
+import unicodedata
 
 
 def normalize_text(text: str) -> str:
     """
     Nettoyage simple :
+    - normalisation Unicode (corrige certains caractères PDF/OCR)
+    - remplace les ligatures (ﬁ -> fi, ﬂ -> fl, etc.)
     - remplacer \\r par \\n
     - supprimer les lignes vides
     - trim des espaces
     """
-    text = text.replace("\r", "\n")
+    if not text:
+        return ""
+
+    # Normalisation unicode
+    text = unicodedata.normalize("NFKC", text)
+
+    # Ligatures fréquentes dans les PDF
+    text = (
+        text.replace("ﬁ", "fi")
+            .replace("ﬂ", "fl")
+            .replace("\r", "\n")
+    )
+
+    # Nettoyage lignes
     lines = [l.strip() for l in text.split("\n") if l.strip()]
     return "\n".join(lines)
+
+
+def extract_kv(text: str, key: str) -> str:
+    """
+    Extrait une valeur sur une ligne type:
+      Nom: ...
+      Marque: ...
+      Catégorie: ...
+      GTIN: ...
+    """
+    m = re.search(rf"(?mi)^{re.escape(key)}\s*:\s*(.+)$", text)
+    return m.group(1).strip() if m else ""
 
 
 def extract_after(labels_pattern: str, text: str) -> str:
     """
     Extrait ce qui vient après un libellé de type :
-      Ingrédients : ...
-      Ingredients : ...
-      Contains : ...
       Origine : ...
       Made in : ...
     """
@@ -30,11 +55,8 @@ def extract_after(labels_pattern: str, text: str) -> str:
 
 def extract_block(label_keywords: str, text: str) -> str:
     """
-    Extrait un bloc après un titre type :
-      INGREDIENTS
-      INGREDIENTS :
-      CONTAINS :
-    Capture jusqu'à un autre titre en MAJUSCULES ou la fin du texte.
+    Extrait un bloc après un titre, capture jusqu'à un autre "titre" (ligne qui ressemble à une section)
+    ou la fin du texte.
     """
     pattern = rf"({label_keywords})\s*[:\-]?\s*(.+?)(?=\n[A-Z][A-Z0-9 \-/]{{3,}}\n|\Z)"
     m = re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL)
@@ -45,21 +67,15 @@ def extract_block(label_keywords: str, text: str) -> str:
 
 def detect_gtin(text: str) -> str:
     """
-    Essaie de trouver un GTIN/EAN (8 à 14 chiffres) dans le texte OCR.
-
-    ⚠ Limitation :
-    - On ne lit que des séquences de chiffres CONTIGÜES (pas les codes-barres au format image).
-    - Pour un vrai scan de code-barres, il faudra utiliser une lib comme pyzbar/zxing
-      directement sur l'image.
+    Trouve un GTIN/EAN (8 à 14 chiffres) dans le texte.
     """
-    # Suite de 8 à 14 chiffres
     m = re.search(r"\b(\d{8,14})\b", text)
     return m.group(1) if m else ""
 
 
 def looks_like_ingredients_only(text: str) -> bool:
     """
-    Heuristique simple : beaucoup de virgules / points-virgules
+    Heuristique : beaucoup de virgules / points-virgules
     et pas de mots typiques de tableau nutritionnel.
     """
     t = text.lower()
@@ -75,9 +91,8 @@ def looks_like_ingredients_only(text: str) -> bool:
 
 def guess_ingredients_by_commas(text: str) -> str:
     """
-    Devine un bloc d'ingrédients en se basant sur les lignes contenant des virgules
-    (ou des points-virgules).
-    On prend le plus long bloc contigu de lignes avec des virgules.
+    Devine un bloc d'ingrédients à partir des lignes contenant des virgules/points-virgules.
+    Retourne le plus long bloc contigu.
     """
     lines = text.split("\n")
     candidate_blocks = []
@@ -85,7 +100,6 @@ def guess_ingredients_by_commas(text: str) -> str:
 
     for line in lines:
         l = line.strip()
-        # Heuristique : une ligne avec une virgule/point-virgule et au moins quelques mots
         if ("," in l or ";" in l) and len(l.split()) >= 3:
             current_block.append(l)
         else:
@@ -93,22 +107,20 @@ def guess_ingredients_by_commas(text: str) -> str:
                 candidate_blocks.append(" ".join(current_block))
                 current_block = []
 
-    # Si on finit sur un bloc en cours
     if current_block:
         candidate_blocks.append(" ".join(current_block))
 
     if not candidate_blocks:
         return ""
 
-    # On retourne le bloc le plus long (en nombre de caractères)
     return max(candidate_blocks, key=len)
 
 
 def guess_product_name(text_norm: str) -> str:
     """
-    Essaie de deviner un 'nom de produit' raisonnable :
+    Devine un 'nom de produit' :
     - première ligne qui contient au moins 3 lettres,
-    - sinon première ligne tout court.
+    - sinon première ligne.
     """
     lines = text_norm.split("\n")
     for line in lines:
@@ -119,15 +131,14 @@ def guess_product_name(text_norm: str) -> str:
 
 def parse_product_text(text: str, gtin: str, source_file: str):
     """
-    Analyse OCR du texte (générique pour TOUT produit / TOUTE image) :
+    Analyse OCR du texte :
     - Nettoyage
-    - Détection éventuelle du GTIN dans le texte OCR
-    - Extraction des ingrédients, origine, labels
-    - Emballage = tout le texte brut OCR
+    - Extraction de champs structurés (Nom/Marque/Catégorie/Poids net/Origine/etc.)
+    - Extraction d'ingrédients sans débordement vers Emballage/Origine/Destination/Transport/Labels
     """
     text_norm = normalize_text(text)
 
-    # DEBUG → Regarder ce que Tesseract a réellement détecté (console)
+    # DEBUG → Regarder ce que l'extracteur a détecté (console)
     print("\n===== OCR DEBUG =====")
     print(text_norm)
     print("=====================\n")
@@ -137,48 +148,88 @@ def parse_product_text(text: str, gtin: str, source_file: str):
     if not gtin:
         gtin = auto_gtin or ""
 
-    # 2) Nom du produit = heuristique sur la première ligne "propre"
-    nom = guess_product_name(text_norm)
+    # 2) Extraction "clé: valeur" (format PDF clean)
+    nom = extract_kv(text_norm, "Nom") or guess_product_name(text_norm)
+    marque = extract_kv(text_norm, "Marque") or "Non renseigné"
+    categorie = extract_kv(text_norm, "Catégorie") or "Non renseigné"
 
-    # 3) Ingrédients (bloc dédié si possible)
-    ingredients = extract_block(
-        "INGRÉDIENTS|INGREDIENTS|Contains|Contient|المكونات",
+    # 3) Poids net -> grammes
+    poids_net_g = 0
+    m = re.search(r"(?mi)^Poids\s*net\s*:\s*(\d+(?:[.,]\d+)?)\s*(g|kg|ml|l)\b", text_norm)
+    if m:
+        val = float(m.group(1).replace(",", "."))
+        unit = m.group(2).lower()
+        if unit == "kg":
+            poids_net_g = int(val * 1000)
+        elif unit in ("g", "ml"):
+            poids_net_g = int(val)
+        elif unit == "l":
+            poids_net_g = int(val * 1000)  # approximation
+
+    # 4) Ingrédients : gérer "Ingredients (INCI): ..."
+    ingredients = ""
+    m = re.search(
+        r"(?is)Ingredients\s*\(INCI\)\s*:\s*(.*?)(?:\n(Emballage|Origine|Destination|Transport|Labels)\s*:|$)",
         text_norm
     )
+    if m:
+        ingredients = m.group(1).strip()
 
-    # 3.bis) Fallback : essayer de deviner par les lignes avec virgules
+    # Fallback bloc (autres formats)
+    if not ingredients:
+        ingredients = extract_block(
+            r"INGRÉDIENTS|INGREDIENTS|Contains|Contient|المكونات",
+            text_norm
+        )
+
+    # Couper si déborde
+    if ingredients:
+        ingredients = re.split(r"(?mi)\n(Emballage|Origine|Destination|Transport|Labels)\s*:", ingredients)[0].strip()
+
+    # Fallback virgules
     if not ingredients:
         ingredients = guess_ingredients_by_commas(text_norm)
 
-    # 3.ter) Dernier fallback : si tout le texte ressemble à une liste d'ingrédients
+    # Dernier fallback : si tout ressemble à une liste d'ingrédients
     if not ingredients and looks_like_ingredients_only(text_norm):
         ingredients = text_norm
 
-    # 4) Origine
-    origine = extract_after(
+    # 5) Origine / Destination / Transport / Emballage
+    origine = extract_kv(text_norm, "Origine") or extract_after(
         "Origine du lait|Origine|Made in|Product of|Produced for|Manufactured in",
         text_norm,
     )
+    destination = extract_kv(text_norm, "Destination")
+    transport = extract_kv(text_norm, "Transport")
+    emballage = extract_kv(text_norm, "Emballage")
 
-    # 5) Labels simples (bio, vegan, fairtrade, etc.)
-    labels = []
+    # 6) Labels
+    labels_found = []
     lower = text_norm.lower()
-    if "bio " in lower or "organic" in lower:
-        labels.append("bio")
+    if "bio" in lower or "organic" in lower:
+        labels_found.append("bio")
     if "vegan" in lower:
-        labels.append("vegan")
+        labels_found.append("vegan")
     if "fairtrade" in lower:
-        labels.append("fairtrade")
+        labels_found.append("fairtrade")
+    if "recycl" in lower:
+        labels_found.append("recyclable")
 
-    labels_raw = ", ".join(labels)
+    labels_raw = ", ".join(sorted(set(labels_found)))
 
-    # 6) Emballage = TOUT le texte OCR (on ne perd aucune info)
-    packaging_raw = text_norm
+    # 7) packaging_raw :
+    # On conserve Emballage + Destination + Transport dans un seul champ
+    # (sans changer la DB) pour que LCA puisse lire la distance & le mode.
+    parts = []
+    if emballage:
+        parts.append(f"Emballage: {emballage}")
+    if destination:
+        parts.append(f"Destination: {destination}")
+    if transport:
+        parts.append(f"Transport: {transport}")
 
-    # 7) Valeurs par défaut pour les champs non encore calculés
-    marque = "Non renseigné"
-    categorie = "Non renseigné"
-    poids_net_g = 0
+    packaging_raw = "\n".join(parts).strip() if parts else text_norm
+
 
     return {
         "gtin": gtin,
@@ -192,3 +243,4 @@ def parse_product_text(text: str, gtin: str, source_file: str):
         "labels_raw": labels_raw,
         "source_file": source_file,
     }
+

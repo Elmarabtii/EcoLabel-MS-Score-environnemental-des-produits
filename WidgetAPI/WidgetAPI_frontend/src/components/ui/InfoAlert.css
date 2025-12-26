@@ -1,0 +1,122 @@
+.info-alert {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-alert-content {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.info-alert-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.info-alert-body {
+  flex: 1;
+}
+
+.info-alert-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-alert-message {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-alert-action {
+  padding: 6px 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.info-alert-action:hover {
+  transform: translateY(-1px);
+}
+
+.info-alert-action:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Type: info */
+.info-alert-info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.info-alert-info .info-alert-action {
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
+.info-alert-info .info-alert-action:hover {
+  background: #dbeafe;
+}
+
+/* Type: warning */
+.info-alert-warning {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #7c2d12;
+}
+
+.info-alert-warning .info-alert-action {
+  border-color: #f59e0b;
+  color: #7c2d12;
+}
+
+.info-alert-warning .info-alert-action:hover {
+  background: #ffedd5;
+}
+
+/* Type: success */
+.info-alert-success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.info-alert-success .info-alert-action {
+  border-color: #16a34a;
+  color: #065f46;
+}
+
+.info-alert-success .info-alert-action:hover {
+  background: #d1fae5;
+}
+
+/* Type: error */
+.info-alert-error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #7f1d1d;
+}
+
+.info-alert-error .info-alert-action {
+  border-color: #ef4444;
+  color: #7f1d1d;
+}
+
+.info-alert-error .info-alert-action:hover {
+  background: #fee2e2;
+}
+

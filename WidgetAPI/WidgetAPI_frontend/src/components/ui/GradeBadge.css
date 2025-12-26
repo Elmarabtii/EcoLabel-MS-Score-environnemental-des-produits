@@ -1,0 +1,47 @@
+.grade-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 12px;
+  font-weight: 900;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-badge-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.grade-badge-md {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+.grade-badge-lg {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  font-size: 32px;
+}
+
+.grade-letter {
+  line-height: 1;
+}
+
+.grade-label {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.grade-badge:hover {
+  transform: scale(1.05);
+}
+

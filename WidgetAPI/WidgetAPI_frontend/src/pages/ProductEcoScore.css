@@ -1,0 +1,48 @@
+.product-ecoscore-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: #f8fafc;
+  width: 100%;
+}
+
+.product-ecoscore-nav {
+  width: 100%;
+  max-width: 1100px;
+  padding: 12px 0;
+  margin-bottom: 16px;
+}
+
+.product-ecoscore-back-button {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.product-ecoscore-back-button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-ecoscore-back-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .product-ecoscore-container {
+    padding: 16px;
+  }
+}
+

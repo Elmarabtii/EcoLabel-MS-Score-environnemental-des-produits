@@ -2,10 +2,11 @@ from typing import Dict, Any
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-# Valeurs max théoriques (à ajuster avec les vraies données)
-MAX_CO2 = 10.0      # kg CO2 / produit
-MAX_WATER = 500.0   # litres
-MAX_ENERGY = 100.0  # MJ
+# Valeurs max théoriques (ajustées pour des produits de consommation courante)
+# Ces valeurs représentent un produit très impactant (transport lointain, emballage lourd, etc.)
+MAX_CO2 = 2.0       # kg CO2 / produit (au lieu de 10.0 pour être plus réaliste)
+MAX_WATER = 100.0   # litres (au lieu de 500.0)
+MAX_ENERGY = 20.0   # MJ (au lieu de 100.0)
 
 WEIGHTS = {
     "co2": 0.5,

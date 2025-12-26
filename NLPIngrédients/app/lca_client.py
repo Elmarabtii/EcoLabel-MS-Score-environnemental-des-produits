@@ -1,7 +1,12 @@
 import httpx
+import os
 
 # URL de ton microservice 3 (LCALITE)
-LCA_SERVICE_URL = "http://localhost:8002/lca/calc"
+# Utilise le nom du conteneur Docker si disponible, sinon localhost
+LCA_SERVICE_URL = os.getenv(
+    "LCA_SERVICE_URL",
+    "http://localhost:8002/lca/calc"
+)
 
 
 async def call_lca_service(payload: dict) -> dict:

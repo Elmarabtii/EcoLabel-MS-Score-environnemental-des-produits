@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EcoScoreCore from "../components/EcoScoreCore";
+import "./ProductEcoScore.css";
 
 export interface ProductEcoScoreProps {
   productId?: number | string;
@@ -40,9 +41,13 @@ export default function ProductEcoScore({
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.navBar}>
-        <button onClick={handleBackToList} style={styles.backButton}>
+    <div className="product-ecoscore-container">
+      <div className="product-ecoscore-nav">
+        <button 
+          onClick={handleBackToList} 
+          className="product-ecoscore-back-button"
+          aria-label="Retour à la liste des produits"
+        >
           ← Retour à la liste des produits
         </button>
       </div>
@@ -55,33 +60,4 @@ export default function ProductEcoScore({
     </div>
   );
 }
-
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    minHeight: "100vh",
-    padding: "20px",
-    background: "#f8fafc",
-    width: "100%",
-  },
-  navBar: {
-    width: "100%",
-    maxWidth: "800px",
-    padding: "12px 0",
-    marginBottom: "16px",
-  },
-  backButton: {
-    padding: "8px 16px",
-    border: "1px solid #e2e8f0",
-    borderRadius: 8,
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 14,
-    fontWeight: 600,
-    color: "#0f172a",
-    transition: "all 0.2s",
-  },
-};
 

@@ -1,0 +1,69 @@
+.category-impact-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-impact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.category-impact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.category-impact-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.category-impact-value {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.category-impact-bar-track {
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.category-impact-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-impact-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.category-impact-quality {
+  font-weight: 700;
+  color: #64748b;
+}
+
+.category-impact-weight {
+  color: #94a3b8;
+}
+
+.category-impact-description {
+  font-size: 11px;
+  color: #64748b;
+  font-style: italic;
+  cursor: help;
+}
+

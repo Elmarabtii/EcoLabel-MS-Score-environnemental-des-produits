@@ -1,0 +1,40 @@
+.ecoscore-not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.ecoscore-not-found-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.ecoscore-not-found-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.ecoscore-not-found-text {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 24px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ecoscore-widget-skeleton {
+  width: min(400px, 100%);
+  padding: 12px;
+  border: 1px solid #e6e8ee;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.ecoscore-widget-skeleton-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+

@@ -1,0 +1,56 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Installer les dépendances système
+RUN apt-get update && apt-get install -y \
+    gcc \
+    postgresql-client \
+    tesseract-ocr \
+    tesseract-ocr-fra \
+    libtesseract-dev \
+    poppler-utils \
+    supervisor \
+    && rm -rf /var/lib/apt/lists/*
+
+# Créer les dossiers pour chaque service
+RUN mkdir -p /app/services/{parser,nlp,lca,scoring,widget,provenance}
+
+# Copier et installer les dépendances de chaque service
+COPY ParserProduit/requirements.txt /app/services/parser/
+COPY NLPIngrédients/requirements.txt /app/services/nlp/
+COPY LCALite/requirements.txt /app/services/lca/
+COPY Scoring/requirements.txt /app/services/scoring/
+COPY WidgetAPI/requirements.txt /app/services/widget/
+COPY Provenance/requirements.txt /app/services/provenance/
+
+# Installer toutes les dépendances
+RUN pip install --no-cache-dir -r /app/services/parser/requirements.txt && \
+    pip install --no-cache-dir -r /app/services/nlp/requirements.txt && \
+    pip install --no-cache-dir -r /app/services/lca/requirements.txt && \
+    pip install --no-cache-dir -r /app/services/scoring/requirements.txt && \
+    pip install --no-cache-dir -r /app/services/widget/requirements.txt && \
+    pip install --no-cache-dir -r /app/services/provenance/requirements.txt && \
+    pip install supervisor
+
+# Télécharger le modèle spaCy français
+RUN python -m spacy download fr_core_news_md
+
+# Copier le code de tous les services
+COPY ParserProduit/ /app/services/parser/
+COPY NLPIngrédients/ /app/services/nlp/
+COPY LCALite/ /app/services/lca/
+COPY Scoring/ /app/services/scoring/
+COPY WidgetAPI/ /app/services/widget/
+COPY Provenance/ /app/services/provenance/
+
+# Créer le fichier de configuration supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Exposer tous les ports
+EXPOSE 8000 8001 8002 8004 8005 8006
+
+# Démarrer supervisor
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
+

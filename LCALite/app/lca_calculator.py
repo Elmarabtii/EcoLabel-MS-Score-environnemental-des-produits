@@ -98,11 +98,27 @@ class LCACalculator:
 
         # --- Transport ---
         co2_tr = water_tr = energy_tr = 0.0
+        print(f"DEBUG LCA Calculator: Nombre de legs de transport: {len(req.transport)}")
         for t in req.transport:
+            print(f"DEBUG LCA Calculator: Traitement transport - mode={t.mode}, distance={t.distance_km} km, mass={t.mass_kg} kg")
             f = tr_factors.get(t.mode)
             if not f:
-                continue
-
+                # Fallback : si le mode n'existe pas, essayer ROAD ou utiliser des valeurs par défaut
+                # Log pour debug (vous pouvez utiliser logging si vous voulez)
+                print(f"WARNING: Transport mode '{t.mode}' not found in database. Available modes: {list(tr_factors.keys())}")
+                
+                # Essayer ROAD comme fallback
+                f = tr_factors.get("ROAD")
+                if not f:
+                    # Si même ROAD n'existe pas, utiliser des valeurs par défaut réalistes
+                    # (basées sur des moyennes de transport maritime/routier)
+                    if "SEA" in t.mode.upper() or "MARITIME" in t.mode.upper():
+                        # Transport maritime : ~0.015 kg CO2/tkm
+                        f = {"co2_kg_per_tkm": 0.015, "water_l_per_tkm": 0.1, "energy_mj_per_tkm": 0.05}
+                    else:
+                        # Transport routier : ~0.1 kg CO2/tkm
+                        f = {"co2_kg_per_tkm": 0.1, "water_l_per_tkm": 0.5, "energy_mj_per_tkm": 0.3}
+                
             # tonne.km = distance_km × masse(tonnes)
             tkm = t.distance_km * (t.mass_kg / 1000.0)
             co2_tr += tkm * f["co2_kg_per_tkm"]

@@ -72,9 +72,19 @@ async def extract_and_calculate_lca(
     # 1) NLP
     nlp_response = run_nlp_pipeline(payload, db)
     nlp_dict = nlp_response.dict()
-
+    
+    # Ajouter les données structurées du texte si disponibles dans payload
+    # Le texte peut contenir "Poids net: 800 g" qu'on peut extraire
+    nlp_dict["raw_text"] = payload.text
+    
     # 2) Mapping vers la requête /lca/calc
     lca_request = build_lca_request_from_nlp(nlp_dict)
+    
+    # Debug: afficher la requête LCA créée
+    print(f"DEBUG NLP->LCA: Requête LCA créée avec {len(lca_request.get('transport', []))} legs de transport")
+    if lca_request.get('transport'):
+        for t in lca_request['transport']:
+            print(f"  - Transport: mode={t.get('mode')}, distance={t.get('distance_km')} km, mass={t.get('mass_kg')} kg")
 
     # 3) Appel du microservice 3
     lca_result = await call_lca_service(lca_request)

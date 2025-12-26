@@ -1,0 +1,56 @@
+.score-bar-container {
+  width: 100%;
+}
+
+.score-bar-value {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-neutral-900, #0f172a);
+  margin-bottom: 8px;
+}
+
+.score-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--color-neutral-400, #94a3b8);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.score-bar-track {
+  width: 100%;
+  border-radius: 9999px;
+  background-color: var(--color-neutral-200, #e2e8f0);
+  overflow: hidden;
+  position: relative;
+}
+
+.score-bar-sm {
+  height: 6px;
+}
+
+.score-bar-md {
+  height: 10px;
+}
+
+.score-bar-lg {
+  height: 14px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-bar-animated {
+  animation: scoreBarFill 0.8s ease-out;
+}
+
+@keyframes scoreBarFill {
+  from {
+    width: 0;
+  }
+}
+

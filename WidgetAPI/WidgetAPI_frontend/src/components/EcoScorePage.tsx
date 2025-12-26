@@ -1,10 +1,17 @@
 import { useMemo, useState } from "react";
 import { EcoScoreData, fetchEcoScore } from "../services/ecoScoreApi";
-import { fmtNum, getScoreUI, getGradeUI, getGradeRange, formatPackagingType, getPackagingImpact } from "../utils/ecoScoreUtils";
+import { fmtNum, getScoreUI, getGradeRange, formatPackagingType, getPackagingImpact } from "../utils/ecoScoreUtils";
 import { Tooltip } from "./shared/Tooltip";
 import { Modal } from "./shared/Modal";
 import { MethodologyModal } from "./modals/MethodologyModal";
 import { ComparisonModal } from "./modals/ComparisonModal";
+import { PackagingAlternativesModal } from "./modals/PackagingAlternativesModal";
+import { GradeBadge } from "./ui/GradeBadge";
+import { ScoreBar } from "./ui/ScoreBar";
+import { CategoryImpactCard } from "./ui/CategoryImpactCard";
+import { InfoAlert } from "./ui/InfoAlert";
+import { Breadcrumb } from "./ui/Breadcrumb";
+import { generateEcoScorePDF } from "../utils/pdfGenerator";
 import "./EcoScorePage.css";
 
 export interface EcoScorePageProps {
@@ -16,11 +23,11 @@ export interface EcoScorePageProps {
 export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", onModeChange }: EcoScorePageProps) {
   const [showMethodology, setShowMethodology] = useState(false);
   const [showComparison, setShowComparison] = useState(false);
+  const [showPackagingAlternatives, setShowPackagingAlternatives] = useState(false);
   const [compareProductId, setCompareProductId] = useState("");
   const [compareData, setCompareData] = useState<EcoScoreData | null>(null);
 
   const s = useMemo(() => getScoreUI(data.numeric_score), [data.numeric_score]);
-  const gradeUI = useMemo(() => getGradeUI(data.grade), [data.grade]);
   const gradeRange = useMemo(() => getGradeRange(data.grade), [data.grade]);
 
   const weights = data.details?.weights || {};
@@ -61,22 +68,29 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
     }
   };
 
+  const breadcrumbItems = [
+    { label: "Liste des produits", onClick: () => window.location.href = "/" },
+    { label: productName },
+  ];
+
   return (
-    <div style={styles.shell} className="ecowidget-shell">
-      <div style={styles.card} className="ecowidget-card">
+    <div className="ecoscore-page-container">
+      <Breadcrumb items={breadcrumbItems} />
+      
+      <div className="ecoscore-page-card">
         {/* Mode switcher */}
         {onModeChange && (
-          <div style={styles.modeSwitcher} className="ecowidget-mode-switcher">
+          <div className="ecoscore-mode-switcher">
             <button
               onClick={() => onModeChange("page")}
-              style={{ ...styles.modeButton, ...styles.modeButtonActive }}
+              className="ecoscore-mode-button ecoscore-mode-button-active"
               aria-pressed={true}
             >
               Mode page
             </button>
             <button
               onClick={() => onModeChange("widget")}
-              style={styles.modeButton}
+              className="ecoscore-mode-button"
               aria-pressed={false}
             >
               Mode widget
@@ -84,15 +98,15 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
           </div>
         )}
 
-        {/* Header amélioré */}
-        <div style={styles.header} className="ecowidget-header">
-          <div style={styles.headerLeft}>
-            <div style={styles.kicker}>
+        {/* Header */}
+        <div className="ecoscore-header">
+          <div className="ecoscore-header-left">
+            <div className="ecoscore-kicker">
               EcoScore • Product
-              <span style={styles.kickerSub}>Score environnemental basé sur CO₂, Eau, Énergie</span>
+              <span className="ecoscore-kicker-sub">Score environnemental basé sur CO₂, Eau, Énergie</span>
             </div>
-            <div style={styles.title} className="ecowidget-title">{productName}</div>
-            <div style={styles.productInfo} className="ecowidget-product-info">
+            <h1 className="ecoscore-title">{productName}</h1>
+            <div className="ecoscore-product-info">
               <InfoBadge label="Marque" value={brand} />
               <InfoBadge label="Catégorie" value={category} />
               <InfoBadge label="Origine" value={origin} />
@@ -100,11 +114,8 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
             </div>
           </div>
 
-          <div style={{ position: "relative" }}>
-            <div style={{ ...styles.gradeBadge, background: gradeUI.bg, borderColor: gradeUI.border }}>
-              <div style={{ ...styles.gradeLetter, color: gradeUI.text }}>{data.grade ?? "—"}</div>
-              <div style={{ ...styles.gradeLabel, color: gradeUI.textSoft }}>Grade</div>
-            </div>
+          <div className="ecoscore-grade-container">
+            <GradeBadge grade={data.grade} size="lg" showLabel />
             <Tooltip
               content={
                 <div>
@@ -124,7 +135,7 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
                 </div>
               }
             >
-              <button style={styles.infoButton} aria-label="Comment c'est calculé ?">
+              <button className="ecoscore-info-button" aria-label="Comment c'est calculé ?">
                 ℹ️
               </button>
             </Tooltip>
@@ -132,12 +143,12 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
         </div>
 
         {/* Score hero */}
-        <div style={styles.scoreBlock}>
-          <div style={styles.scoreTop}>
-            <div style={styles.scoreValue}>
-              {fmtNum(data.numeric_score)} <span style={styles.scoreOn}>/ 100</span>
+        <div className="ecoscore-score-block">
+          <div className="ecoscore-score-top">
+            <div className="ecoscore-score-value">
+              {fmtNum(data.numeric_score)} <span className="ecoscore-score-on">/ 100</span>
             </div>
-            <div style={styles.scoreMeta}>
+            <div className="ecoscore-score-meta">
               <Tooltip content="Fiabilité liée à la complétude des données et stabilité du modèle">
                 <span>
                   Confidence: <b>{fmtNum(data.confidence)}</b>
@@ -146,56 +157,54 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
             </div>
           </div>
 
-          <div style={styles.barTrack}>
-            <div style={styles.barMarkers}>
-              <div style={styles.barMarker}>0</div>
-              <div style={styles.barMarker}>50</div>
-              <div style={styles.barMarker}>85</div>
-              <div style={styles.barMarker}>100</div>
-            </div>
-            <div style={styles.barFillContainer}>
-              <div style={{ ...styles.barFill, width: `${s.pct}%`, background: s.color }} className="ecowidget-bar-fill" />
-            </div>
-          </div>
+          <ScoreBar 
+            score={data.numeric_score} 
+            showLabels 
+            showValue={false}
+            height="md"
+            animated
+          />
 
-          <div style={styles.scoreHint}>
+          <div className="ecoscore-score-hint">
             <span style={{ fontWeight: 700 }}>{s.label}</span> • {s.description}
           </div>
         </div>
 
         {/* Résumé en 3 points */}
-        <div style={styles.summarySection}>
-          <div style={styles.sectionTitle}>Résumé en 3 points</div>
-          <div style={styles.summaryGrid} className="ecowidget-summary-grid">
-            {strengths.length > 0 && (
-              <SummaryCard type="strength" title="Points forts" items={strengths} />
-            )}
-            {improvements.length > 0 && (
-              <SummaryCard type="improvement" title="Points à améliorer" items={improvements} />
-            )}
-            {advice.length > 0 && (
-              <SummaryCard type="advice" title="Conseil" items={advice} />
-            )}
+        {(strengths.length > 0 || improvements.length > 0 || advice.length > 0) && (
+          <div className="ecoscore-section">
+            <h2 className="ecoscore-section-title">Résumé en 3 points</h2>
+            <div className="ecoscore-summary-grid">
+              {strengths.length > 0 && (
+                <SummaryCard type="strength" title="Points forts" items={strengths} />
+              )}
+              {improvements.length > 0 && (
+                <SummaryCard type="improvement" title="Points à améliorer" items={improvements} />
+              )}
+              {advice.length > 0 && (
+                <SummaryCard type="advice" title="Conseil" items={advice} />
+              )}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Impact par catégorie */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>Impact par catégorie</div>
-          <div style={styles.impactGrid} className="ecowidget-impact-grid">
-            <ImpactCard 
+        <div className="ecoscore-section">
+          <h2 className="ecoscore-section-title">Impact par catégorie</h2>
+          <div className="ecoscore-impact-grid">
+            <CategoryImpactCard 
               label="CO₂" 
               value={norm.co2} 
               weight={weights.co2}
               description="Émissions de gaz à effet de serre"
             />
-            <ImpactCard 
+            <CategoryImpactCard 
               label="Eau" 
               value={norm.water} 
               weight={weights.water}
               description="Consommation d'eau"
             />
-            <ImpactCard 
+            <CategoryImpactCard 
               label="Énergie" 
               value={norm.energy} 
               weight={weights.energy}
@@ -205,54 +214,49 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
         </div>
 
         {/* Pondérations */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>Pondérations</div>
-          <div style={styles.weightsCard}>
-            <div style={styles.weightsGrid} className="ecowidget-weights-grid">
-              <WeightRow label="Weight CO₂" value={weights.co2} />
-              <WeightRow label="Weight Water" value={weights.water} />
-              <WeightRow label="Weight Energy" value={weights.energy} />
+        <div className="ecoscore-section">
+          <h2 className="ecoscore-section-title">Pondérations</h2>
+          <div className="ecoscore-weights-card">
+            <div className="ecoscore-weights-grid">
+              <WeightChip label="CO₂" value={weights.co2} />
+              <WeightChip label="Eau" value={weights.water} />
+              <WeightChip label="Énergie" value={weights.energy} />
             </div>
-            <div style={styles.weightsNote}>
+            <div className="ecoscore-weights-note">
               Ces pondérations peuvent varier selon la catégorie produit (ex: alimentaire vs électronique).
             </div>
           </div>
         </div>
 
-        {/* Packaging amélioré */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>Emballage</div>
-          <div style={styles.packagingCard} className="ecowidget-packaging-card">
-            <div style={styles.packagingInfo}>
-              <div style={styles.packagingType}>
-                Emballage : <strong>{formatPackagingType(data.details?.packaging_type)}</strong>
-                <span style={styles.packagingImpact}>
-                  ({getPackagingImpact(data.details?.packaging_type)})
-                </span>
+        {/* Packaging */}
+        <div className="ecoscore-section">
+          <h2 className="ecoscore-section-title">Emballage</h2>
+          <InfoAlert
+            type={data.details?.packaging_penalty && data.details.packaging_penalty > 0 ? "warning" : "info"}
+            icon="📦"
+            title={`Emballage : ${formatPackagingType(data.details?.packaging_type)}`}
+            onAction={() => setShowPackagingAlternatives(true)}
+            actionLabel="Voir alternatives"
+          >
+            <div>
+              <div style={{ marginBottom: 4 }}>
+                Impact: <strong>{getPackagingImpact(data.details?.packaging_type)}</strong>
               </div>
               {(data.details?.packaging_penalty || 0) > 0 && (
-                <div style={styles.packagingPenalty}>
+                <div>
                   Pénalité : <strong>-{fmtNum((data.details.packaging_penalty || 0) * 100)}%</strong> sur le score
                 </div>
               )}
             </div>
-            <button 
-              style={styles.alternativesButton}
-              className="ecowidget-button"
-              onClick={() => alert("Fonctionnalité à venir : alternatives d'emballage")}
-              aria-label="Voir alternatives d'emballage"
-            >
-              Voir alternatives
-            </button>
-          </div>
+          </InfoAlert>
         </div>
 
         {/* Traçabilité */}
-        <div style={styles.section}>
-          <div style={styles.traceability}>
-            <div style={styles.traceabilityItem}>
-              <span style={styles.traceabilityLabel}>Dernière mise à jour :</span>
-              <span style={styles.traceabilityValue}>
+        <div className="ecoscore-section">
+          <div className="ecoscore-traceability">
+            <div className="ecoscore-traceability-item">
+              <span className="ecoscore-traceability-label">Dernière mise à jour :</span>
+              <span className="ecoscore-traceability-value">
                 {data.updated_at 
                   ? new Date(data.updated_at).toLocaleString("fr-FR")
                   : data.created_at 
@@ -260,9 +264,9 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
                   : "—"}
               </span>
             </div>
-            <div style={styles.traceabilityItem}>
-              <span style={styles.traceabilityLabel}>Source des données :</span>
-              <span style={styles.traceabilityValue}>
+            <div className="ecoscore-traceability-item">
+              <span className="ecoscore-traceability-label">Source des données :</span>
+              <span className="ecoscore-traceability-value">
                 {data.data_source || "Base de données EcoScore"}
               </span>
             </div>
@@ -270,11 +274,10 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
         </div>
 
         {/* Actions */}
-        <div style={styles.actionsSection} className="ecowidget-actions-section">
+        <div className="ecoscore-actions-section">
           <button 
             onClick={() => setShowMethodology(true)}
-            style={styles.actionButton}
-            className="ecowidget-button ecowidget-action-button"
+            className="ecoscore-action-button"
             aria-label="Voir méthodologie"
           >
             📊 Méthodologie
@@ -284,8 +287,7 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
               setShowComparison(true);
               setCompareData(null);
             }}
-            style={styles.actionButton}
-            className="ecowidget-button ecowidget-action-button"
+            className="ecoscore-action-button"
             aria-label="Comparer avec un autre produit"
           >
             ⚖️ Comparer
@@ -296,8 +298,7 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
               navigator.clipboard.writeText(url);
               alert("Lien copié dans le presse-papier !");
             }}
-            style={styles.actionButton}
-            className="ecowidget-button ecowidget-action-button"
+            className="ecoscore-action-button"
             aria-label="Copier le lien"
           >
             🔗 Copier lien
@@ -314,18 +315,21 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
                 alert("Partage non disponible sur ce navigateur");
               }
             }}
-            style={styles.actionButton}
-            className="ecowidget-button ecowidget-action-button"
+            className="ecoscore-action-button"
             aria-label="Partager"
           >
             📤 Partager
           </button>
           <button 
             onClick={() => {
-              alert("Fonctionnalité export PDF à implémenter avec jsPDF");
+              try {
+                generateEcoScorePDF(data);
+              } catch (error) {
+                console.error("Erreur lors de la génération du PDF:", error);
+                alert("Une erreur est survenue lors de la génération du PDF.");
+              }
             }}
-            style={styles.actionButton}
-            className="ecowidget-button ecowidget-action-button"
+            className="ecoscore-action-button"
             aria-label="Télécharger PDF"
           >
             📄 PDF
@@ -353,6 +357,13 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
           />
         </Modal>
       )}
+
+      {/* Modal Alternatives d'emballage */}
+      {showPackagingAlternatives && (
+        <Modal onClose={() => setShowPackagingAlternatives(false)} maxWidth={700}>
+          <PackagingAlternativesModal data={data} />
+        </Modal>
+      )}
     </div>
   );
 }
@@ -362,9 +373,9 @@ export default function EcoScorePage({ data, apiBase = "http://127.0.0.1:8005", 
 function InfoBadge({ label, value }: { label: string; value: string }) {
   if (value === "—" || !value) return null;
   return (
-    <div style={styles.infoBadge}>
-      <span style={styles.infoBadgeLabel}>{label}:</span>
-      <span style={styles.infoBadgeValue}>{value}</span>
+    <div className="ecoscore-info-badge">
+      <span className="ecoscore-info-badge-label">{label}:</span>
+      <span className="ecoscore-info-badge-value">{value}</span>
     </div>
   );
 }
@@ -375,457 +386,31 @@ function SummaryCard({ type, title, items }: { type: "strength" | "improvement" 
     improvement: "⚠️",
     advice: "📌"
   };
-  const colors = {
-    strength: { bg: "#ecfdf5", border: "#a7f3d0", text: "#065f46" },
-    improvement: { bg: "#fff7ed", border: "#fed7aa", text: "#7c2d12" },
-    advice: { bg: "#eff6ff", border: "#bfdbfe", text: "#1e3a8a" }
+  const typeClasses = {
+    strength: "ecoscore-summary-card-strength",
+    improvement: "ecoscore-summary-card-improvement",
+    advice: "ecoscore-summary-card-advice"
   };
-  const color = colors[type] || colors.advice;
 
   return (
-    <div style={{ ...styles.summaryCard, background: color.bg, borderColor: color.border }}>
-      <div style={{ ...styles.summaryCardTitle, color: color.text }}>
+    <div className={`ecoscore-summary-card ${typeClasses[type]}`}>
+      <div className="ecoscore-summary-card-title">
         {icons[type]} {title}
       </div>
-      <ul style={styles.summaryCardList}>
+      <ul className="ecoscore-summary-card-list">
         {items.map((item, i) => (
-          <li key={i} style={{ ...styles.summaryCardItem, color: color.text }}>{item}</li>
+          <li key={i} className="ecoscore-summary-card-item">{item}</li>
         ))}
       </ul>
     </div>
   );
 }
 
-function ImpactCard({ label, value, weight, description }: { label: string; value?: number; weight?: number; description: string }) {
-  const n = Number(value) || 0;
-  const pct = Math.min(100, Math.max(0, n * 100));
-  const quality = n >= 0.8 ? "Très bon" : n >= 0.6 ? "Bon" : n >= 0.4 ? "Moyen" : "Faible";
-  const color = n >= 0.8 ? "#16a34a" : n >= 0.6 ? "#22c55e" : n >= 0.4 ? "#f59e0b" : "#ef4444";
-
+function WeightChip({ label, value }: { label: string; value?: number }) {
   return (
-    <div style={styles.impactCard}>
-      <div style={styles.impactCardHeader}>
-        <div style={styles.impactCardLabel}>{label}</div>
-        <div style={styles.impactCardValue}>{fmtNum(n)}</div>
-      </div>
-      <div style={styles.impactBarTrack}>
-        <div style={{ ...styles.impactBarFill, width: `${pct}%`, background: color }} className="ecowidget-impact-bar-fill" />
-      </div>
-      <div style={styles.impactCardMeta}>
-        <span style={styles.impactQuality}>{quality}</span>
-        <span style={styles.impactWeight}>Pondération: {fmtNum(weight)}</span>
-      </div>
-      <div style={styles.impactDescription}>{description}</div>
+    <div className="ecoscore-weight-chip">
+      <div className="ecoscore-weight-chip-label">{label}</div>
+      <div className="ecoscore-weight-chip-value">{fmtNum(value)}</div>
     </div>
   );
 }
-
-function WeightRow({ label, value }: { label: string; value?: number }) {
-  return (
-    <div style={styles.weightRow}>
-      <div style={styles.weightLabel}>{label}</div>
-      <div style={styles.weightValue}>{fmtNum(value)}</div>
-    </div>
-  );
-}
-
-/* ---------- Styles ---------- */
-
-const styles = {
-  shell: {
-    width: "min(800px, 100%)",
-    padding: 14,
-    fontFamily: 'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"',
-    margin: "0 auto",
-  },
-  card: {
-    background: "#ffffff",
-    border: "1px solid #e6e8ee",
-    borderRadius: 16,
-    padding: 20,
-    boxShadow: "0 10px 30px rgba(15, 23, 42, 0.08)",
-  },
-  modeSwitcher: {
-    display: "flex",
-    gap: 8,
-    marginBottom: 16,
-    padding: 4,
-    background: "#f1f5f9",
-    borderRadius: 10,
-  },
-  modeButton: {
-    flex: 1,
-    padding: "8px 16px",
-    border: "none",
-    borderRadius: 8,
-    background: "transparent",
-    cursor: "pointer",
-    fontSize: 13,
-    fontWeight: 600,
-    color: "#64748b",
-    transition: "all 0.2s",
-  },
-  modeButtonActive: {
-    background: "#ffffff",
-    color: "#0f172a",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-  },
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    gap: 14,
-    alignItems: "flex-start",
-    marginBottom: 20,
-  },
-  headerLeft: {
-    flex: 1,
-  },
-  kicker: {
-    fontSize: 12,
-    color: "#64748b",
-    fontWeight: 600,
-    display: "flex",
-    alignItems: "center",
-    gap: 8,
-  },
-  kickerSub: {
-    fontSize: 11,
-    fontWeight: 400,
-    color: "#94a3b8",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 800,
-    color: "#0f172a",
-    marginTop: 6,
-    marginBottom: 12,
-  },
-  productInfo: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 8,
-    marginTop: 8,
-  },
-  infoBadge: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 4,
-    padding: "4px 10px",
-    background: "#f1f5f9",
-    borderRadius: 6,
-    fontSize: 12,
-  },
-  infoBadgeLabel: {
-    color: "#64748b",
-    fontWeight: 600,
-  },
-  infoBadgeValue: {
-    color: "#0f172a",
-    fontWeight: 700,
-  },
-  gradeBadge: {
-    width: 86,
-    minWidth: 86,
-    height: 70,
-    borderRadius: 14,
-    border: "1px solid",
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative" as const,
-  },
-  gradeLetter: {
-    fontSize: 26,
-    fontWeight: 900,
-    lineHeight: 1,
-  },
-  gradeLabel: {
-    fontSize: 11,
-    fontWeight: 700,
-    marginTop: 4,
-  },
-  infoButton: {
-    position: "absolute" as const,
-    top: -8,
-    right: -8,
-    width: 24,
-    height: 24,
-    borderRadius: "50%",
-    border: "1px solid #e2e8f0",
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 12,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-  },
-  scoreBlock: {
-    marginTop: 20,
-    padding: 16,
-    borderRadius: 14,
-    border: "1px solid #eef2f7",
-    background: "#fbfcfe",
-  },
-  scoreTop: {
-    display: "flex",
-    alignItems: "baseline" as const,
-    justifyContent: "space-between",
-    gap: 12,
-    marginBottom: 12,
-  },
-  scoreValue: {
-    fontSize: 32,
-    fontWeight: 900,
-    color: "#0f172a",
-  },
-  scoreOn: {
-    fontSize: 18,
-    fontWeight: 700,
-    color: "#64748b",
-    marginLeft: 6,
-  },
-  scoreMeta: {
-    fontSize: 13,
-    color: "#334155",
-    cursor: "help",
-  },
-  barTrack: {
-    marginTop: 12,
-  },
-  barMarkers: {
-    display: "flex",
-    justifyContent: "space-between",
-    fontSize: 10,
-    color: "#94a3b8",
-    marginBottom: 4,
-  },
-  barMarker: {
-    fontWeight: 600,
-  },
-  barFillContainer: {
-    height: 12,
-    borderRadius: 999,
-    background: "#e9eef5",
-    overflow: "hidden",
-    position: "relative" as const,
-  },
-  barFill: {
-    height: "100%",
-    borderRadius: 999,
-    transition: "width 0.3s ease",
-  },
-  scoreHint: {
-    fontSize: 13,
-    color: "#64748b",
-    marginTop: 10,
-    fontWeight: 600,
-  },
-  section: {
-    marginTop: 24,
-  },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: 900,
-    color: "#0f172a",
-    marginBottom: 12,
-  },
-  summarySection: {
-    marginTop: 24,
-  },
-  summaryGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-    gap: 12,
-  },
-  summaryCard: {
-    padding: 14,
-    borderRadius: 12,
-    border: "1px solid",
-  },
-  summaryCardTitle: {
-    fontSize: 13,
-    fontWeight: 800,
-    marginBottom: 8,
-  },
-  summaryCardList: {
-    margin: 0,
-    paddingLeft: 20,
-    fontSize: 12,
-    lineHeight: 1.6,
-  },
-  summaryCardItem: {
-    marginTop: 4,
-  },
-  impactGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-    gap: 12,
-  },
-  impactCard: {
-    padding: 14,
-    borderRadius: 12,
-    border: "1px solid #eef2f7",
-    background: "#ffffff",
-  },
-  impactCardHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 10,
-  },
-  impactCardLabel: {
-    fontSize: 14,
-    fontWeight: 800,
-    color: "#0f172a",
-  },
-  impactCardValue: {
-    fontSize: 18,
-    fontWeight: 900,
-    color: "#0f172a",
-  },
-  impactBarTrack: {
-    height: 8,
-    borderRadius: 999,
-    background: "#e9eef5",
-    overflow: "hidden",
-    marginBottom: 8,
-  },
-  impactBarFill: {
-    height: "100%",
-    borderRadius: 999,
-    transition: "width 0.3s ease",
-  },
-  impactCardMeta: {
-    display: "flex",
-    justifyContent: "space-between",
-    fontSize: 11,
-    marginBottom: 6,
-  },
-  impactQuality: {
-    fontWeight: 700,
-    color: "#64748b",
-  },
-  impactWeight: {
-    color: "#94a3b8",
-  },
-  impactDescription: {
-    fontSize: 11,
-    color: "#64748b",
-    fontStyle: "italic",
-  },
-  weightsCard: {
-    padding: 14,
-    borderRadius: 12,
-    border: "1px solid #eef2f7",
-    background: "#fbfcfe",
-  },
-  weightsGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: 12,
-    marginBottom: 12,
-  },
-  weightRow: {
-    display: "flex",
-    flexDirection: "column" as const,
-    gap: 4,
-  },
-  weightLabel: {
-    fontSize: 12,
-    color: "#64748b",
-    fontWeight: 700,
-  },
-  weightValue: {
-    fontSize: 18,
-    color: "#0f172a",
-    fontWeight: 900,
-  },
-  weightsNote: {
-    fontSize: 11,
-    color: "#64748b",
-    fontStyle: "italic",
-    paddingTop: 12,
-    borderTop: "1px solid #eef2f7",
-  },
-  packagingCard: {
-    padding: 14,
-    borderRadius: 12,
-    border: "1px solid #eef2f7",
-    background: "#ffffff",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: 12,
-  },
-  packagingInfo: {
-    flex: 1,
-  },
-  packagingType: {
-    fontSize: 14,
-    color: "#0f172a",
-    marginBottom: 6,
-  },
-  packagingImpact: {
-    fontSize: 12,
-    color: "#64748b",
-    marginLeft: 8,
-  },
-  packagingPenalty: {
-    fontSize: 12,
-    color: "#ef4444",
-    fontWeight: 600,
-  },
-  alternativesButton: {
-    padding: "8px 16px",
-    border: "1px solid #e2e8f0",
-    borderRadius: 8,
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 12,
-    fontWeight: 600,
-    color: "#0f172a",
-    transition: "all 0.2s",
-  },
-  traceability: {
-    padding: 14,
-    borderRadius: 12,
-    border: "1px solid #eef2f7",
-    background: "#fbfcfe",
-    display: "flex",
-    flexDirection: "column" as const,
-    gap: 8,
-  },
-  traceabilityItem: {
-    display: "flex",
-    gap: 8,
-    fontSize: 12,
-  },
-  traceabilityLabel: {
-    color: "#64748b",
-    fontWeight: 700,
-  },
-  traceabilityValue: {
-    color: "#0f172a",
-    fontWeight: 600,
-  },
-  actionsSection: {
-    marginTop: 24,
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 8,
-  },
-  actionButton: {
-    padding: "10px 16px",
-    border: "1px solid #e2e8f0",
-    borderRadius: 8,
-    background: "#ffffff",
-    cursor: "pointer",
-    fontSize: 13,
-    fontWeight: 600,
-    color: "#0f172a",
-    transition: "all 0.2s",
-  },
-};
-

@@ -1,2 +1,86 @@
-/* Styles pour EcoScoreWidget - déjà inclus dans EcoWidget.css */
+.ecoscore-widget {
+  width: min(400px, 100%);
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.ecoscore-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+}
+
+.ecoscore-widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ecoscore-widget-score-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ecoscore-widget-score {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.ecoscore-widget-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.ecoscore-widget-button {
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.ecoscore-widget-button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.ecoscore-widget-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.ecoscore-widget-indicators {
+  display: flex;
+  gap: 12px;
+}
+
+.ecoscore-widget-indicator {
+  flex: 1;
+  text-align: center;
+}
+
+.ecoscore-widget-indicator-label {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ecoscore-widget-indicator-value {
+  font-size: 16px;
+  font-weight: 900;
+}
