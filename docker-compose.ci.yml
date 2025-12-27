@@ -6,7 +6,9 @@ services:
   # ============================================
   
   jenkins:
-    image: jenkins/jenkins:lts
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
     container_name: ecolabel-jenkins
     user: root
     ports:

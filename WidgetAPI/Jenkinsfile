@@ -27,7 +27,7 @@ pipeline {
                 dir(SERVICE_DIR) {
                     sh '''
                         python -m venv venv
-                        source venv/bin/activate
+                        . venv/bin/activate
                         pip install --upgrade pip --quiet
                         pip install -r requirements.txt --quiet
                         pip install pytest pytest-cov pylint black flake8 --quiet || true
@@ -47,7 +47,7 @@ pipeline {
                 dir(SERVICE_DIR) {
                     sh '''
                         python -m venv venv
-                        source venv/bin/activate
+                        . venv/bin/activate
                         pip install --upgrade pip --quiet
                         pip install -r requirements.txt --quiet
                         pip install pylint flake8 --quiet || true
@@ -81,7 +81,7 @@ pipeline {
                 dir(SERVICE_DIR) {
                     sh '''
                         python -m venv venv
-                        source venv/bin/activate
+                        . venv/bin/activate
                         pip install --upgrade pip --quiet
                         pip install -r requirements.txt --quiet
                         pip install pytest pytest-cov --quiet || true
