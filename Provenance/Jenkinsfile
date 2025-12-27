@@ -53,7 +53,7 @@ pipeline {
                         pip install pylint flake8 --quiet || true
                         pylint app/ --exit-zero --output-format=text > pylint-report.txt || true
                         mkdir -p flake8-report || true
-                        flake8 app/ --max-line-length=120 --format=html --html=flake8-report/index.html || true
+                        flake8 app/ --max-line-length=120 --format=html > flake8-report/index.html || true
                     '''
                 }
             }
@@ -105,26 +105,27 @@ pipeline {
         }
         
         stage('SonarQube Analysis') {
-            agent {
-                docker {
-                    image 'sonarsource/sonar-scanner-cli:latest'
-                    reuseNode true
-                }
-            }
             steps {
                 dir(SERVICE_DIR) {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                sonar-scanner \
-                                    -Dsonar.projectKey=provenance \
-                                    -Dsonar.projectName=Provenance \
-                                    -Dsonar.sources=app \
-                                    -Dsonar.host.url=http://sonarqube:9000 \
-                                    -Dsonar.login=${SONAR_TOKEN} \
-                                    -Dsonar.python.version=${PYTHON_VERSION} \
-                                    -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
-                                    -Dsonar.python.coverage.reportPaths=coverage.xml || true
+                                docker run --rm \
+                                    --network ecolabel-network \
+                                    -v ${WORKSPACE}/${SERVICE_DIR}:/usr/src \
+                                    -w /usr/src \
+                                    -e SONAR_HOST_URL=http://sonarqube:9000 \
+                                    -e SONAR_TOKEN=${SONAR_TOKEN} \
+                                    sonarsource/sonar-scanner-cli:latest \
+                                    sonar-scanner \
+                                        -Dsonar.projectKey=provenance \
+                                        -Dsonar.projectName=Provenance \
+                                        -Dsonar.sources=app \
+                                        -Dsonar.host.url=http://sonarqube:9000 \
+                                        -Dsonar.login=${SONAR_TOKEN} \
+                                        -Dsonar.python.version=${PYTHON_VERSION} \
+                                        -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
+                                        -Dsonar.python.coverage.reportPaths=coverage.xml || true
                             '''
                         }
                     }

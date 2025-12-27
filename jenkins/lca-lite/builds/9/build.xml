@@ -1,10 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-build plugin="workflow-job@1559.va_a_533730b_ea_d">
   <actions>
-    <org.jenkinsci.plugins.workflow.cps.replay.ReplayFlowFactoryAction plugin="workflow-cps@4238.va_6fb_65c1f699">
-      <replacementLoadedScripts/>
-      <sandbox>true</sandbox>
-    </org.jenkinsci.plugins.workflow.cps.replay.ReplayFlowFactoryAction>
     <hudson.model.CauseAction>
       <causeBag class="linked-hash-map">
         <entry>
@@ -13,25 +9,19 @@
           </hudson.model.Cause_-UserIdCause>
           <int>1</int>
         </entry>
-        <entry>
-          <org.jenkinsci.plugins.workflow.cps.replay.ReplayCause plugin="workflow-cps@4238.va_6fb_65c1f699">
-            <originalNumber>7</originalNumber>
-          </org.jenkinsci.plugins.workflow.cps.replay.ReplayCause>
-          <int>1</int>
-        </entry>
       </causeBag>
     </hudson.model.CauseAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.37-489.vb_6db_69b_ce753">
-      <queuingDurationMillis>3</queuingDurationMillis>
+      <queuingDurationMillis>2</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>1</waitingDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@787.ve2fef0efdca_6">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2277.v00573e73ddf1">
-      <stagesUUID>16d038b3-8162-4515-909f-8914318216c6</stagesUUID>
+      <stagesUUID>4791237a-9c71-49e4-8271-828b828c0764</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2277.v00573e73ddf1">
           <stages>
@@ -249,7 +239,8 @@
                         pip install -r requirements.txt --quiet
                         pip install pylint flake8 --quiet || true
                         pylint app/ --exit-zero --output-format=text &gt; pylint-report.txt || true
-                        flake8 app/ --max-line-length=120 --format=html --htmldir=flake8-report || true
+                        mkdir -p flake8-report || true
+                        flake8 app/ --max-line-length=120 --format=html --html=flake8-report/index.html || true
                     </value>
                                   </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                                 </entry>
@@ -397,6 +388,31 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <agent>
+                  <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTClosureMap">
+                    <variables class="linked-hash-map">
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>image</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="string">sonarsource/sonar-scanner-cli:latest</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                      <entry>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                          <key>reuseNode</key>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          <value class="boolean">true</value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                      </entry>
+                    </variables>
+                  </variables>
+                  <agentType>
+                    <key>docker</key>
+                  </agentType>
+                </agent>
                 <name>SonarQube Analysis</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
@@ -425,7 +441,7 @@
                                     -Dsonar.projectKey=lca-lite \
                                     -Dsonar.projectName=LCA-Lite \
                                     -Dsonar.sources=app \
-                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.host.url=http://sonarqube:9000 \
                                     -Dsonar.login=${SONAR_TOKEN} \
                                     -Dsonar.python.version=${PYTHON_VERSION} \
                                     -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
@@ -509,7 +525,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>16d038b3-8162-4515-909f-8914318216c6</uuid>
+            <uuid>4791237a-9c71-49e4-8271-828b828c0764</uuid>
           </stages>
           <postBuild>
             <conditions>
@@ -587,6 +603,14 @@
               </entry>
               <entry>
                 <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>SONAR_HOST_URL_EXTERNAL</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">http://localhost:9002</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                   <key>SONAR_TOKEN</key>
                 </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                 <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTInternalFunctionCall>
@@ -638,7 +662,7 @@
           <string>refs/remotes/origin/main</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@6.5.0">
-              <sha1>98cd620ee612e7eace6f564602092bd39d948946</sha1>
+              <sha1>c4c43417856be0680aa054a186993150667c656b</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -647,7 +671,7 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>8</hudsonBuildNumber>
+            <hudsonBuildNumber>9</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
@@ -673,38 +697,40 @@
     <org.jenkinsci.plugins.docker.workflow.ImageAction plugin="docker-workflow@634.vedc7242b_eda_7">
       <names class="sorted-set">
         <string>python:3.11-slim</string>
+        <string>sonarsource/sonar-scanner-cli:latest</string>
       </names>
     </org.jenkinsci.plugins.docker.workflow.ImageAction>
-    <jenkins.model.InterruptedBuildAction>
-      <causes>
-        <jenkins.model.CauseOfInterruption_-UserInterruption>
-          <user>ecolabe</user>
-        </jenkins.model.CauseOfInterruption_-UserInterruption>
-      </causes>
-    </jenkins.model.InterruptedBuildAction>
+    <hudson.plugins.sonar.action.SonarMarkerAction plugin="sonar@2.18.2"/>
+    <hudson.plugins.sonar.action.SonarAnalysisAction plugin="sonar@2.18.2">
+      <installationName>SonarQube</installationName>
+      <installationUrl>http://localhost:9002</installationUrl>
+      <isNew>true</isNew>
+      <isSkipped>true</isSkipped>
+    </hudson.plugins.sonar.action.SonarAnalysisAction>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.37-489.vb_6db_69b_ce753">
-      <queuingDurationMillis>32</queuingDurationMillis>
+      <queuingDurationMillis>35</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>30</buildableDurationMillis>
-      <waitingDurationMillis>0</waitingDurationMillis>
-      <executingDurationMillis>317786</executingDurationMillis>
+      <buildableDurationMillis>33</buildableDurationMillis>
+      <waitingDurationMillis>1</waitingDurationMillis>
+      <executingDurationMillis>1084650</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>13</queueId>
-  <timestamp>1766871920205</timestamp>
-  <startTime>1766871920240</startTime>
-  <result>ABORTED</result>
-  <duration>319741</duration>
+  <queueId>15</queueId>
+  <timestamp>1766872284796</timestamp>
+  <startTime>1766872284844</startTime>
+  <result>FAILURE</result>
+  <duration>1087840</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>ABORTED</result>
+    <result>FAILURE</result>
     <script>pipeline {
     agent any
     
     environment {
         SONAR_HOST_URL = &apos;http://sonarqube:9000&apos;
+        SONAR_HOST_URL_EXTERNAL = &apos;http://localhost:9002&apos;
         SONAR_TOKEN = credentials(&apos;sonar-token&apos;)
         IMAGE_NAME = &apos;ecolabel-lca-lite&apos;
         PYTHON_VERSION = &apos;3.11&apos;
@@ -754,7 +780,8 @@
                         pip install -r requirements.txt --quiet
                         pip install pylint flake8 --quiet || true
                         pylint app/ --exit-zero --output-format=text &gt; pylint-report.txt || true
-                        flake8 app/ --max-line-length=120 --format=html --htmldir=flake8-report || true
+                        mkdir -p flake8-report || true
+                        flake8 app/ --max-line-length=120 --format=html --html=flake8-report/index.html || true
                     &apos;&apos;&apos;
                 }
             }
@@ -806,6 +833,12 @@
         }
         
         stage(&apos;SonarQube Analysis&apos;) {
+            agent {
+                docker {
+                    image &apos;sonarsource/sonar-scanner-cli:latest&apos;
+                    reuseNode true
+                }
+            }
             steps {
                 dir(SERVICE_DIR) {
                     script {
@@ -815,7 +848,7 @@
                                     -Dsonar.projectKey=lca-lite \
                                     -Dsonar.projectName=LCA-Lite \
                                     -Dsonar.sources=app \
-                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.host.url=http://sonarqube:9000 \
                                     -Dsonar.login=${SONAR_TOKEN} \
                                     -Dsonar.python.version=${PYTHON_VERSION} \
                                     -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
@@ -870,27 +903,27 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>5817001418</long>
+        <long>17036702103</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>635356323</long>
+        <long>339697368</long>
       </entry>
       <entry>
         <string>runQueue</string>
-        <long>54719553921</long>
+        <long>116762237153</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>27545248797</long>
+        <long>76943900554</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>151969721</long>
+        <long>113825349</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>16660618993</long>
+        <long>50545718422</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -899,12 +932,11 @@
       <string>org.jenkinsci.plugins.docker.commons.credentials.DockerRegistryEndpoint.imageName</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.build</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.hasData</string>
-      <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
       <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>79</iota>
-    <head>1:79</head>
+    <iota>157</iota>
+    <head>1:157</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -930,7 +962,7 @@
       </scm>
       <node></node>
       <workspace>/var/jenkins_home/jobs/lca-lite/workspace</workspace>
-      <changelogFile>/var/jenkins_home/jobs/lca-lite/builds/8/changelog12737220312193386645.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/lca-lite/builds/9/changelog14733229135257140607.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>

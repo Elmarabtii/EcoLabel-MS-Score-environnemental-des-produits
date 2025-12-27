@@ -70,25 +70,26 @@ pipeline {
         }
         
         stage('SonarQube Analysis') {
-            agent {
-                docker {
-                    image 'sonarsource/sonar-scanner-cli:latest'
-                    reuseNode true
-                }
-            }
             steps {
                 dir(FRONTEND_DIR) {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                sonar-scanner \
-                                    -Dsonar.projectKey=widget-frontend \
-                                    -Dsonar.projectName=Widget-Frontend \
-                                    -Dsonar.sources=src \
-                                    -Dsonar.host.url=http://sonarqube:9000 \
-                                    -Dsonar.login=${SONAR_TOKEN} \
-                                    -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
-                                    -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.* || true
+                                docker run --rm \
+                                    --network ecolabel-network \
+                                    -v ${WORKSPACE}/${FRONTEND_DIR}:/usr/src \
+                                    -w /usr/src \
+                                    -e SONAR_HOST_URL=http://sonarqube:9000 \
+                                    -e SONAR_TOKEN=${SONAR_TOKEN} \
+                                    sonarsource/sonar-scanner-cli:latest \
+                                    sonar-scanner \
+                                        -Dsonar.projectKey=widget-frontend \
+                                        -Dsonar.projectName=Widget-Frontend \
+                                        -Dsonar.sources=src \
+                                        -Dsonar.host.url=http://sonarqube:9000 \
+                                        -Dsonar.login=${SONAR_TOKEN} \
+                                        -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+                                        -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.* || true
                             '''
                         }
                     }
