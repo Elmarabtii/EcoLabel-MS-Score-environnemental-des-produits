@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@1010.vb_b_39488a_9841">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@4238.va_6fb_65c1f699">
+    <parentIds>
+      <string>9</string>
+    </parentIds>
+    <id>10</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EnvStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@4238.va_6fb_65c1f699">
+      <arguments>
+        <entry>
+          <string>overrides</string>
+          <list>
+            <string>GIT_BRANCH=origin/main</string>
+            <string>GIT_COMMIT=98cd620ee612e7eace6f564602092bd39d948946</string>
+            <string>GIT_PREVIOUS_COMMIT=5de31324d10dd9b6b1eedbc1fbf9079d6b024969</string>
+            <string>GIT_URL=https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits</string>
+          </list>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1384.vdc05a_48f535f">
+      <startTime>1766871928397</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>
