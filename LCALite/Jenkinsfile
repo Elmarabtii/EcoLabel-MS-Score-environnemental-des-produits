@@ -111,21 +111,13 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                echo "=== Debug: Current directory ==="
-                                pwd
-                                echo "=== Debug: Listing files ==="
+                                echo "Current directory: $(pwd)"
+                                echo "Files in current directory:"
                                 ls -la
-                                echo "=== Debug: Checking app directory ==="
-                                if [ -d app ]; then
-                                    echo "✓ app directory exists"
-                                    ls -la app/
-                                else
-                                    echo "✗ app directory NOT found"
-                                    echo "Available directories:"
-                                    find . -maxdepth 1 -type d
-                                fi
+                                echo "Checking app directory:"
+                                ls -la app/ || echo "app directory not found"
                                 echo ""
-                                echo "=== Running SonarQube Analysis ==="
+                                echo "Running SonarQube Analysis..."
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
                                     -v $(pwd):/usr/src \
@@ -133,31 +125,15 @@ pipeline {
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c "
-                                        echo '=== Contents of /usr/src in container ===';
-                                        ls -la /usr/src;
-                                        echo '';
-                                        echo '=== Checking app directory ===';
-                                        if [ -d /usr/src/app ]; then
-                                            echo '✓ app exists';
-                                            ls -la /usr/src/app;
-                                        else
-                                            echo '✗ app NOT found';
-                                            echo 'Available directories:';
-                                            find /usr/src -maxdepth 1 -type d;
-                                        fi;
-                                        echo '';
-                                        echo '=== Running sonar-scanner ===';
-                                        sonar-scanner \
-                                            -Dsonar.projectKey=lca-lite \
-                                            -Dsonar.projectName=LCA-Lite \
-                                            -Dsonar.sources=app \
-                                            -Dsonar.host.url=http://sonarqube:9000 \
-                                            -Dsonar.login=${SONAR_TOKEN} \
-                                            -Dsonar.python.version=${PYTHON_VERSION} \
-                                            -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
-                                            -Dsonar.python.coverage.reportPaths=coverage.xml
-                                    " || true
+                                    sh -c 'ls -la /usr/src && echo "---" && ls -la /usr/src/app 2>&1 || echo "app not found in container" && sonar-scanner \
+                                        -Dsonar.projectKey=lca-lite \
+                                        -Dsonar.projectName=LCA-Lite \
+                                        -Dsonar.sources=app \
+                                        -Dsonar.host.url=http://sonarqube:9000 \
+                                        -Dsonar.login=${SONAR_TOKEN} \
+                                        -Dsonar.python.version=${PYTHON_VERSION} \
+                                        -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
+                                        -Dsonar.python.coverage.reportPaths=coverage.xml' || true
                             '''
                         }
                     }
