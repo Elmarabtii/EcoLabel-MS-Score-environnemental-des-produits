@@ -17,31 +17,43 @@ pipeline {
         }
         
         stage('Install Dependencies') {
+            agent {
+                docker {
+                    image 'python:3.11-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(SERVICE_DIR) {
-                    script {
-                        sh '''
-                            python -m venv venv
-                            source venv/bin/activate || . venv/Scripts/activate
-                            pip install --upgrade pip
-                            pip install -r requirements.txt
-                            pip install pytest pytest-cov pylint black flake8 || true
-                        '''
-                    }
+                    sh '''
+                        python -m venv venv
+                        source venv/bin/activate
+                        pip install --upgrade pip
+                        pip install -r requirements.txt
+                        pip install pytest pytest-cov pylint black flake8 || true
+                    '''
                 }
             }
         }
         
         stage('Lint') {
+            agent {
+                docker {
+                    image 'python:3.11-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(SERVICE_DIR) {
-                    script {
-                        sh '''
-                            source venv/bin/activate || . venv/Scripts/activate
-                            pylint app/ --exit-zero --output-format=text > pylint-report.txt || true
-                            flake8 app/ --max-line-length=120 --format=html --htmldir=flake8-report || true
-                        '''
-                    }
+                    sh '''
+                        python -m venv venv
+                        source venv/bin/activate
+                        pip install --upgrade pip --quiet
+                        pip install -r requirements.txt --quiet
+                        pip install pylint flake8 --quiet || true
+                        pylint app/ --exit-zero --output-format=text > pylint-report.txt || true
+                        flake8 app/ --max-line-length=120 --format=html --htmldir=flake8-report || true
+                    '''
                 }
             }
             post {
@@ -59,14 +71,22 @@ pipeline {
         }
         
         stage('Tests') {
+            agent {
+                docker {
+                    image 'python:3.11-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(SERVICE_DIR) {
-                    script {
-                        sh '''
-                            source venv/bin/activate || . venv/Scripts/activate
-                            pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term || true
-                        '''
-                    }
+                    sh '''
+                        python -m venv venv
+                        source venv/bin/activate
+                        pip install --upgrade pip --quiet
+                        pip install -r requirements.txt --quiet
+                        pip install pytest pytest-cov --quiet || true
+                        pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term || true
+                    '''
                 }
             }
             post {
