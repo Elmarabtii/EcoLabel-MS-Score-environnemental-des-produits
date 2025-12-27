@@ -111,19 +111,22 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                echo "Current directory: $(pwd)"
-                                echo "Listing files:"
+                                CURRENT_DIR=$(pwd)
+                                echo "Current directory: ${CURRENT_DIR}"
+                                echo "WORKSPACE: ${WORKSPACE}"
+                                echo "SERVICE_DIR: ${SERVICE_DIR}"
+                                echo "Listing files in current directory:"
                                 ls -la
                                 echo "Checking if app directory exists:"
-                                ls -la app/ || echo "app directory not found"
+                                test -d app && echo "app directory exists" || echo "app directory NOT found"
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v $(pwd):/usr/src \
+                                    -v "${CURRENT_DIR}:/usr/src" \
                                     -w /usr/src \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c "ls -la /usr/src && sonar-scanner \
+                                    sh -c "echo 'Contents of /usr/src:'; ls -la /usr/src; echo 'Checking app directory:'; test -d /usr/src/app && echo 'app exists' || echo 'app NOT found'; sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
