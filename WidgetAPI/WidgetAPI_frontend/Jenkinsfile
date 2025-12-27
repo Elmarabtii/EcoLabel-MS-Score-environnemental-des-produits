@@ -52,7 +52,10 @@ pipeline {
                     publishHTML([
                         reportDir: "${FRONTEND_DIR}/coverage",
                         reportFiles: 'index.html',
-                        reportName: 'Coverage Report'
+                        reportName: 'Coverage Report',
+                        keepAll: true,
+                        alwaysLinkToLastBuild: true,
+                        allowMissing: true
                     ])
                 }
             }
