@@ -111,22 +111,24 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                CURRENT_DIR=$(pwd)
-                                echo "Current directory: ${CURRENT_DIR}"
+                                echo "=== Debug Info ==="
+                                echo "Current directory: $(pwd)"
                                 echo "WORKSPACE: ${WORKSPACE}"
                                 echo "SERVICE_DIR: ${SERVICE_DIR}"
                                 echo "Listing files in current directory:"
                                 ls -la
                                 echo "Checking if app directory exists:"
-                                test -d app && echo "app directory exists" || echo "app directory NOT found"
+                                test -d app && echo "✓ app directory exists" || echo "✗ app directory NOT found"
+                                echo ""
+                                echo "=== Running SonarQube Analysis ==="
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v "${CURRENT_DIR}:/usr/src" \
+                                    -v $(pwd):/usr/src \
                                     -w /usr/src \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c "echo 'Contents of /usr/src:'; ls -la /usr/src; echo 'Checking app directory:'; test -d /usr/src/app && echo 'app exists' || echo 'app NOT found'; sonar-scanner \
+                                    sh -c "echo '=== Contents of /usr/src in container ==='; ls -la /usr/src; echo ''; echo '=== Checking app directory ==='; test -d /usr/src/app && (echo '✓ app exists'; ls -la /usr/src/app) || echo '✗ app NOT found'; echo ''; echo '=== Running sonar-scanner ==='; sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
