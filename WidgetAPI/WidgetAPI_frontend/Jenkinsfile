@@ -70,6 +70,12 @@ pipeline {
         }
         
         stage('SonarQube Analysis') {
+            agent {
+                docker {
+                    image 'sonarsource/sonar-scanner-cli:latest'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(FRONTEND_DIR) {
                     script {
@@ -79,7 +85,7 @@ pipeline {
                                     -Dsonar.projectKey=widget-frontend \
                                     -Dsonar.projectName=Widget-Frontend \
                                     -Dsonar.sources=src \
-                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.host.url=http://host.docker.internal:9002 \
                                     -Dsonar.login=${SONAR_TOKEN} \
                                     -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
                                     -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.* || true
