@@ -111,14 +111,19 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                echo "=== Debug Info ==="
-                                echo "Current directory: $(pwd)"
-                                echo "WORKSPACE: ${WORKSPACE}"
-                                echo "SERVICE_DIR: ${SERVICE_DIR}"
-                                echo "Listing files in current directory:"
+                                echo "=== Debug: Current directory ==="
+                                pwd
+                                echo "=== Debug: Listing files ==="
                                 ls -la
-                                echo "Checking if app directory exists:"
-                                test -d app && echo "✓ app directory exists" || echo "✗ app directory NOT found"
+                                echo "=== Debug: Checking app directory ==="
+                                if [ -d app ]; then
+                                    echo "✓ app directory exists"
+                                    ls -la app/
+                                else
+                                    echo "✗ app directory NOT found"
+                                    echo "Available directories:"
+                                    find . -maxdepth 1 -type d
+                                fi
                                 echo ""
                                 echo "=== Running SonarQube Analysis ==="
                                 docker run --rm \
@@ -128,15 +133,31 @@ pipeline {
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c "echo '=== Contents of /usr/src in container ==='; ls -la /usr/src; echo ''; echo '=== Checking app directory ==='; test -d /usr/src/app && (echo '✓ app exists'; ls -la /usr/src/app) || echo '✗ app NOT found'; echo ''; echo '=== Running sonar-scanner ==='; sonar-scanner \
-                                        -Dsonar.projectKey=lca-lite \
-                                        -Dsonar.projectName=LCA-Lite \
-                                        -Dsonar.sources=app \
-                                        -Dsonar.host.url=http://sonarqube:9000 \
-                                        -Dsonar.login=${SONAR_TOKEN} \
-                                        -Dsonar.python.version=${PYTHON_VERSION} \
-                                        -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
-                                        -Dsonar.python.coverage.reportPaths=coverage.xml" || true
+                                    sh -c "
+                                        echo '=== Contents of /usr/src in container ===';
+                                        ls -la /usr/src;
+                                        echo '';
+                                        echo '=== Checking app directory ===';
+                                        if [ -d /usr/src/app ]; then
+                                            echo '✓ app exists';
+                                            ls -la /usr/src/app;
+                                        else
+                                            echo '✗ app NOT found';
+                                            echo 'Available directories:';
+                                            find /usr/src -maxdepth 1 -type d;
+                                        fi;
+                                        echo '';
+                                        echo '=== Running sonar-scanner ===';
+                                        sonar-scanner \
+                                            -Dsonar.projectKey=lca-lite \
+                                            -Dsonar.projectName=LCA-Lite \
+                                            -Dsonar.sources=app \
+                                            -Dsonar.host.url=http://sonarqube:9000 \
+                                            -Dsonar.login=${SONAR_TOKEN} \
+                                            -Dsonar.python.version=${PYTHON_VERSION} \
+                                            -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
+                                            -Dsonar.python.coverage.reportPaths=coverage.xml
+                                    " || true
                             '''
                         }
                     }
