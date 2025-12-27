@@ -281,3 +281,127 @@ Injecting SonarQube environment variables using the configuration: SonarQube
 22:26:15.177 INFO  Total time: 4.192s
 + true
 [8mha:////4J0SWAafFhv7mJyUg7AA3ckjBUJS4pO1zPeGeim4ZUozAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGkZBwr2gyNJ4ghxkBmF5NFqDyRV/MOZmTGyl/995r3esMmBjhRsKI3ODiM2onRTzY9MVMYrp5m0dNFaMJI3ojWzC11plmxJTawLsuhkLA1qD1Fh5ZhJ3v1UKVXaMszh+SOEnLX3eEJmUxlVoG/sATY36YuEv46fwOwjCNDUR0qhryuP5Jn9ia/AAAA[0m[Pipeline] }
+WARN: Unable to locate 'report-task.txt' in the workspace. Did the SonarScanner succeed?
+[8mha:////4JEDXVTCFUlSbMhLfM92lK8Ruc5uMvrbzB5tENmyCQa1AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHUSoexss3QeIJIYgxkdjFZhMoTeTXvYEZmrPzVf695rzcsYoAjBStag53D2DjR+8GmJ0YK3dXTKFq6iIYwkjeiNmNN2pxmrIkNzMtyKCQsDTaeokPLsJKteqjSK7TlmUNylYTc6Ts8IZOpzCrwF6YA69ugI+Gv8zcAU98zFNvNjiE/7D+qJWXXvwAAAA==[0m[Pipeline] // withSonarQubeEnv
+[8mha:////4Aluewamz/xDak7gbgptfZ4JW3DuTZRy/dhoBTbSY13FAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDokAooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrtZseQH/YfnuuGjL8AAAA=[0m[Pipeline] }
+[8mha:////4KBaue8UwM8OMaP3JJKKLS/800DaX7Q+3B5BMcuYehh2AAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEkJCERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BsNzuG/LD/ALDrhOa/AAAA[0m[Pipeline] // script
+[8mha:////4KloV1f8XMJq5PEvijjnprQM5GINla5O2GtM2caZR5S9AAAAph+LCAAAAAAAAP9tjTESgjAQRZcwFraWHiJoQeE4VLYZGk8QQ4yBzC4mi1B5Iq/mHWRkxspf/fea93rDKkWoKDrZWuw8JuNlHwY3PzlS7K6BRtnSRRrCRMHK2o41Nfa0YE1sYVkmIFewtmgCJY+OYaNa/dBF0OiKM8fZHRUI39zhCZmay6wjf2GKsL0NTSL8df4GYOp7hny/KxnEofwAr2nRtL8AAAA=[0m[Pipeline] }
+[8mha:////4MDlzPvNHLSOjmEMpfI+tLZWXBXwBz+T1+IBz9Dg4E5XAAAApx+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEkJCERWtlYYXmNgYJ9ZdsC8kFS/ia/wBi0hUbLUzzbzesIgBjhSsaA12DmPjRO8Hm54YKXRXT6No6SIawkjeiNqMNWlzmrEmNjAvy6GQsDTYeIoOLcNKtuqhSq/QlmcOyVUScqfv8IRMpjKrwF+YAqxvg46Ev87fAEx9z1BsN3uG/LD7AJcrQkW/AAAA[0m[Pipeline] // dir
+[8mha:////4AT3ClhF5u+gHb/Ff+Z73N/II2ex4U/7O8Zwyul5BfsbAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDokAooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrtZs+QH3YfkW16EL8AAAA=[0m[Pipeline] }
+$ docker stop --time=1 9ae6d2a9ba5ece786122914076f54501b612257a4901b0a13374143302415c68
+$ docker rm -f --volumes 9ae6d2a9ba5ece786122914076f54501b612257a4901b0a13374143302415c68
+[8mha:////4E0QXDxpSiBR6l0Gxa/Tg8PdP+G0LiN+uKIsuv7T/FQ3AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHUSoexss3QeIJIYgxkdjFZhMoTeTXvYEZmrPzVf695rzcsYoAjBStag53D2DjR+8GmJ0YK3dXTKFq6iIYwkjeiNmNN2pxmrIkNzMtyKCQsDTaeokPLsJKteqjSK7TlmUNylYTc6Ts8IZOpzCrwF6YA69ugI+Gv8zcAU98zFNvNniE/7D7S7yuWvwAAAA==[0m[Pipeline] // withDockerContainer
+[8mha:////4O3gMbbNPHZv09hSs5YsUox9d48PiRgTdosiAHi4RnSnAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEgUooqK10vACExvjxLoL9oWk4kV8jT9gEYmKrXammdcbFjHAkYIVrcHOYWyc6P1g0xMjhe7qaRQtXURDGMkbUZuxJm1OM9bEBuZlORQSlgYbT9GhZVjJVj1U6RXa8swhuUpC7vQdnpDJVGYV+AtTgPVt0JHw1/kbgKnvGYrt5sCQ73cfA6gPrb8AAAA=[0m[Pipeline] }
+[8mha:////4IU0mQpBZFvatcWcEhUueVM9TfNX8zwe0e3vPJoq+5vAAAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6JIXEwMk2vD4hdUWmuheQ/bhzD5Rf6a/2AjiZN3uucs5/WGVQxQU7CiM9g7jK0Tgx9temKi0F89TaKji2gJI3kjGjM1pM1pwYbYwLIsh0LC2mDrKTq0DBvZqYcqvUJbnjkkd5SQO32HJ2QylVkF/sIcYHsbdST8df4GYB4GhqKqdgz5Yf8B3GcTsr8AAAA=[0m[Pipeline] // stage
+[8mha:////4DjHI5Sc3JrN0fJJKTIGwfJyKR4OxmY8nE6gr7ypRW5JAAAAqB+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6Kkg5Nxcm1Y/IJaai0070H7ECa/yF/zH0RJnLzTPTe5Oc8XlCnCkaITrcXOYzJe9GF0SxMTxe4aaBItXYQhTBSsqO1UU2NPK9bEFtZkORQKNhZNoOTRMWxVq++6Chpddea4bAcFuW8GeECmFjPryF+YI+xuY5MIf56/Aph7hlzuGQop5edavgHFXXk5wwAAAA==[0m[Pipeline] stage
+[8mha:////4GXwEwPp6NQQnazmKsH6r3ib0B0zS+pRI07Weaiix6LSAAAApx+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BCpwoqYWKMunCA0ISSN/i9JSjtxIq7GHQitxIQHy7Zkvdcb6hjgSMEwp7G3GDvLBj+anNhEob96mpijC+sII3nNWj21pPRprS0lDauKEioBG42dp2jRJNgKJx+y8RJNc04hbwcBpVV3eEIhMjnJkJYyB9jdRhUJf5y/AJiHBBXnfPH991t/ANWAUNjEAAAA[0m[Pipeline] { (Build Docker Image)
+[8mha:////4D7wVgHPCMquZLdk3awWjTfmSFJG0Vao7jBfLQmFsL5pAAAApx+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJOhon1obFJ6il1kLz/9gWy+QT+Wq+gxUSJ2+43F1y+V5vKL2DEznNeoWDQS8NG+2kU2KR3HC1FFlPFyYJPVnFWhVb6lSz1paCglVZDgWHjUJpyRvUAba8Fw9RWYG6OgeXtiOH3HR3eELGEzkIF5YyO9jdps4T/jh/ATCPAYq63i9++H7LD4CBkmTEAAAA[0m[Pipeline] dir
+Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+[8mha:////4Dy8CLUQBLs9oD4xJljjInfKKRJiscudG/y7076ezaRMAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJ0c04sTYsPkEttRaa/8e2WCafyFfzHayQOHnD5e6Sy/d6Q+kdnMhp1iscDHpp2GgnnRKL5Iarpch6ujBJ6Mkq1qrYUqeatbYUFKzKcig4bBRKS96gDrDlvXiIygrU1Tm4tB055Ka7wxMynshBuLCU2cHuNnWe8Mf5C4B5DFDU9X7xw/dbfgBX/TLixAAAAA==[0m[Pipeline] {
+[8mha:////4E6MclBX+n4n5QxqqnffPxTA49VeVOrjx1CIBsENA7QdAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJiU7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gN9x/ZdxAAAAA==[0m[Pipeline] script
+[8mha:////4ASyExRnKjR1GDAR1wHOVmJrRmo4BMvQMQ1WP8t6FRJiAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJgy7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gO8+cdAxAAAAA==[0m[Pipeline] {
+[8mha:////4BZvTpkVpDvLJuVDdojF5XEwSrjwHHcrCVKtU2HVlQe7AAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNFAgqrRWGl5gYmPsWHfGdkgqXsTX+ANWIlGxxWpnm3l/YBMDnCloZhUOBmNvmHejzotNFIabo4lZurKeMJJTrFNTR1K1K3aUFKwpSqg4bBX2jqJBnWDHrXiK2gnU9SWF/J04lEY+4AUFz+YkQlpgDrC/jzIS/jx/BTD7BFXTHJY++i+AM3D7wAAAAA==[0m[Pipeline] sh
++ docker build -t ecolabel-lca-lite:10 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 537B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/6] FROM docker.io/library/python:3.11-slim@sha256:158caf0e080e2cd74ef2879ed3c4e697792ee65251c8208b7afb56683c32ea6c
+#5 resolve docker.io/library/python:3.11-slim@sha256:158caf0e080e2cd74ef2879ed3c4e697792ee65251c8208b7afb56683c32ea6c 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 16.80MB 5.0s
+#4 transferring context: 26.17MB 10.0s
+#4 transferring context: 50.64MB 15.1s
+#4 transferring context: 59.27MB 20.1s
+#4 transferring context: 70.53MB 25.2s
+#4 transferring context: 136.18MB 30.3s
+#4 transferring context: 145.88MB 35.3s
+#4 transferring context: 158.32MB 40.4s
+#4 transferring context: 171.81MB 45.5s
+#4 transferring context: 180.94MB 50.5s
+#4 transferring context: 199.29MB 55.6s
+#4 transferring context: 219.21MB 60.7s
+#4 transferring context: 222.86MB 65.7s
+#4 transferring context: 229.97MB 70.7s
+#4 transferring context: 254.92MB 75.8s
+#4 transferring context: 265.76MB 80.9s
+#4 transferring context: 275.83MB 82.1s done
+#4 DONE 82.1s
+
+#6 [2/6] WORKDIR /app
+#6 CACHED
+
+#7 [3/6] RUN apt-get update && apt-get install -y     gcc     postgresql-client     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [4/6] COPY requirements.txt .
+#8 CACHED
+
+#9 [5/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [6/6] COPY . .
+#10 DONE 3.2s
+
+#11 exporting to image
+#11 exporting layers
+Aborted by [8mha:////4AZtx10kWA60yeGpRc4zLp/FsYoAOgZ2Gp/wSQC5aVkeAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZe/dLi1CL91OT8nMSkVAARuP7GwgAAAA==[0meco
+Sending interrupt signal to process
+#11 exporting layers 16.6s done
+#11 exporting manifest sha256:b5b282c50d4c12951d95fe49a5adc208363796c06cba33a5d5afca5cfdc830c6 0.1s done
+#11 exporting config sha256:f27f98fe93635c1dea26771caf0c93ce82e4edcc0f5aabe2a6e8def0ed8174c5 0.0s done
+#11 exporting attestation manifest sha256:8325bf82304b93bfa4b2413e79e5f015bdf7f246a6ebe51c8458d628e79f0556
+#11 exporting attestation manifest sha256:8325bf82304b93bfa4b2413e79e5f015bdf7f246a6ebe51c8458d628e79f0556 0.2s done
+#11 exporting manifest list sha256:60a640ee448f4b96f5319408c4599f39ccd8bed0ae31ec40c1d6586dbe6d4afd
+#11 exporting manifest list sha256:60a640ee448f4b96f5319408c4599f39ccd8bed0ae31ec40c1d6586dbe6d4afd 0.0s done
+#11 naming to docker.io/library/ecolabel-lca-lite:10 0.0s done
+#11 unpacking to docker.io/library/ecolabel-lca-lite:10
+#11 unpacking to docker.io/library/ecolabel-lca-lite:10 1.0s done
+#11 CANCELED
+ERROR: failed to solve: Canceled: context canceled
+script returned exit code 1
+[8mha:////4PK1CsUvJVRn0/T6bnOSsF4XWCewPzfWVPPosyE/FLeTAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjNAgJUaW10vACExtjx7oztkNS8SK+xh+wEomKLVY728z7A5sY4ExBM6twMBh7w7wbdV5sojDcHE3M0pX1hJGcYp2aOpKqXbGjpGBNUULFYauwdxQN6gQ7bsVT1E6gri8p5O/EoTTyAS8oeDYnEdICc4D9fZSR8Of5K4DZ+wRV0xyXPnwBg4fbJMAAAAA=[0m[Pipeline] }
+[8mha:////4AVmcEMeGMampOQ6KfpreBga3RVUZixtJmiRbIsi4CE5AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjFBQIUaW10vACExtjx7oztkNS8SK+xh+wEomKLVY728z7A5sY4ExBM6twMBh7w7wbdV5sojDcHE3M0pX1hJGcYp2aOpKqXbGjpGBNUULFYauwdxQN6gQ7bsVT1E6gri8p5O/EoTTyAS8oeDYnEdICc4D9fZSR8Of5K4DZ+wRV0xyXPnwBjd2lG8AAAAA=[0m[Pipeline] // script
+[8mha:////4GoEPyaHO/W08zft1YmPHnAZNViHgtkKbS46pUIEYSN4AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYRDEB2iorXS8AKTGGPHujP2haTiRXyNPxCIRMUWq51t5vmCRYpwoGiE09hZTI0VwfdmWmKg2F08DcLRWTSEibwWtR5qavVxxppYw5wsh0LCUmPjKVk0DCvp1F2VXqEpTxynby8ht+0NHpDJycwq8hfGCOtr3ybCn+evAMYQGIpqu/l0tXsDK6+1d8AAAAA=[0m[Pipeline] }
+[8mha:////4K2InWLVtHmOffZpJ8rFA1LY1oIessUTdA++G0WKOmuHAAAApR+LCAAAAAAAAP9tjTESwiAURH+SsbC19BBk0NKxSsuk8QQIiBDm/wjEpPJEXs07GM2MlVvs7NvmPV+wShGOFC3zBjuHSTnWh8HOi40Uu0ugkXk6M0WYKBjWmrElbZoFW8oGlhQlVALWBlWg5NBm2Agv77IOEm19ynH+DgJKp2/wgELM5ixj/sIUYXsddCL8ef4KYOr7DBXf8U/z/Rs8MaZPwAAAAA==[0m[Pipeline] // dir
+[8mha:////4LV5PwYuSdI//8nhBdIwJfQNLHJAU8aRSyQWXDIhmaUzAAAApR+LCAAAAAAAAP9tjTESgjAURD8wFraWHiIMtI6VbYbGE8QkxoTM/yEJQuWJvJp3EGXGyi129m3zni/YpAhHioY5jb3FJC0LfjTLYhPF/uppYo4uTBIm8pp1eupI6dOKHWUNa4oSKg5bjdJTsmgy7LgTd1F7gaY+57h8Bw6lVQM8oOCLOYuYvzBH2N9GlQh/nr8CmEPIUDVt++mmfQM3G0kJwAAAAA==[0m[Pipeline] }
+[8mha:////4HBFesOc11ifcrnmk73tcFlCjGrG9MVrkvq4SpHnet6RAAAApR+LCAAAAAAAAP9tjTESwiAURH+SsbC19BBk0NKxSsuk8QQIiBDm/wjEpPJEXs07GM2MlVvs7NvmPV+wShGOFC3zBjuHSTnWh8HOi40Uu0ugkXk6M0WYKBjWmrElbZoFW8oGlhQlVALWBlWg5NBm2Agv77IOEm19ynH+DgJKp2/wgELM5ixj/sIUYXsddCL8ef4KYOr7DBXf7T/N+Rs5QTc2wAAAAA==[0m[Pipeline] // stage
+[8mha:////4K62LPNa3OO23IkBNr7IbOiPbHLMeInxwnfTn/8m41kWAAAAqB+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6IEo5Nhcm26+AUVai0072H7ECa/yF/zH0RJnLzTPTe5Oc8X5DFARcGK1mDnMNZO9H6wcxMjhe7iaRQtnUVNGMkbocyoqDHHBRWxgSVJCpmElcHaU3RoGday1XddeI22OHGYt4OE1DU3eEAiZzPrwF+YAmyuQxMJf56/Aph6hrTcM2Tldve55m/r1lxYwwAAAA==[0m[Pipeline] stage
+[8mha:////4MbT0Vm60bbb8dtuKF5XQvPWNl8J9Yd830+btZDcNuPXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BCpQDChTqxRF04QkhCSRv+XJKWdOBFX4w6UVmLCg2Vbst7rDWUMUFMwzGlsLUZpWed7MyU2UGivngbm6MIkYSSvWaOHhpQ+LbWhpGFRlkPBYaVReooWTYI1d+IhKi/QVOcUpu3IIbfqDk/I+EROIqS5jAE2t15Fwh/nLwDGLkGx3e1nP3y/5QcusdTRxAAAAA==[0m[Pipeline] { (Quality Gate)
+Stage "Quality Gate" skipped due to earlier failure(s)
+[8mha:////4Db8Y2/LlxCErE8KWiU9G+5X0Q8XS0ohFNKOzJS4SBzjAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjkKBBqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7BNVuf5j72H8BvocvV8AAAAA=[0m[Pipeline] getContext
+[8mha:////4AzQdayyE51Z1x8jcGtcZaIReYZ2go+/mQ0fr++HF6eXAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjkBAFSkVrpeEFxjbGjnUXbAen4kV8jT8QJRIVW6x2tpn3B1YxQEPBMKexsxilZb0fzLRYptDdPGXm6MokYSSvWatzS0qfF2wpaVhSlFBxWGuUnqJFk2DDnXiK2gs09SWF6TtxKK16wAsKPpmTCGmGMcD2PqhI+PP8FcDY9wmq3f449+EL8PI47sAAAAA=[0m[Pipeline] }
+[8mha:////4P0RZAyVXjQ58XYFwMeQiTbL+h5o0/h3qQWXHURQSdAZAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjEAUSSkVrpeEFxjbGjnUXbAen4kV8jT8QJRIVW6x2tpn3B1YxQEPBMKexsxilZb0fzLRYptDdPGXm6MokYSSvWatzS0qfF2wpaVhSlFBxWGuUnqJFk2DDnXiK2gs09SWF6TtxKK16wAsKPpmTCGmGMcD2PqhI+PP8FcDY9wmq3f449+ELj7J3b8AAAAA=[0m[Pipeline] // stage
+[8mha:////4CG0LtSQiYs3yBZCDjVVfSd3zC2XBj94Qkoc8ZvtD1U6AAAAqR+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6IEEwdjmFybLn5BhVoLzXvYPoTJL/LX/AdREifvdM9Nbs7zBXkMUFGwojXYOYy1E70f7NzESKG7eBpFS2dRE0byRigzKmrMcUFFbGBJkkImYWWw9hQdWoa1bPVdF16jLU4c5u0gIXXNDR6QyNnMOvAXpgCb69BEwp/nrwCmniEtdwxZud1/rvkbNcXC5MMAAAA=[0m[Pipeline] stage
+[8mha:////4HsFr23vJyLyaZoRiCzummS3n5Yw4LNDzPuoxGOnBu/2AAAAqR+LCAAAAAAAAP9tjT0OwjAUg19bdWBl5BApPxNCTKxRFk4Q0hDSRu+VJCWdOBFX4w60VGLCg2Vbsr7XG8rg4UjesEZjazEoyzrXmzGxRL69OkqsoQtThIGcZkInQbU+zVVQ1DAry6HgsNCoHAWLJsKSN/IhKyfRVOfox+3AIbf1HZ6Q8ZEcpY/fMnhY3fo6EP44fwEwdBGKzXY/+W49fcsPxyrBucQAAAA=[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4CuPi759zyfpuHI6NVRGmQ8/Of5Jn2a+TlunLYjY97sSAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLD7HIWDpWtJk0niCGGAOZXUyCUHkir+YdZGDGyl/8+e837/2BTQxw5mCxNdQ5itph7wc7Lxw5dDfPI7Z8Rc0U2RuUZpTcmHpFycnAmiyHQsDWkPYcHdkEO9Gqpyq9IlteUpi/k4DcNQ94QSZmc1IhLTAF2N+HJjL9PH8FMPUJiup4WLrqv2lhN0bAAAAA[0m[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[8mha:////4H4BM70kg0jaNDJpfhoYjxsjWlTOiD4VCdSc+xysC+Q0AAAApR+LCAAAAAAAAP9tjTsOwjAQRDeJKGgpOYTDp0SpaK00nMDYxtixdoPt4FSciKtxB6JEomKK0bxp3vsDqxigoWCY09hZjNKy3g9mWixT6G6eMnN0ZZIwktes1bklpc8LtpQ0LClKqDisNUpP0aJJsOFOPEXtBZr6ksL0nTiUVj3gBQWfzEmENMMYYHsfVCT8ef4KYOz7BNX+eJh79wUHGNsZwAAAAA==[0m[Pipeline] }
+[8mha:////4HnRuvngTx/l8hnfr301XzxbIOe8it8BCb1rjeHizBgVAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjSIUQFa2VhheYxBg71p2xLyQVL+Jr/IFAJCq2WO1sM88XLFKEA0UjnMbOYmqsCL430xIDxe7iaRCOzqIhTOS1qPVQU6uPM9bEGuZkORQSlhobT8miYVhJp+6q9ApNeeI4fXsJuW1v8IBMTmZWkb8wRlhf+zYR/jx/BTCGwFBsqurT290bVppr38AAAAA=[0m[Pipeline] // stage
+[8mha:////4MT1vnESzadP8Y4ISYYxEGJtA8aPBDzIttL580FJWpq7AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGGUSuHyjZD4wliiDGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHUTsx+NGmJyYK/dXTJDq6CE0YyRvRmKmh1pwWbIgNLMtyKCSsDWpP0aFl2MhOPVTpFdryzCG5o4TctXd4QiZTmVXgL8wBtrexjYS/zt8AzMPAUFS7PUNeHT6fKryGvwAAAA==[0m[Pipeline] }
+[8mha:////4Hj8MRYlzdOUEFUudDZYo6SV9QqWHTWeD4M3r7lxjZKkAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGGUSuHyjZD4wliiDGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHUTsx+NGmJyYK/dXTJDq6CE0YyRvRmKmh1pwWbIgNLMtyKCSsDWpP0aFl2MhOPVTpFdryzCG5o4TctXd4QiZTmVXgL8wBtrexjYS/zt8AzMPAUFS7A0Ne7T+syec6vwAAAA==[0m[Pipeline] // withEnv
+[8mha:////4LmKth9klDRSUF/yj7AypmbhWPZHkeBhW8+6AYga5tT6AAAAph+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP6KEkLgYJ9aGxS+oba2F5j1sH8LkF/lr/oNEEifvdM9ZzusNmxThRNGJzmLvMWkvhjC65YmJYn8NNImOLkITJgpWtHZqydhmxZbYwrosh0LC1qIOlDw6hp3s1EOVQaErzxwXd5SQe3OHJ2RyKbOK/IU5wv42mkT46/wNwDwMDEVVHxjyqv4AoS4XIr8AAAA=[0m[Pipeline] }
+[8mha:////4Gwml1JlgoitaF1vQxWp9YIedkG3363C8xhCouYzg+s5AAAAph+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxEGLSwcKtsMjSeIIcZAZheTRag8kVfzDmZkxspf/fea93rDKgaoKVjRGewdRu3E4Eebnpgo9FdPk+joIjRhJG9EY6aGWnNasCE2sCzLoZCwNqg9RYeWYSM79VClV2jLM4fkjhJy197hCZlMZVaBvzAH2N7GNhL+On8DMA8DQ1HtDwx5tfsAks1Mnr8AAAA=[0m[Pipeline] // withCredentials
+[8mha:////4Iq+0WumLccLIyT1PPeUg1gOdzmKbdnom7yhL+H+gyC0AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjiAYJUdFaaXiBiY1xYt0Z+4JT8SK+xh+IiETFVjvTzOsNqxThSNGK3uDgMHVOBD/a+YlMcbh6yqKni+gIE3kjWpNb0ua0YEtsYFlRQiVhbbDzlBxaho3s1UPVXqGtzxxnd5BQOn2HJxRyLrOK/IUpwvY26kT46/wNwBQCQ9Xs9gxl03wA/S4T9r8AAAA=[0m[Pipeline] }
+[8mha:////4CKQksZmYI+ZpdtkEp60wK2ZjIBIu075WtF4ulxSBeJ1AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxFkrByHyjZD4wkiiTGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHsXVi8KNNT0wU+qunSXR0ES1hJG9EY6aGtDkt2BAbWJblUEhYG2w9RYeWYSM79VClV2jLM4fkjhJyp+/whEymMqvAX5gDbG+jjoS/zt8AzMPAUFT7A0Ne7T7OzUhKvwAAAA==[0m[Pipeline] // withEnv
+[8mha:////4FNiLuw4L5EVJ7i7aYleDTAgcC/maODc/mi1vuOPfSMuAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDUjpERWul4QUmNsaJdWfsC07Fi/gafyAiEhVb7UwzrzesUoQjRSt6g4PD1DkR/GjnJzLF4eopi54uoiNM5I1oTW5Jm9OCLbGBZUUJlYS1wc5TcmgZNrJXD1V7hbY+c5zdQULp9B2eUMi5zCryF6YI29uoE+Gv8zcAUwgM1b7ZMRTNB/cKUNO+AAAA[0m[Pipeline] }
+[8mha:////4C8WUDfPqCnZJqvizKopm+QA+pjNMBue+Z0JgJKVwlmAAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYSjCDpERWul4QUmNsaJdRfsC07Fi/gafyAiEhVb7UwzrzesUoQjRSc7i73H1Ho5hNHNT2aK/TVQlh1dZEuYKFjZ2NyQsacFG2ILy0QBpYK1xTZQ8ugYNqrTD10Fja46c5zdQUHhzR2eINRcZh35C1OE7W00ifDX+RuAaRgYynpfM4jdB+S2VHC+AAAA[0m[Pipeline] // node
+[8mha:////4ITCz3/ZHf3rVNG9NpxGxYM+RAf6CkpaOI5qJnuJB/DhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjIjpERWul4QUmNsaJdWfsC07Fi/gafyAiEhVb7UwzrzesUoQjRSt6g4PD1DkR/GjnJzLF4eopi54uoiNM5I1oTW5Jm9OCLbGBZUUJlYS1wc5TcmgZNrJXD1V7hbY+c5zdQULp9B2eUMi5zCryF6YI29uoE+Gv8zcAUwgM1W7fMBTNB6L880C+AAAA[0m[Pipeline] End of Pipeline
+org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 3b5b40a4-68cc-4ba1-b0c0-bc885132a320
+Finished: ABORTED

@@ -711,15 +711,37 @@
       </names>
     </org.jenkinsci.plugins.docker.workflow.ImageAction>
     <hudson.plugins.sonar.action.SonarMarkerAction plugin="sonar@2.18.2"/>
+    <hudson.plugins.sonar.action.SonarAnalysisAction plugin="sonar@2.18.2">
+      <installationName>SonarQube</installationName>
+      <installationUrl>http://localhost:9002</installationUrl>
+      <isNew>true</isNew>
+      <isSkipped>true</isSkipped>
+    </hudson.plugins.sonar.action.SonarAnalysisAction>
+    <jenkins.model.InterruptedBuildAction>
+      <causes>
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>ecolabe</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.37-489.vb_6db_69b_ce753">
+      <queuingDurationMillis>37</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>35</buildableDurationMillis>
+      <waitingDurationMillis>1</waitingDurationMillis>
+      <executingDurationMillis>1047100</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
   <queueId>17</queueId>
   <timestamp>1766873688634</timestamp>
   <startTime>1766873688683</startTime>
-  <duration>0</duration>
+  <result>ABORTED</result>
+  <duration>1049665</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>SUCCESS</result>
+    <result>ABORTED</result>
     <script>pipeline {
     agent any
     
@@ -898,19 +920,19 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>8333218640</long>
+        <long>14401716764</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>641614395</long>
+        <long>642036066</long>
       </entry>
       <entry>
         <string>runQueue</string>
-        <long>74024747398</long>
+        <long>111428115434</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>44617651680</long>
+        <long>71301675786</long>
       </entry>
       <entry>
         <string>parse</string>
@@ -918,7 +940,7 @@
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>27092881736</long>
+        <long>46257374454</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -927,16 +949,17 @@
       <string>org.jenkinsci.plugins.docker.commons.credentials.DockerRegistryEndpoint.imageName</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.build</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.hasData</string>
+      <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
       <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>101</iota>
-    <head>1:101</head>
-    <start>2</start>
-    <done>false</done>
+    <iota>142</iota>
+    <head>1:142</head>
+    <done>true</done>
     <resumeBlocked>false</resumeBlocked>
+    <storageDir>workflow-completed</storageDir>
   </execution>
-  <completed>false</completed>
+  <completed>true</completed>
   <checkouts class="hudson.util.PersistedList">
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
       <scm class="hudson.plugins.git.GitSCM" plugin="git@5.8.1">
