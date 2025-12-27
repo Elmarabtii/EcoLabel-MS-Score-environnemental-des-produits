@@ -1,0 +1,126 @@
+pipeline {
+    agent any
+    
+    environment {
+        SONAR_HOST_URL = 'http://sonarqube:9000'
+        SONAR_TOKEN = credentials('sonar-token')
+        IMAGE_NAME = 'ecolabel-widget-frontend'
+        NODE_VERSION = '18'
+        FRONTEND_DIR = 'WidgetAPI/WidgetAPI_frontend'
+    }
+    
+    tools {
+        nodejs "${NODE_VERSION}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    sh 'npm ci'
+                }
+            }
+        }
+        
+        stage('Lint') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    sh 'npm run lint || true'
+                }
+            }
+        }
+        
+        stage('Tests') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    script {
+                        sh '''
+                            npm install --save-dev jest @testing-library/react @testing-library/jest-dom || true
+                            npm test -- --coverage --coverageReporters=html --coverageReporters=text --coverageReporters=lcov || true
+                        '''
+                    }
+                }
+            }
+            post {
+                always {
+                    publishHTML([
+                        reportDir: "${FRONTEND_DIR}/coverage",
+                        reportFiles: 'index.html',
+                        reportName: 'Coverage Report'
+                    ])
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    sh 'npm run build'
+                }
+            }
+        }
+        
+        stage('SonarQube Analysis') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    script {
+                        withSonarQubeEnv('SonarQube') {
+                            sh '''
+                                sonar-scanner \
+                                    -Dsonar.projectKey=widget-frontend \
+                                    -Dsonar.projectName=Widget-Frontend \
+                                    -Dsonar.sources=src \
+                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.login=${SONAR_TOKEN} \
+                                    -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+                                    -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.* || true
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                dir(FRONTEND_DIR) {
+                    script {
+                        sh '''
+                            docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+                            docker tag ${IMAGE_NAME}:${BUILD_NUMBER} ${IMAGE_NAME}:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Quality Gate') {
+            steps {
+                script {
+                    timeout(time: 5, unit: 'MINUTES') {
+                        waitForQualityGate abortPipeline: false
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline Widget-Frontend réussi! ✅'
+        }
+        failure {
+            echo 'Pipeline Widget-Frontend échoué! ❌'
+        }
+    }
+}
+

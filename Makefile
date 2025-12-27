@@ -1,4 +1,4 @@
-.PHONY: help build up down restart logs clean init-db
+.PHONY: help build up down restart logs clean init-db ci-up ci-down ci-logs
 
 help: ## Affiche cette aide
 	@echo "Commandes disponibles :"
@@ -68,3 +68,28 @@ test: ## Tester que tous les services répondent
 	@curl -s http://localhost:8004/health | grep -q "ok" && echo "✅ Scoring (8004)" || echo "❌ Scoring (8004)"
 	@curl -s http://localhost:8005/ | grep -q "OK" && echo "✅ WidgetAPI (8005)" || echo "❌ WidgetAPI (8005)"
 
+# ============================================
+# Commandes CI/CD
+# ============================================
+
+ci-up: ## Démarrer Jenkins et SonarQube
+	docker-compose -f docker-compose.ci.yml up -d
+	@echo "⏳ Attente du démarrage de Jenkins et SonarQube..."
+	@sleep 15
+	@echo "✅ Jenkins: http://localhost:8080"
+	@echo "✅ SonarQube: http://localhost:9002"
+	@echo "📝 Mot de passe Jenkins initial:"
+	@docker exec ecolabel-jenkins cat /var/jenkins_home/secrets/initialAdminPassword 2>/dev/null || echo "   (Jenkins n'est pas encore prêt, attendez quelques secondes)"
+
+ci-down: ## Arrêter Jenkins et SonarQube
+	docker-compose -f docker-compose.ci.yml down
+
+ci-logs: ## Voir les logs de Jenkins et SonarQube
+	docker-compose -f docker-compose.ci.yml logs -f
+
+ci-restart: ## Redémarrer Jenkins et SonarQube
+	docker-compose -f docker-compose.ci.yml restart
+
+ci-clean: ## Arrêter et supprimer Jenkins et SonarQube (⚠️ supprime les données)
+	docker-compose -f docker-compose.ci.yml down -v
+	@echo "⚠️  Toutes les données Jenkins et SonarQube ont été supprimées !"

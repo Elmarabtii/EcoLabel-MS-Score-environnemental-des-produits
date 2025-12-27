@@ -1,0 +1,142 @@
+pipeline {
+    agent any
+    
+    environment {
+        // Configuration SonarQube
+        SONAR_HOST_URL = 'http://sonarqube:9000'
+        SONAR_TOKEN = credentials('sonar-token')
+        
+        // Configuration Docker
+        DOCKER_REGISTRY = 'localhost:5000'
+        IMAGE_NAME = "${env.JOB_NAME.toLowerCase()}"
+        
+        // Configuration Node
+        NODE_VERSION = '18'
+    }
+    
+    tools {
+        nodejs "${NODE_VERSION}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                dir('WidgetAPI/WidgetAPI_frontend') {
+                    sh 'npm ci'
+                }
+            }
+        }
+        
+        stage('Lint') {
+            steps {
+                dir('WidgetAPI/WidgetAPI_frontend') {
+                    sh 'npm run lint || true'
+                }
+            }
+        }
+        
+        stage('Tests') {
+            steps {
+                dir('WidgetAPI/WidgetAPI_frontend') {
+                    script {
+                        // Installer jest si nécessaire
+                        sh '''
+                            npm install --save-dev jest @testing-library/react @testing-library/jest-dom || true
+                            npm test -- --coverage --coverageReporters=html --coverageReporters=text || true
+                        '''
+                    }
+                }
+            }
+            post {
+                always {
+                    publishHTML([
+                        reportDir: 'WidgetAPI/WidgetAPI_frontend/coverage',
+                        reportFiles: 'index.html',
+                        reportName: 'Coverage Report'
+                    ])
+                }
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                dir('WidgetAPI/WidgetAPI_frontend') {
+                    sh 'npm run build'
+                }
+            }
+        }
+        
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    withSonarQubeEnv('SonarQube') {
+                        dir('WidgetAPI/WidgetAPI_frontend') {
+                            sh '''
+                                sonar-scanner \
+                                    -Dsonar.projectKey=${JOB_NAME} \
+                                    -Dsonar.sources=src \
+                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.login=${SONAR_TOKEN} \
+                                    -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+                                    -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                dir('WidgetAPI/WidgetAPI_frontend') {
+                    script {
+                        sh '''
+                            docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+                            docker tag ${IMAGE_NAME}:${BUILD_NUMBER} ${IMAGE_NAME}:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Security Scan') {
+            steps {
+                script {
+                    sh '''
+                        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+                            aquasec/trivy image ${IMAGE_NAME}:${BUILD_NUMBER} || true
+                    '''
+                }
+            }
+        }
+        
+        stage('Quality Gate') {
+            steps {
+                script {
+                    timeout(time: 5, unit: 'MINUTES') {
+                        waitForQualityGate abortPipeline: true
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline réussi! ✅'
+        }
+        failure {
+            echo 'Pipeline échoué! ❌'
+        }
+    }
+}
+

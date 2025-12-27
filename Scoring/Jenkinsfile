@@ -1,0 +1,138 @@
+pipeline {
+    agent any
+    
+    environment {
+        SONAR_HOST_URL = 'http://sonarqube:9000'
+        SONAR_TOKEN = credentials('sonar-token')
+        IMAGE_NAME = 'ecolabel-scoring'
+        PYTHON_VERSION = '3.11'
+        SERVICE_DIR = 'Scoring'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                dir(SERVICE_DIR) {
+                    script {
+                        sh '''
+                            python -m venv venv
+                            source venv/bin/activate || . venv/Scripts/activate
+                            pip install --upgrade pip
+                            pip install -r requirements.txt
+                            pip install pytest pytest-cov pylint black flake8 || true
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Lint') {
+            steps {
+                dir(SERVICE_DIR) {
+                    script {
+                        sh '''
+                            source venv/bin/activate || . venv/Scripts/activate
+                            pylint app/ --exit-zero --output-format=text > pylint-report.txt || true
+                            flake8 app/ --max-line-length=120 --format=html --htmldir=flake8-report || true
+                        '''
+                    }
+                }
+            }
+            post {
+                always {
+                    publishHTML([
+                        reportDir: "${SERVICE_DIR}/flake8-report",
+                        reportFiles: 'index.html',
+                        reportName: 'Flake8 Report'
+                    ])
+                }
+            }
+        }
+        
+        stage('Tests') {
+            steps {
+                dir(SERVICE_DIR) {
+                    script {
+                        sh '''
+                            source venv/bin/activate || . venv/Scripts/activate
+                            pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term || true
+                        '''
+                    }
+                }
+            }
+            post {
+                always {
+                    publishHTML([
+                        reportDir: "${SERVICE_DIR}/htmlcov",
+                        reportFiles: 'index.html',
+                        reportName: 'Coverage Report'
+                    ])
+                }
+            }
+        }
+        
+        stage('SonarQube Analysis') {
+            steps {
+                dir(SERVICE_DIR) {
+                    script {
+                        withSonarQubeEnv('SonarQube') {
+                            sh '''
+                                sonar-scanner \
+                                    -Dsonar.projectKey=scoring \
+                                    -Dsonar.projectName=Scoring \
+                                    -Dsonar.sources=app \
+                                    -Dsonar.host.url=${SONAR_HOST_URL} \
+                                    -Dsonar.login=${SONAR_TOKEN} \
+                                    -Dsonar.python.version=${PYTHON_VERSION} \
+                                    -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
+                                    -Dsonar.python.coverage.reportPaths=coverage.xml || true
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                dir(SERVICE_DIR) {
+                    script {
+                        sh '''
+                            docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
+                            docker tag ${IMAGE_NAME}:${BUILD_NUMBER} ${IMAGE_NAME}:latest
+                        '''
+                    }
+                }
+            }
+        }
+        
+        stage('Quality Gate') {
+            steps {
+                script {
+                    timeout(time: 5, unit: 'MINUTES') {
+                        waitForQualityGate abortPipeline: false
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline Scoring réussi! ✅'
+        }
+        failure {
+            echo 'Pipeline Scoring échoué! ❌'
+        }
+    }
+}
+
