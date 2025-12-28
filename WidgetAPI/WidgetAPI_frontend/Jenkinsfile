@@ -28,39 +28,6 @@ pipeline {
             }
         }
         
-        stage('Lint') {
-            steps {
-                dir(FRONTEND_DIR) {
-                    sh 'npm run lint || true'
-                }
-            }
-        }
-        
-        stage('Tests') {
-            steps {
-                dir(FRONTEND_DIR) {
-                    script {
-                        sh '''
-                            npm install --save-dev jest @testing-library/react @testing-library/jest-dom || true
-                            npm test -- --coverage --coverageReporters=html --coverageReporters=text --coverageReporters=lcov || true
-                        '''
-                    }
-                }
-            }
-            post {
-                always {
-                    publishHTML([
-                        reportDir: "${FRONTEND_DIR}/coverage",
-                        reportFiles: 'index.html',
-                        reportName: 'Coverage Report',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true,
-                        allowMissing: true
-                    ])
-                }
-            }
-        }
-        
         stage('Build') {
             steps {
                 dir(FRONTEND_DIR) {

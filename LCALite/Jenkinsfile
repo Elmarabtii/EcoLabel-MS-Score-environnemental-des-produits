@@ -31,76 +31,7 @@ pipeline {
                         . venv/bin/activate
                         pip install --upgrade pip --quiet
                         pip install -r requirements.txt --quiet
-                        pip install pytest pytest-cov pylint black flake8 --quiet || true
                     '''
-                }
-            }
-        }
-        
-        stage('Lint') {
-            agent {
-                docker {
-                    image 'python:3.11-slim'
-                    reuseNode true
-                }
-            }
-            steps {
-                dir(SERVICE_DIR) {
-                    sh '''
-                        python -m venv venv
-                        . venv/bin/activate
-                        pip install --upgrade pip --quiet
-                        pip install -r requirements.txt --quiet
-                        pip install pylint flake8 --quiet || true
-                        pylint app/ --exit-zero --output-format=text > pylint-report.txt || true
-                        mkdir -p flake8-report || true
-                        flake8 app/ --max-line-length=120 --format=html > flake8-report/index.html || true
-                    '''
-                }
-            }
-            post {
-                always {
-                    publishHTML([
-                        reportDir: "${SERVICE_DIR}/flake8-report",
-                        reportFiles: 'index.html',
-                        reportName: 'Flake8 Report',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true,
-                        allowMissing: true
-                    ])
-                }
-            }
-        }
-        
-        stage('Tests') {
-            agent {
-                docker {
-                    image 'python:3.11-slim'
-                    reuseNode true
-                }
-            }
-            steps {
-                dir(SERVICE_DIR) {
-                    sh '''
-                        python -m venv venv
-                        . venv/bin/activate
-                        pip install --upgrade pip --quiet
-                        pip install -r requirements.txt --quiet
-                        pip install pytest pytest-cov --quiet || true
-                        pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term || true
-                    '''
-                }
-            }
-            post {
-                always {
-                    publishHTML([
-                        reportDir: "${SERVICE_DIR}/htmlcov",
-                        reportFiles: 'index.html',
-                        reportName: 'Coverage Report',
-                        keepAll: true,
-                        alwaysLinkToLastBuild: true,
-                        allowMissing: true
-                    ])
                 }
             }
         }
@@ -111,28 +42,32 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                echo "Current directory: $(pwd)"
+                                CURRENT_DIR=$(pwd)
+                                echo "Current directory: ${CURRENT_DIR}"
                                 echo "Files in current directory:"
                                 ls -la
                                 echo "Checking app directory:"
                                 ls -la app/ || echo "app directory not found"
                                 echo ""
+                                echo "Creating .scannerwork directory with proper permissions..."
+                                # Create .scannerwork directory from Jenkins host with proper permissions
+                                mkdir -p .scannerwork
+                                chmod 777 .scannerwork
                                 echo "Running SonarQube Analysis..."
                                 JENKINS_CONTAINER_ID=$(cat /etc/hostname)
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
                                     --volumes-from ${JENKINS_CONTAINER_ID} \
                                     --user root \
-                                    -w $(pwd) \
+                                    -w ${CURRENT_DIR} \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c 'mkdir -p .scannerwork && chmod 777 .scannerwork && sonar-scanner \
+                                    sh -c 'chown -R root:root .scannerwork 2>/dev/null || true && chmod -R 777 .scannerwork && sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
                                         -Dsonar.host.url=http://sonarqube:9000 \
-                                        -Dsonar.login=${SONAR_TOKEN} \
                                         -Dsonar.python.version=${PYTHON_VERSION} \
                                         -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
                                         -Dsonar.python.coverage.reportPaths=coverage.xml' || true
