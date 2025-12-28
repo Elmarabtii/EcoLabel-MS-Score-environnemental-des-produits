@@ -1,0 +1,20 @@
+commit a1ce62c65c012db4dfeecb5fd51f2a8745d90e1e
+tree 21c5cc52d0d7576413cef709ddd3d2617fd294dd
+parent 89e2c1c1030f0e45d15c94e808eb8ccb9c1fe42e
+author simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:47:24 +0100
+committer simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:47:24 +0100
+
+    Simplify SonarQube debug script to ensure it executes
+
+
+:100644 100644 18f588599fa47db6a225751316e97d5e866bb1dc 6481be32d7a693d4a655acce7c203737fecdbd26 M	LCALite/Jenkinsfile
+commit 89e2c1c1030f0e45d15c94e808eb8ccb9c1fe42e
+tree e0d426fd6274269b318df08bda11ab1c36ffa1b7
+parent 0cb33306f907b043b7beed02f8c81d3063cb4d52
+author simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:43:37 +0100
+committer simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:43:37 +0100
+
+    Fix debug script: Use proper shell syntax and check directory contents
+
+
+:100644 100644 4208f6c8ce2493502c75d172542cc2e3c61ea5d5 18f588599fa47db6a225751316e97d5e866bb1dc M	LCALite/Jenkinsfile

@@ -110,10 +110,11 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
+                                JENKINS_CONTAINER_ID=$(cat /etc/hostname)
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v $(pwd):/usr/src \
-                                    -w /usr/src \
+                                    --volumes-from ${JENKINS_CONTAINER_ID} \
+                                    -w $(pwd) \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \

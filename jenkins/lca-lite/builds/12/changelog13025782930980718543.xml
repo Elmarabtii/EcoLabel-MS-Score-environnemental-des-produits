@@ -1,0 +1,147 @@
+commit fdeeb6c817b1de669cfc3a7c4fb9b8c3a127cd6a
+tree ad97a9e95162102c8a5c46497c04dc04e7128f79
+parent c7d9be1b74e3449e9b95156625e6e5c8a7a533f3
+author simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-27 23:48:09 +0100
+committer simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-27 23:48:09 +0100
+
+    Fix SonarQube volume mount: Use pwd instead of WORKSPACE variable
+
+
+:100644 100644 cc0d6dd7bf1648ef805e1eb336a09a554abe2378 11d6570c8441eca4970259cb1e552f5708cbe9cb M	LCALite/Jenkinsfile
+:100644 100644 a47c7f41ebb0415fa7ac46616d2c7babfe432a3e 11bec27faf681510fd7ae4ef85ff767d3f9000dc M	"NLPIngr\303\251dients/Jenkinsfile"
+:100644 100644 fe5abbe857b7a31a7a871e820678319b0315c086 a563937f57ecaf33a827e0dd5284008a38a93f13 M	ParserProduit/Jenkinsfile
+:100644 100644 decdc45fc7dd4824b7c70522d8c68dff988fcbe4 ef80834f5b11402f5ba24ca3877d37c4260a0c26 M	Provenance/Jenkinsfile
+:100644 100644 72d196a050b29b8e889444faf16c48983d228e3f 18a8bf0dfe5f310c454ede394c92579b5d7e8a07 M	Scoring/Jenkinsfile
+:100644 100644 079e010e506ffd271500e5c70d7875552e876865 d889176d518a875c453ed4638c857f177e96720b M	WidgetAPI/Jenkinsfile
+:100644 100644 1568e012780429bf7f9b51917b47c63b33a2296a 8dc3dfca190cd08fc691964e09582ef2aa0f98c3 M	WidgetAPI/WidgetAPI_frontend/Jenkinsfile
+commit c7d9be1b74e3449e9b95156625e6e5c8a7a533f3
+tree 9485e6ec0b1e0661fdfa55ebd24690a869c4ea71
+parent eeb677ba50e04a93b0fe92782fc2997c8450d5d9
+author simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-27 23:46:38 +0100
+committer simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-27 23:46:38 +0100
+
+    Fix SonarQube URL: Use sonarqube:9000 service name instead of host.docker.internal
+
+
+:100644 100644 313e18272d66f5c34df9860bf5eb8376e4a2eaae cc0d6dd7bf1648ef805e1eb336a09a554abe2378 M	LCALite/Jenkinsfile
+:100644 100644 d4514c339e659833d9b67ec406e6d0be530b1c03 a47c7f41ebb0415fa7ac46616d2c7babfe432a3e M	"NLPIngr\303\251dients/Jenkinsfile"
+:100644 100644 2dd58d2e0f4dfbe3c95d767883a89f72b14263bc fe5abbe857b7a31a7a871e820678319b0315c086 M	ParserProduit/Jenkinsfile
+:100644 100644 156b9b2148cef311f5986c797ac5b1cb53d4640d decdc45fc7dd4824b7c70522d8c68dff988fcbe4 M	Provenance/Jenkinsfile
+:100644 100644 3baf76c7ee17919a5675e55bcee11090d76e3e64 72d196a050b29b8e889444faf16c48983d228e3f M	Scoring/Jenkinsfile
+:100644 100644 a2cdaefd97d8318b2f507e08a73b529f1ec969da 079e010e506ffd271500e5c70d7875552e876865 M	WidgetAPI/Jenkinsfile
+:100644 100644 73b205c961531ab71d56c412d1fe5a5243b1e134 1568e012780429bf7f9b51917b47c63b33a2296a M	WidgetAPI/WidgetAPI_frontend/Jenkinsfile
+:100644 100644 7ec725524e2c9fd4704fe675fb709681a39a9a18 d761591b4e274a122fcfcf98648c21f70d433e84 M	jenkins/lca-lite/builds/10/build.xml
+:100644 100644 658666c65bae6e8822d20639de751c9cb1c1b955 fd4a306621d54f21390b2e4715f3db8163eeecf2 M	jenkins/lca-lite/builds/10/log
+:100644 100644 3a8ee81eaf2a2195c9acaad8f2d3efa108c93a94 4e5890052dc3fe21e18df466a7a33fa0aa56c0e0 M	jenkins/lca-lite/builds/10/log-index
+:100644 000000 284b3cfd9e54840f0f89475b41236ae5b74ef628 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/program.dat
+:000000 100644 0000000000000000000000000000000000000000 cfd332b190b977b0e06031621c85574daee86ff1 A	jenkins/lca-lite/builds/10/workflow-completed/flowNodeStore.xml
+:100644 000000 c8876f166e0fb4ca8c79d1ecc2aaaa73136e8584 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/100.xml
+:100644 000000 48a417a21b22d48e03386b239ea13563a58f1523 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/86.xml
+:100644 000000 abdc5206af125c51d3c45b20e40bc4d442996381 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/87.xml
+:100644 000000 09b88304241d79cf53bdb7859ac0f9a78148a7ca 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/89.xml
+:100644 000000 70b04dfe23b6a597a9638efa8f26d4775fc716e9 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/90.xml
+:100644 000000 804aeea2a610a20c0037584700ef413310a9e690 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/91.xml
+:100644 000000 eeb668b6c672ab4c14e7dbf383d2297329b560bc 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/92.xml
+:100644 000000 9409576ee67808698c42b5a27a20bf7639e53b4f 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/93.xml
+:100644 000000 67dbffebc76abb79242d9c4c9cfface2c75112c7 0000000000000000000000000000000000000000 D	jenkins/lca-lite/builds/10/workflow/97.xml
+:000000 100644 0000000000000000000000000000000000000000 1f669798a6e721f9aed1c23a5b093dc97a758735 A	jenkins/lca-lite/builds/11/build.xml
+:000000 100644 0000000000000000000000000000000000000000 1d535513803f3275e0229b9eefd4953db960f4fc A	jenkins/lca-lite/builds/11/changelog5798726332122920044.xml
+:000000 100644 0000000000000000000000000000000000000000 782eb016a43ce594c2375a0a31e2b8d23ac5a7c5 A	jenkins/lca-lite/builds/11/htmlreports/Flake8_20Report/htmlpublisher-wrapper.html
+:000000 100644 0000000000000000000000000000000000000000 e4ed4deb8fe8ab0c00b1d5296112c1d9366209c6 A	jenkins/lca-lite/builds/11/htmlreports/Flake8_20Report/index.html
+:000000 100644 0000000000000000000000000000000000000000 1d6f6719e99e10c33ee7107e98b4cea739c395da A	jenkins/lca-lite/builds/11/log
+:000000 100644 0000000000000000000000000000000000000000 f44ccf6a3935016eec8cb35d45dac8ac6b3c623b A	jenkins/lca-lite/builds/11/log-index
+:000000 100644 0000000000000000000000000000000000000000 420e88a135df6139db304b3228b4173336183107 A	jenkins/lca-lite/builds/11/program.dat
+:100644 100644 a1db4c8ea45989d9c768574c33991b4ebc764e73 35dfc220960c5c6eeb24e125b0ab57f36ca0b676 R082	jenkins/lca-lite/builds/10/workflow/10.xml	jenkins/lca-lite/builds/11/workflow/10.xml
+:100644 100644 1cbfb4e9d79c6c760ecc805379d751260919b8fc a04d8da6193ed1a6531a7a039940193744beb7e6 R092	jenkins/lca-lite/builds/10/workflow/11.xml	jenkins/lca-lite/builds/11/workflow/11.xml
+:100644 100644 f7e99b372409a875a0b55e20e8a48eb215a0214f 15640fe777bb47e3664a69970a5c851d003258bb R096	jenkins/lca-lite/builds/10/workflow/12.xml	jenkins/lca-lite/builds/11/workflow/12.xml
+:100644 100644 9ec59eebfdaa201bf6c7fc6ce4cfc016001c120e a7f5b420ef84e67c0e62bdaf5a9315032b825e96 R092	jenkins/lca-lite/builds/10/workflow/13.xml	jenkins/lca-lite/builds/11/workflow/13.xml
+:100644 100644 d88c01e6423a5134886903a2d143aeeff65cef5c 3971415d7f691358db407fd6266755b28fc94bc0 R096	jenkins/lca-lite/builds/10/workflow/14.xml	jenkins/lca-lite/builds/11/workflow/14.xml
+:100644 100644 56a25f743e26d8e3febbe56243a79a89904a33c7 a6c9cd449edc2956b3a1e7a964d0fd46e7f74ba5 R092	jenkins/lca-lite/builds/10/workflow/15.xml	jenkins/lca-lite/builds/11/workflow/15.xml
+:100644 100644 65274b1fb64ea0ff09e7e71524facc9d1e3ae598 cd50c4cc87dd8293acf4ada1e13bf2e6795500c9 R095	jenkins/lca-lite/builds/10/workflow/16.xml	jenkins/lca-lite/builds/11/workflow/16.xml
+:100644 100644 59a263607c27993abbd5042284a286913796cbd3 f5498dd8ccde83203c4299c0db62cf71418a788b R094	jenkins/lca-lite/builds/10/workflow/17.xml	jenkins/lca-lite/builds/11/workflow/17.xml
+:100644 100644 689b06f029dc60cef5c3a021fa5fcae6a8cd3992 67a1ce739fbc086494af0fb6eebff3e77119d31d R098	jenkins/lca-lite/builds/10/workflow/18.xml	jenkins/lca-lite/builds/11/workflow/18.xml
+:100644 100644 1875a9b9103d5e4b5a89ae1af7609122c15864a1 584c9b563dafaad1a0fe6d92e775024ade7152ba R091	jenkins/lca-lite/builds/10/workflow/19.xml	jenkins/lca-lite/builds/11/workflow/19.xml
+:100644 100644 f59433bcd35abf97c5357741f05e4c8b2fb9be66 2e678107871ec3ebb797da9edfb7c9290bcf975f R089	jenkins/lca-lite/builds/10/workflow/2.xml	jenkins/lca-lite/builds/11/workflow/2.xml
+:100644 100644 7418aaf27c54786e99790b9cd4b8b18033d2bce9 7787d20d02876d496dc723f5b67f3650654c34fd R090	jenkins/lca-lite/builds/10/workflow/20.xml	jenkins/lca-lite/builds/11/workflow/20.xml
+:100644 100644 e85ca23ad328d7457d13ce82e217ed596ab39d11 1ca5d965abf9466d55415af00c55f457f6395bf0 R095	jenkins/lca-lite/builds/10/workflow/21.xml	jenkins/lca-lite/builds/11/workflow/21.xml
+:100644 100644 f06d7f7a167fc596c98e34469a76b35060f5651d 04b41fd9045b0c6167d91a29c9943209c097b96c R094	jenkins/lca-lite/builds/10/workflow/22.xml	jenkins/lca-lite/builds/11/workflow/22.xml
+:100644 100644 91f2864a16f565c7ac8769c91439c1736a23dddf f64f81003b2b74dff167d0d18dd7d90871c63075 R095	jenkins/lca-lite/builds/10/workflow/23.xml	jenkins/lca-lite/builds/11/workflow/23.xml
+:100644 100644 1bde175abdc8b9d8913150798617c15aa5c79380 7c396225a7c8fa68f318fd010955bd4439d5f6a1 R091	jenkins/lca-lite/builds/10/workflow/24.xml	jenkins/lca-lite/builds/11/workflow/24.xml
+:100644 100644 a3247e6a6ce29f66d9176320b4639d67dc660ed6 96c19da2742fcf645e3587f72448fd44e382c330 R095	jenkins/lca-lite/builds/10/workflow/25.xml	jenkins/lca-lite/builds/11/workflow/25.xml
+:100644 100644 912f761b972dd73783bece5972b46abc15ce82dd 322af2ecb043980017cef2f2ae85306434b96761 R092	jenkins/lca-lite/builds/10/workflow/26.xml	jenkins/lca-lite/builds/11/workflow/26.xml
+:100644 100644 f4cb5d7c4d3f17e52bf5d970c91b1947bce8679a 713aba2ecccc01acb3bdd3712264ed87c105f37f R096	jenkins/lca-lite/builds/10/workflow/27.xml	jenkins/lca-lite/builds/11/workflow/27.xml
+:100644 100644 a79b7c26e18e5b1812519c1d14374820cb98c8cb c5c5ea8cc504042281b0a7a466432856ac519763 R091	jenkins/lca-lite/builds/10/workflow/28.xml	jenkins/lca-lite/builds/11/workflow/28.xml
+:100644 100644 9354e045ceff430e1fc13866244ae45581538d0b a7cbd04fb380d9a22530a7ccc9347a6cbd0fc7c7 R090	jenkins/lca-lite/builds/10/workflow/29.xml	jenkins/lca-lite/builds/11/workflow/29.xml
+:100644 100644 b2fba72c587dc5a6e90a755da256b2108f3b7fd6 33344a74f57b37f0088da5bec13032cb8764bcb7 R093	jenkins/lca-lite/builds/10/workflow/3.xml	jenkins/lca-lite/builds/11/workflow/3.xml
+:100644 100644 22d04e861f975941ed8e117997bff16705c7b96e 5cba760055683d3693cc90e56416dad6e48bea6f R096	jenkins/lca-lite/builds/10/workflow/30.xml	jenkins/lca-lite/builds/11/workflow/30.xml
+:100644 100644 00a8b9aae8886195cff54a3db88ff8397c7a91a7 7332c0ded1058dcb1096afbfbc184191811b605b R092	jenkins/lca-lite/builds/10/workflow/31.xml	jenkins/lca-lite/builds/11/workflow/31.xml
+:100644 100644 cccf10b5ebff2807eeaf2d4302d5e1eb404deea5 f88d367df5f9626b84e3dab7507bf8b715604cb2 R095	jenkins/lca-lite/builds/10/workflow/32.xml	jenkins/lca-lite/builds/11/workflow/32.xml
+:100644 100644 e92cbf7d0453aa56329d181ba226ea4ed441e3c3 e9863c88c6de6f5a2a2013a15d2cecd3a0cefb63 R092	jenkins/lca-lite/builds/10/workflow/33.xml	jenkins/lca-lite/builds/11/workflow/33.xml
+:100644 100644 9c7a96178d6780e3037a593cb7ca8f6fc7a63f8f fae36ddff36b6edac2c5fb3f9516389f55d7d632 R096	jenkins/lca-lite/builds/10/workflow/34.xml	jenkins/lca-lite/builds/11/workflow/34.xml
+:100644 100644 7ed013f2f472fda36ac8a0e074c04e92610afc45 676a5882db3757de7da0b4e8c7e1135a78eda7cd R091	jenkins/lca-lite/builds/10/workflow/35.xml	jenkins/lca-lite/builds/11/workflow/35.xml
+:100644 100644 8e4f24590d5fa7312285e3949cd62e0eade3b7e5 e4c5b1f38cb0dcfedb8e84bcd4edafe377a5d431 R090	jenkins/lca-lite/builds/10/workflow/36.xml	jenkins/lca-lite/builds/11/workflow/36.xml
+:100644 100644 0ecad205ea9c10df3efd55581595626170459268 a6ce0540f8d91f224f491b2b817b5e575ef57968 R092	jenkins/lca-lite/builds/10/workflow/37.xml	jenkins/lca-lite/builds/11/workflow/37.xml
+:100644 100644 0fd668f7f5ff43facfd9fa3bd885217a681dcdf1 ec25d88840f6cdd658b1312dbedc595dd2655c0c R090	jenkins/lca-lite/builds/10/workflow/38.xml	jenkins/lca-lite/builds/11/workflow/38.xml
+:100644 100644 69f1e19e2f9348637d645285ba933d8363a05254 eaed49e9be5cc812828e63bf01c68a68d89aacfb R091	jenkins/lca-lite/builds/10/workflow/39.xml	jenkins/lca-lite/builds/11/workflow/39.xml
+:100644 100644 4ce2a236292699000f0963fce86d7ed32c5e157a b39c670e92db82b6e6e2573de8df30d291da0236 R092	jenkins/lca-lite/builds/10/workflow/4.xml	jenkins/lca-lite/builds/11/workflow/4.xml
+:100644 100644 31820fe6169effcccde98b689ad6e00181f35546 d69298269d32428de5f123b14636b78baf25995e R090	jenkins/lca-lite/builds/10/workflow/40.xml	jenkins/lca-lite/builds/11/workflow/40.xml
+:100644 100644 4b1db1188d5c472da58a5f9c15f41b25d1b90bef 757975f5a69cd9e94c24583ea8e07629329d6717 R095	jenkins/lca-lite/builds/10/workflow/41.xml	jenkins/lca-lite/builds/11/workflow/41.xml
+:100644 100644 abb10c5f57accd595761074d6f661138d5122c07 3e2ae04660bcc2456257d981af8e4112fae6f93f R093	jenkins/lca-lite/builds/10/workflow/42.xml	jenkins/lca-lite/builds/11/workflow/42.xml
+:100644 100644 f5e8c62c59431d833010457412c5630d0a052f8e b6b2efb1997778452cd9a25e27f8919d3c6eff66 R095	jenkins/lca-lite/builds/10/workflow/43.xml	jenkins/lca-lite/builds/11/workflow/43.xml
+:100644 100644 76dc412c97ef10bf4b70064af2598f401daaef97 9ecb921f55f387a736dcf8e1988ed94d6bc691ea R091	jenkins/lca-lite/builds/10/workflow/44.xml	jenkins/lca-lite/builds/11/workflow/44.xml
+:100644 100644 4d4e23a2d59a07263aef135c8e810a1838971fab eddb886f527a9706fc44f0632b84bb4eb08ee874 R095	jenkins/lca-lite/builds/10/workflow/45.xml	jenkins/lca-lite/builds/11/workflow/45.xml
+:100644 100644 01974a8f128336e51c54aab414d229391b09af48 9b30dff3c71d762f852daa59a90a1bb5878d18bd R092	jenkins/lca-lite/builds/10/workflow/46.xml	jenkins/lca-lite/builds/11/workflow/46.xml
+:100644 100644 7c3535c7b33555e6095b5e925892cdd522932e7e 9b1c8c2b080d33fae103ef5a87284991481808ca R096	jenkins/lca-lite/builds/10/workflow/47.xml	jenkins/lca-lite/builds/11/workflow/47.xml
+:100644 100644 2d67631b080d20d932be58cc955131813efe6579 a28b3624128a32261012057019fc0bc3b83319f6 R091	jenkins/lca-lite/builds/10/workflow/48.xml	jenkins/lca-lite/builds/11/workflow/48.xml
+:100644 100644 a1bcc3d7719e8c8ce65d778854e47728cb9bcbe6 a57015f4d5b47eb17b38274c54564926cc271fd8 R090	jenkins/lca-lite/builds/10/workflow/49.xml	jenkins/lca-lite/builds/11/workflow/49.xml
+:100644 100644 e77bbc05a47a4b069893b4f040b9d9c9832e21fb c309762a6b131e0640fdbf97d4d1475231f295b8 R095	jenkins/lca-lite/builds/10/workflow/5.xml	jenkins/lca-lite/builds/11/workflow/5.xml
+:100644 100644 ac613d05608389e108b0d83838239866fd8f0a9b 62510b53d9488e4dcb749fc220a4a63dffc6bd45 R096	jenkins/lca-lite/builds/10/workflow/50.xml	jenkins/lca-lite/builds/11/workflow/50.xml
+:100644 100644 ca452edbcf15d71197a40f921598ef99e67ae91d 65700d585ccf004a35d5e24a2d84b0b268daa050 R092	jenkins/lca-lite/builds/10/workflow/51.xml	jenkins/lca-lite/builds/11/workflow/51.xml
+:100644 100644 e3363d5f3752fbe9f8335d41f97f3b8b17aee84a 270f7e14bc19be21800b7772d7b63ba699b5c65f R095	jenkins/lca-lite/builds/10/workflow/52.xml	jenkins/lca-lite/builds/11/workflow/52.xml
+:100644 100644 f67fcb5f05275da5b1dd39cc530fe6678ba2707a f113816bc8206a242e6cb7783ab11ae49e0ef86a R092	jenkins/lca-lite/builds/10/workflow/53.xml	jenkins/lca-lite/builds/11/workflow/53.xml
+:100644 100644 5a73cba801d9475264d0ad876f9b9e206b31f540 bb0cdba68b5899e258eb8c58233ed8b8ec23d915 R093	jenkins/lca-lite/builds/10/workflow/54.xml	jenkins/lca-lite/builds/11/workflow/54.xml
+:100644 100644 bfd9ef246dc71bc6d7bcf6fbe60c6d03609fd724 7d82d39051525e06700937314fc0e21f63eb41de R091	jenkins/lca-lite/builds/10/workflow/55.xml	jenkins/lca-lite/builds/11/workflow/55.xml
+:100644 100644 0d9c888c7f4b33259f5b5d6f31c3228011f56d15 61ec670a9d7bd6b9db8930c0038aa25bf2d23501 R090	jenkins/lca-lite/builds/10/workflow/56.xml	jenkins/lca-lite/builds/11/workflow/56.xml
+:100644 100644 95c9a3853d4865ed3f2f04878e4239f4583a0450 ea90707a0108cbdd2ce15039fc21ea42a3d80029 R097	jenkins/lca-lite/builds/10/workflow/57.xml	jenkins/lca-lite/builds/11/workflow/57.xml
+:100644 100644 3e6049c1bd71fef209c0e658b42a10fce75eb6f2 42be99bab6209fc72a862f3062e4c620368811f0 R092	jenkins/lca-lite/builds/10/workflow/58.xml	jenkins/lca-lite/builds/11/workflow/58.xml
+:100644 100644 f1b00b1222ff44d2c6640ff924ec0d3bab5a460f 2a662988e2d94250f9ca2c49ad7cf76fb11a1dc7 R090	jenkins/lca-lite/builds/10/workflow/59.xml	jenkins/lca-lite/builds/11/workflow/59.xml
+:100644 100644 c8b2b69d657c24491b8bc3f44f1e278b00f148c1 8084ff6c2eac4b13064576b8ba606f7d8e93c725 R095	jenkins/lca-lite/builds/10/workflow/6.xml	jenkins/lca-lite/builds/11/workflow/6.xml
+:100644 100644 0bf76aa6ee69d468d688f6e598c3941aead8c088 bb9a192415cc736b73c9a6480022cabb9a1aa1a3 R091	jenkins/lca-lite/builds/10/workflow/60.xml	jenkins/lca-lite/builds/11/workflow/60.xml
+:100644 100644 bebcd12627850dd7c65218e18d616c2d8c5af8de 829a7fdcc7fa919a6d32a1603236fbb1f6c65bdc R090	jenkins/lca-lite/builds/10/workflow/61.xml	jenkins/lca-lite/builds/11/workflow/61.xml
+:100644 100644 c9c0a1e4828bf63187274889d24085f78b057b34 5ac278d4922674ab23ea93c04a972f7abcd59639 R095	jenkins/lca-lite/builds/10/workflow/62.xml	jenkins/lca-lite/builds/11/workflow/62.xml
+:100644 100644 9327ec882d4ef4742f3b9a2b94c267d46e749168 8ce3803ab6ce521d05769d6e022429389e9b621c R093	jenkins/lca-lite/builds/10/workflow/63.xml	jenkins/lca-lite/builds/11/workflow/63.xml
+:100644 100644 e0e6dbc68b8246f49056ccb5508b097cc043c81a d03f998df5b22f72434a89e40ec30b92df947bb8 R095	jenkins/lca-lite/builds/10/workflow/64.xml	jenkins/lca-lite/builds/11/workflow/64.xml
+:100644 100644 bfbf5fd04af1df6f5b0ca17f4be62f5146f10552 9803beb93edb1d7e0abe2b5447fe1564e06c67b6 R091	jenkins/lca-lite/builds/10/workflow/65.xml	jenkins/lca-lite/builds/11/workflow/65.xml
+:100644 100644 50c99104a708227680b4548588f596eed671c296 bf1043df115692d77435044900231e09ffe7bcae R095	jenkins/lca-lite/builds/10/workflow/66.xml	jenkins/lca-lite/builds/11/workflow/66.xml
+:100644 100644 5f01409d8b366f7de87073327648ca6dfdf6f979 68e4037554e94e504bd30910d08c0987c6b2a6de R092	jenkins/lca-lite/builds/10/workflow/67.xml	jenkins/lca-lite/builds/11/workflow/67.xml
+:100644 100644 f8eadb7da12e9446f0d02eb6b01f6ccdebba3c3a deb08bdeaa9e0649b374f4b1921eddc1d768ca4f R096	jenkins/lca-lite/builds/10/workflow/68.xml	jenkins/lca-lite/builds/11/workflow/68.xml
+:100644 100644 9c5edaec63ecaabf6a22fa131e501a1ce1619b8e 6237957cea707118b708517d7a9bbe6d7a455e93 R091	jenkins/lca-lite/builds/10/workflow/69.xml	jenkins/lca-lite/builds/11/workflow/69.xml
+:100644 100644 393cab13b9cc2fa488af2d76fb05971b074cd9a9 a4fc01096be07cb9d16fa72effea32589eb879c5 R098	jenkins/lca-lite/builds/10/workflow/7.xml	jenkins/lca-lite/builds/11/workflow/7.xml
+:100644 100644 70085b37d15ec62caa32838f5467393ac91c199e d4c381f335ae643eaa12e62d00f48ceef5394f57 R090	jenkins/lca-lite/builds/10/workflow/70.xml	jenkins/lca-lite/builds/11/workflow/70.xml
+:100644 100644 66df2828b53ced8ad7c56cb607eff5a65fe9f77c bb5b1429c1fd3531cfc9d6b5593b5e98970c4f68 R096	jenkins/lca-lite/builds/10/workflow/71.xml	jenkins/lca-lite/builds/11/workflow/71.xml
+:100644 100644 62ab2d98326d8c656fbc9fc39b8b9b3c2ad2227f 2157bc7ca29c895c2928231e09988a8da4877941 R092	jenkins/lca-lite/builds/10/workflow/72.xml	jenkins/lca-lite/builds/11/workflow/72.xml
+:100644 100644 b655819f17cb5210796ca80fff3d554e252b5e00 3aae2f75773b23dd0222f41d918ac52ffb793691 R095	jenkins/lca-lite/builds/10/workflow/73.xml	jenkins/lca-lite/builds/11/workflow/73.xml
+:100644 100644 4657465360774596b78655f2f6a12a588714bcfd e0ede2124e8fbc485e566876968eb444b02a7aee R092	jenkins/lca-lite/builds/10/workflow/74.xml	jenkins/lca-lite/builds/11/workflow/74.xml
+:100644 100644 801408e1771e4acaad67eb751b44d1c7d029593d 02ead57e7b07e78bd6d874ae36e272d2003a75eb R096	jenkins/lca-lite/builds/10/workflow/75.xml	jenkins/lca-lite/builds/11/workflow/75.xml
+:100644 100644 8249278470b67b9d2b43f7e3202a0c63403cce3b c8e65240ed4326ccd7d73f9e1221b9636f17fd9e R091	jenkins/lca-lite/builds/10/workflow/76.xml	jenkins/lca-lite/builds/11/workflow/76.xml
+:100644 100644 9708d0a7c7287bee665a9e103c6dac3318c55576 6069caf7466ca6cc637fdb8d6f75906f4a662206 R090	jenkins/lca-lite/builds/10/workflow/77.xml	jenkins/lca-lite/builds/11/workflow/77.xml
+:100644 100644 2969051374f359726fcdd90a67abb9d41af5732e bb0601e7245f40d457f72ba73e92450ecf0831d6 R097	jenkins/lca-lite/builds/10/workflow/78.xml	jenkins/lca-lite/builds/11/workflow/78.xml
+:100644 100644 295407c09f5e93d15d22657c1df3fb79b82ff635 b724a2619efa09a28ea5afb4898c0f4a1724017e R092	jenkins/lca-lite/builds/10/workflow/79.xml	jenkins/lca-lite/builds/11/workflow/79.xml
+:100644 100644 0f925043cc2cff0ab650fdaf52dcbfd75a970486 c0bb3f94305730a8aa291d12ffdacf4591b50ee0 R091	jenkins/lca-lite/builds/10/workflow/8.xml	jenkins/lca-lite/builds/11/workflow/8.xml
+:100644 100644 a49cd7b1df1eca37309c1c733e225fbf5c0f118b 73b1bf3740f0293ad95755e9fff2ab01112bbc7a R090	jenkins/lca-lite/builds/10/workflow/80.xml	jenkins/lca-lite/builds/11/workflow/80.xml
+:100644 100644 2d7300095901745b2b2761d9b92f77e25484d466 0d496363a78d1342da23482b7eb1d5a061d35d60 R091	jenkins/lca-lite/builds/10/workflow/81.xml	jenkins/lca-lite/builds/11/workflow/81.xml
+:100644 100644 0f7bc10a908836071b4589429821686cd57190c4 1653c9d7f78f2082aefab0a23c9884ba3a3db74b R090	jenkins/lca-lite/builds/10/workflow/82.xml	jenkins/lca-lite/builds/11/workflow/82.xml
+:100644 100644 f4c2e46678d15f283ca6a0a5276436b8b2b8aaac d463bac7d6bae2aed0795539ac6ec8a45fa41f04 R095	jenkins/lca-lite/builds/10/workflow/83.xml	jenkins/lca-lite/builds/11/workflow/83.xml
+:100644 100644 fcd075017a25785c2fd1c099dd568aaf86937786 646a880dc6fb52d56498ba796e8f7dfaf0a69c8d R094	jenkins/lca-lite/builds/10/workflow/84.xml	jenkins/lca-lite/builds/11/workflow/84.xml
+:100644 100644 eb656d977ca69143560dc69f931f3478bdc3e16d 1ff9d14e23b71c346f520fae2bd20a567773ae3b R090	jenkins/lca-lite/builds/10/workflow/94.xml	jenkins/lca-lite/builds/11/workflow/85.xml
+:100644 100644 1098267c1d006484a959efdf20b433c7fc1cf71a 8004913346cea5c9a8c8cce2528a4eef518ba5c5 R085	jenkins/lca-lite/builds/10/workflow/95.xml	jenkins/lca-lite/builds/11/workflow/86.xml
+:100644 100644 c2017353ace19b0a45029b3ebe6070d510d384f2 4a2a6155606d5609058cb995f2303162ec74d44f R084	jenkins/lca-lite/builds/10/workflow/96.xml	jenkins/lca-lite/builds/11/workflow/87.xml
+:100644 100644 8f1cb814b5e0abe72a54aec8b6a300bbcbce2ce6 c7098afdd2eaade20e5a4d753cc2a3e792d17b03 R076	jenkins/lca-lite/builds/10/workflow/88.xml	jenkins/lca-lite/builds/11/workflow/88.xml
+:100644 100644 52e54f1b7ca509c343ed7755e943d0d7762c77b1 7c0f3cb67d6050211ab9495ae68f44a1cbbc99b7 R093	jenkins/lca-lite/builds/10/workflow/98.xml	jenkins/lca-lite/builds/11/workflow/89.xml
+:100644 100644 25cc500726b7df452d74bf491064765c920836d1 29cf082c9e4f27d90ecda527d9033d396dd17a36 R090	jenkins/lca-lite/builds/10/workflow/9.xml	jenkins/lca-lite/builds/11/workflow/9.xml
+:100644 100644 e023d1870284d659344d12ccae5a4a04b4f15a8b 80429ed912dcdc846cc602cbd30f780b3cf219c9 R085	jenkins/lca-lite/builds/10/workflow/99.xml	jenkins/lca-lite/builds/11/workflow/90.xml
+:100644 100644 a2acbde5abed0075c35576517ed3cd14c79be02d 8f56972c7937fbb5864cfb756252aa0a01f1c6cd R072	jenkins/lca-lite/builds/10/workflow/85.xml	jenkins/lca-lite/builds/11/workflow/91.xml
+:100644 100644 71059bc9e58e55e87d8b2db0abe764d72fcbf728 511cd9a2b4b65a07a39bbec46fe565e70932fba2 R079	jenkins/lca-lite/builds/10/workflow/101.xml	jenkins/lca-lite/builds/11/workflow/92.xml
+:100644 100644 8d352f7a1085092ee306b2c9ab29cf32702bca81 8e156608ebda83a0fd0b62c793c2c20643b8466b M	jenkins/lca-lite/builds/permalinks
+:100644 100644 b4de3947675361a7770d29b8982c407b0ec6b2a0 48082f72f087ce7e6fa75b9c41d7387daecd447b M	jenkins/lca-lite/nextBuildNumber
+:160000 160000 d4dbd107f726ffdb46c66793465da1e19fcd14c8 eeb677ba50e04a93b0fe92782fc2997c8450d5d9 M	jenkins/lca-lite/workspace

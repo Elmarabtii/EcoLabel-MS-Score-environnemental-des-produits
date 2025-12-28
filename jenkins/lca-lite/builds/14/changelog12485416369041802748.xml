@@ -1,0 +1,10 @@
+commit 0cb33306f907b043b7beed02f8c81d3063cb4d52
+tree 5bf54e59baecf5477991e5ca872bf525d5902096
+parent 3f87e8aa4c8e59c9bf9ad69126376c8146ef35b4
+author simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:22:53 +0100
+committer simoelabd <mohamed.ouledelabd@emsi-edu.ma> 2025-12-28 00:22:53 +0100
+
+    Add comprehensive debug output to diagnose app directory issue
+
+
+:100644 100644 a949463efdb45a4156cf87c4d42a611214e91199 4208f6c8ce2493502c75d172542cc2e3c61ea5d5 M	LCALite/Jenkinsfile

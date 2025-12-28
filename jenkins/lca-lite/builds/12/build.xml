@@ -21,7 +21,7 @@
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2277.v00573e73ddf1">
-      <stagesUUID>56a894d7-cd16-42fc-a1de-3343d6ead925</stagesUUID>
+      <stagesUUID>58af348e-fd8f-49c8-9ef3-2447562df5ab</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2277.v00573e73ddf1">
           <stages>
@@ -414,16 +414,16 @@
                             sh &apos;&apos;&apos;
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v ${WORKSPACE}/${SERVICE_DIR}:/usr/src \
+                                    -v $(pwd):/usr/src \
                                     -w /usr/src \
-                                    -e SONAR_HOST_URL=http://host.docker.internal:9002 \
+                                    -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
                                     sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
-                                        -Dsonar.host.url=http://host.docker.internal:9002 \
+                                        -Dsonar.host.url=http://sonarqube:9000 \
                                         -Dsonar.login=${SONAR_TOKEN} \
                                         -Dsonar.python.version=${PYTHON_VERSION} \
                                         -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
@@ -507,7 +507,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>56a894d7-cd16-42fc-a1de-3343d6ead925</uuid>
+            <uuid>58af348e-fd8f-49c8-9ef3-2447562df5ab</uuid>
           </stages>
           <postBuild>
             <conditions>
@@ -644,7 +644,7 @@
           <string>refs/remotes/origin/main</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@6.5.0">
-              <sha1>eeb677ba50e04a93b0fe92782fc2997c8450d5d9</sha1>
+              <sha1>fdeeb6c817b1de669cfc3a7c4fb9b8c3a127cd6a</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -653,11 +653,12 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>11</hudsonBuildNumber>
+            <hudsonBuildNumber>12</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
       <remoteUrls>
         <string>https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits</string>
       </remoteUrls>
@@ -696,13 +697,6 @@
       <outer-class defined-in="htmlpublisher.HtmlPublisherTarget$HTMLBuildAction" reference="../actualHtmlPublisherTarget"/>
     </htmlpublisher.HtmlPublisherTarget_-HTMLBuildAction>
     <hudson.plugins.sonar.action.SonarMarkerAction plugin="sonar@2.18.2"/>
-    <jenkins.model.InterruptedBuildAction>
-      <causes>
-        <jenkins.model.CauseOfInterruption_-UserInterruption>
-          <user>ecolabe</user>
-        </jenkins.model.CauseOfInterruption_-UserInterruption>
-      </causes>
-    </jenkins.model.InterruptedBuildAction>
     <hudson.plugins.sonar.action.SonarAnalysisAction plugin="sonar@2.18.2">
       <installationName>SonarQube</installationName>
       <installationUrl>http://localhost:9002</installationUrl>
@@ -710,23 +704,23 @@
       <isSkipped>true</isSkipped>
     </hudson.plugins.sonar.action.SonarAnalysisAction>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.37-489.vb_6db_69b_ce753">
-      <queuingDurationMillis>33</queuingDurationMillis>
+      <queuingDurationMillis>37</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>0</buildableDurationMillis>
+      <buildableDurationMillis>36</buildableDurationMillis>
       <waitingDurationMillis>0</waitingDurationMillis>
-      <executingDurationMillis>1010979</executingDurationMillis>
+      <executingDurationMillis>1096026</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>19</queueId>
-  <timestamp>1766874745734</timestamp>
-  <startTime>1766874745765</startTime>
-  <result>ABORTED</result>
-  <duration>1014335</duration>
+  <queueId>21</queueId>
+  <timestamp>1766875751282</timestamp>
+  <startTime>1766875751318</startTime>
+  <result>FAILURE</result>
+  <duration>1099486</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>ABORTED</result>
+    <result>FAILURE</result>
     <script>pipeline {
     agent any
     
@@ -842,16 +836,16 @@
                             sh &apos;&apos;&apos;
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v ${WORKSPACE}/${SERVICE_DIR}:/usr/src \
+                                    -v $(pwd):/usr/src \
                                     -w /usr/src \
-                                    -e SONAR_HOST_URL=http://host.docker.internal:9002 \
+                                    -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
                                     sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
-                                        -Dsonar.host.url=http://host.docker.internal:9002 \
+                                        -Dsonar.host.url=http://sonarqube:9000 \
                                         -Dsonar.login=${SONAR_TOKEN} \
                                         -Dsonar.python.version=${PYTHON_VERSION} \
                                         -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/** \
@@ -906,27 +900,27 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>12910001327</long>
+        <long>14990484641</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>806005570</long>
+        <long>888524730</long>
       </entry>
       <entry>
         <string>runQueue</string>
-        <long>98596575921</long>
+        <long>104900505849</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>57891343246</long>
+        <long>68593630510</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>145169692</long>
+        <long>311463746</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>35912293457</long>
+        <long>46108836729</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -935,12 +929,11 @@
       <string>org.jenkinsci.plugins.docker.commons.credentials.DockerRegistryEndpoint.imageName</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.build</string>
       <string>org.jenkinsci.plugins.docker.workflow.declarative.DeclarativeDockerUtils$DockerRegistry.hasData</string>
-      <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
       <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>123</iota>
-    <head>1:123</head>
+    <iota>140</iota>
+    <head>1:140</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -965,14 +958,14 @@
         <extensions/>
       </scm>
       <node></node>
-      <workspace>/var/jenkins_home/jobs/lca-lite/workspace</workspace>
-      <changelogFile>/var/jenkins_home/jobs/lca-lite/builds/11/changelog5798726332122920044.xml</changelogFile>
+      <workspace>/var/jenkins_home/jobs/lca-lite/workspace@2</workspace>
+      <changelogFile>/var/jenkins_home/jobs/lca-lite/builds/12/changelog13025782930980718543.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
       <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
       <node></node>
-      <workspace>/var/jenkins_home/jobs/lca-lite/workspace</workspace>
+      <workspace>/var/jenkins_home/jobs/lca-lite/workspace@2</workspace>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
   </checkouts>
