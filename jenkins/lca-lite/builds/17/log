@@ -1,8 +1,8 @@
 Started by user [8mha:////4AZtx10kWA60yeGpRc4zLp/FsYoAOgZ2Gp/wSQC5aVkeAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZe/dLi1CL91OT8nMSkVAARuP7GwgAAAA==[0meco
-Obtained LCALite/Jenkinsfile from git https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits
+Replayed [8mha:////4OnD3QbV0ZJ5/uw6CDGDM8B5GRUcmFECVKIMM7rddVMTAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZB/az8JP2c5ETdnMySVH1DM30A1ztzyMYAAAA=[0m#16
 [8mha:////4C8T2VSegbluy7s/z5rOt3VtERJBp+F7ERpDQ2n9KRAgAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
 [8mha:////4GmGpxo6Vvcn0YU5a8nXA8+V/UbnzzewdyP/zkrJIG9CAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
-Running on [8mha:////4JfG/TrtITxANRE2OthDOUnYMg3O1JUnjofezfTXiv9DAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/jenkins_home/jobs/lca-lite/workspace
+Running on [8mha:////4JfG/TrtITxANRE2OthDOUnYMg3O1JUnjofezfTXiv9DAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/jenkins_home/jobs/lca-lite/workspace@2
 [8mha:////4A+r3DNAmvlx8RunjObUP9cKmibF7UfV9UOeNECXFApuAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
 [8mha:////4IqAYGemZez6Hevnm0cKSxLUedX6qGpxk8+lU2LsZzQWAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
 [8mha:////4ExoLpLWBEJza7wW2N8VUC88O7ZRW2KTBhIfw0FUD2MZAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
@@ -12,7 +12,7 @@ The recommended git tool is: NONE
 No credentials specified
 Cloning the remote Git repository
 Cloning repository https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits
- > git init /var/jenkins_home/jobs/lca-lite/workspace # timeout=10
+ > git init /var/jenkins_home/jobs/lca-lite/workspace@2 # timeout=10
 Fetching upstream changes from https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits
  > git --version # timeout=10
  > git --version # 'git version 2.47.3'
@@ -21,11 +21,11 @@ Fetching upstream changes from https://github.com/Elmarabtii/EcoLabel-MS-Score-e
  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
 Avoid second fetch
  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-Checking out Revision b0bcac0c6964cc54d6d223363fad9dcd064b987e (refs/remotes/origin/main)
+Checking out Revision de2504b33542e5735c12a04f14326e9c7ef67278 (refs/remotes/origin/main)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f b0bcac0c6964cc54d6d223363fad9dcd064b987e # timeout=10
-Commit message: "Fix SonarQube volume mount in all Jenkinsfiles: Use --volumes-from to share Jenkins volumes"
- > git rev-list --no-walk a1ce62c65c012db4dfeecb5fd51f2a8745d90e1e # timeout=10
+ > git checkout -f de2504b33542e5735c12a04f14326e9c7ef67278 # timeout=10
+Commit message: "Fix SonarQube permissions: Add --user root to allow .scannerwork creation"
+ > git rev-list --no-walk b0bcac0c6964cc54d6d223363fad9dcd064b987e # timeout=10
 [8mha:////4LismvnrdIZTXkLkLzN9r5itwnt5FAn2S9Ll2eVuk8mzAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
 [8mha:////4CiSUY3y57O8HpKS+9yRUqs3vl+5eMChT/I+aYQDs3oHAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
 [8mha:////4OiRCrjnqNNIOLhW0BNl9MMHbR5zLTFWNnUw2QFaLekwAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
@@ -41,7 +41,7 @@ Masking supported pattern matches of $SONAR_TOKEN
 Selected Git installation does not exist. Using Default
 The recommended git tool is: NONE
 No credentials specified
- > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/lca-lite/workspace/.git # timeout=10
+ > git rev-parse --resolve-git-dir /var/jenkins_home/jobs/lca-lite/workspace@2/.git # timeout=10
 Fetching changes from the remote Git repository
  > git config remote.origin.url https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits # timeout=10
 Fetching upstream changes from https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits
@@ -49,10 +49,10 @@ Fetching upstream changes from https://github.com/Elmarabtii/EcoLabel-MS-Score-e
  > git --version # 'git version 2.47.3'
  > git fetch --tags --force --progress -- https://github.com/Elmarabtii/EcoLabel-MS-Score-environnemental-des-produits +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-Checking out Revision b0bcac0c6964cc54d6d223363fad9dcd064b987e (refs/remotes/origin/main)
+Checking out Revision de2504b33542e5735c12a04f14326e9c7ef67278 (refs/remotes/origin/main)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f b0bcac0c6964cc54d6d223363fad9dcd064b987e # timeout=10
-Commit message: "Fix SonarQube volume mount in all Jenkinsfiles: Use --volumes-from to share Jenkins volumes"
+ > git checkout -f de2504b33542e5735c12a04f14326e9c7ef67278 # timeout=10
+Commit message: "Fix SonarQube permissions: Add --user root to allow .scannerwork creation"
 [8mha:////4HPg1BB27H+JyPtbdJgUUE6K6D0AQh/PvpFCQ6H+c9rSAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKoQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N9Jjga++AAAA[0m[Pipeline] }
 [8mha:////4C/fIchQVn+2DmDfEEid+02DYnpf3zmzHJsSqSk+ZSoVAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICFDQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AERGGHOvgAAAA==[0m[Pipeline] // stage
 [8mha:////4Am+n5nQ+19PISHSGV2ju7ISmh75KIjdDTMIgiWUv9OhAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohURWJCTF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFs9tl2zedZvQHeFw+cwgAAAA==[0m[Pipeline] stage
@@ -68,11 +68,11 @@ Commit message: "Fix SonarQube volume mount in all Jenkinsfiles: Use --volumes-f
 [8mha:////4AfAX11lVEFGm2jG6qZJtd1Yi+exMX6ZXmoXjJ7ADoOmAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIVEgRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g2gS0pbvgAAAA==[0m[Pipeline] // withEnv
 [8mha:////4NPsRJTptZEzFUo/ZJ709mHPrmg9aJ1mxaIa7TCcRSuVAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUlRExdY2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XVDHAkYJlncHeYVSODX60ObGJQn/xNLGOzkwRRvKGCTMJ0qZdqqBkYFFRworD2qDyFB3aBBveybusvURbn1LI24FD6fQNHlDwTE4ypG+ZA2yvo46EP85fAMxDgrJpsu13n2f1BrwIga/CAAAA[0m[Pipeline] withDockerContainer
 Jenkins seems to be running inside container bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f
-$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
-$ docker top 4616fe1abd1cc3ab813541192d5d0f300094760e6008782cca93397c54eeba18 -eo pid,comm
+$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace@2 --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
+$ docker top 6a9b1b083856bc7a38b7be5a477d96cf25031b6f221c1b5c908dcf26ed37d7ee -eo pid,comm
 [8mha:////4CdXwmCED/GstRzNyXkj9sXnb8Z4u2qIkN4nD6IiAPzJAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+ty4Up8IAAAA=[0m[Pipeline] {
 [8mha:////4GVVmi0/+qjmocZOmdH8cscu07fOflyQAiNKRiJdYPRIAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+2YMO4MIAAAA=[0m[Pipeline] dir
-Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+Running in /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 [8mha:////4GI7usHWIz/BfeeRa3yhWs2VK2BFRXtDktJMuyAz92V/AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUoiNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPfTawssIAAAA=[0m[Pipeline] {
 [8mha:////4IB1lOqTIqAj4ZU1zQxAgBcFSsoHLxm2Psqooe1uRba0AAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSxM6xsmVoPAEmiBDmfwJEUnkir+YdRDNj5RY7+7Z5zxesY4AjBc2swsFg7AzzbtJlsUxhuDrKzNKFdYSRnGJCZUG9Oi0oKClYUtWw4rBR2DmKBnWCLbfyLhsnUTfnFMp34FCbfoQHVLyYkwzpC3OA3W3qI+HP81cAs09Qt+2n9v4NGWcPtb4AAAA=[0m[Pipeline] sh
 + python -m venv venv
@@ -85,10 +85,10 @@ Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
 + unset VIRTUAL_ENV
 + unset VIRTUAL_ENV_PROMPT
 + [ ! nondestructive = nondestructive ]
-+ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv
++ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv
 + export VIRTUAL_ENV
 + _OLD_VIRTUAL_PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+ PATH=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 + export PATH
 + [ -n  ]
 + [ -z  ]
@@ -104,8 +104,8 @@ Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
 [8mha:////4MigL7L8Rx5TkN8s4ZxG29uw3MIx7EgL7lAz462vVmdwAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSZKwcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rfGxSHer4AAAA=[0m[Pipeline] }
 [8mha:////4Hv1ejNRh+LZFGFVBT0C7juaz/iGYfnQunTP2sQsKYQfAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgEjVhSLvgAAAA==[0m[Pipeline] // dir
 [8mha:////4FFTKvnWEoNXoFXN4VOho1D0ZOSPVmGCo1UhDPo1GbLWAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgE81EHZvgAAAA==[0m[Pipeline] }
-$ docker stop --time=1 4616fe1abd1cc3ab813541192d5d0f300094760e6008782cca93397c54eeba18
-$ docker rm -f --volumes 4616fe1abd1cc3ab813541192d5d0f300094760e6008782cca93397c54eeba18
+$ docker stop --time=1 6a9b1b083856bc7a38b7be5a477d96cf25031b6f221c1b5c908dcf26ed37d7ee
+$ docker rm -f --volumes 6a9b1b083856bc7a38b7be5a477d96cf25031b6f221c1b5c908dcf26ed37d7ee
 [8mha:////4A/bbVbwa7Us08/QN90GC0MrhpiFYoNIaGWKLogXZgEaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCRIOEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgF/VhBfvgAAAA==[0m[Pipeline] // withDockerContainer
 [8mha:////4JAaQRhqRdqco0Dlkn/sKuhV2sBgprZ4hiumWgksTZSgAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihQohqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3h1x1/QG31VljvgAAAA==[0m[Pipeline] }
 [8mha:////4Pw3B3KoEsr2Kctfqvikiuogu1lBVQfzHNZsYt76MnCGAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICiA6lorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQnnY5trvPkvr+Bi+AAAA[0m[Pipeline] // stage
@@ -122,11 +122,11 @@ $ docker rm -f --volumes 4616fe1abd1cc3ab813541192d5d0f300094760e6008782cca93397
 [8mha:////4JPqVtJZtHbpNv4ZxgvDFWDHaHFcLwbxiYeY8+EguCkyAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSQIEQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7NxzZwG6+AAAA[0m[Pipeline] // withEnv
 [8mha:////4FMLc2ZM3vVkdu7P0OOsNHiRW8RSeEjmmfz77z4q8Hp+AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUIZhQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCh322z7zedZvQFmmGwjwgAAAA==[0m[Pipeline] withDockerContainer
 Jenkins seems to be running inside container bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f
-$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
-$ docker top 11fd64f62937c210bfe2560b86705f9c37640d0544aa5bf3a973f2cd6e98e34c -eo pid,comm
+$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace@2 --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
+$ docker top ef568b3b033ce5ecf3b8e81a87007284d3b4b5f6cbcea5afb8c75a348b8a561e -eo pid,comm
 [8mha:////4MsLPkF81WiF1B0c1J/KlVMxCf4wDqzgNIv9rDpo9kuAAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUBibE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAW2++SvCAAAA[0m[Pipeline] {
 [8mha:////4BJH8gsEQaYikj9/6X4uGP87W2z1IiHkisnmKOrvO4NdAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDwMT42zCAAAA[0m[Pipeline] dir
-Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+Running in /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 [8mha:////4Ig2Uxk4fukQnjGUBd1fgQ+qv0gkAFjUI5B2DUS8rTCqAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD6emXT7CAAAA[0m[Pipeline] {
 [8mha:////4BcCXMV2PVIPO+dCAtQ+Xgrymxp5xMLpaszWCWvOVzXmAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSABWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBiwS7Xe+AAAA[0m[Pipeline] sh
 + python -m venv venv
@@ -139,10 +139,10 @@ Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
 + unset VIRTUAL_ENV
 + unset VIRTUAL_ENV_PROMPT
 + [ ! nondestructive = nondestructive ]
-+ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv
++ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv
 + export VIRTUAL_ENV
 + _OLD_VIRTUAL_PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+ PATH=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 + export PATH
 + [ -n  ]
 + [ -z  ]
@@ -164,11 +164,11 @@ Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
 Post stage
 [8mha:////4HvdXCJIekT1+Y7N59pEv4s2Bfv6nOwSm/rIPfZiORCbAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCkSBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAHGUF/LvgAAAA==[0m[Pipeline] publishHTML
 [htmlpublisher] Archiving HTML reports...
-[htmlpublisher] Archiving at BUILD level /var/jenkins_home/jobs/lca-lite/workspace/LCALite/flake8-report to Flake8_20Report
+[htmlpublisher] Archiving at BUILD level /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/flake8-report to Flake8_20Report
 [htmlpublisher] Copying recursive using current thread
 [8mha:////4M+zKYQz+7ZUP/HWJKbCwJ3qd0OCyOQmW+KPj1MEtLZiAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCiQkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyt//U9g1V9J0dvgAAAA==[0m[Pipeline] }
-$ docker stop --time=1 11fd64f62937c210bfe2560b86705f9c37640d0544aa5bf3a973f2cd6e98e34c
-$ docker rm -f --volumes 11fd64f62937c210bfe2560b86705f9c37640d0544aa5bf3a973f2cd6e98e34c
+$ docker stop --time=1 ef568b3b033ce5ecf3b8e81a87007284d3b4b5f6cbcea5afb8c75a348b8a561e
+$ docker rm -f --volumes ef568b3b033ce5ecf3b8e81a87007284d3b4b5f6cbcea5afb8c75a348b8a561e
 [8mha:////4DXcWtzUhnlO77omZf2UFtXZpGrGXXdT50Gw5+XQ2z2uAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCQ4EQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN2YXxqG+AAAA[0m[Pipeline] // withDockerContainer
 [8mha:////4B/bbscAyJl3ygsXJ5K2EawfXvdVEYSiC5Kdo13OJ2Q9AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCEKJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw9eDDRAvgAAAA==[0m[Pipeline] }
 [8mha:////4AG0gZYEEleizSRQOBjgv74WwLRT1u/AUZcNA16vN4ntAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKiSIgGUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w9BjmESvgAAAA==[0m[Pipeline] // stage
@@ -185,11 +185,11 @@ $ docker rm -f --volumes 11fd64f62937c210bfe2560b86705f9c37640d0544aa5bf3a973f2c
 [8mha:////4GI4pwE3224HCnM3dq+qW3XGtQE6tTZ68hr+Wz7UP/ZRAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKhCgWiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP3GhGNO+AAAA[0m[Pipeline] // withEnv
 [8mha:////4LReUYgSz44CUqg9QxPtXZC2l0cqDWrHGbe7AvE3vJjhAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCAkG1Ik16sIJQhNC0uj/kqSkEyfiatyBQCUmPFi2Jes9X1AFDw15zazC3mDoDBvcqHNiiXx/cZSYpTPrCAM5xVqVWpLqONeWooJZRQkLDkuFnaNgUEdYcSvuonYCdX2KPm8HDqWRN3hAwTM5Ch+/ZfKwvo4yEP44fwEwDRHK3TbbfvN5Vm+1GxpSwgAAAA==[0m[Pipeline] withDockerContainer
 Jenkins seems to be running inside container bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f
-$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
-$ docker top 65f00d63846bfefd6b0e90b13acef9bb6ef28195e277bccca035f74c020447d8 -eo pid,comm
+$ docker run -t -d -u 0:0 -w /var/jenkins_home/jobs/lca-lite/workspace@2 --volumes-from bf87b26cf65feb9e51cb344fc6be1651abb277488677946febbfd03510b0d53f -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** python:3.11-slim cat
+$ docker top 2fecffa0fdbc2fe979d1262636536ba75e29b3ac1bb910ad863292eb615383e0 -eo pid,comm
 [8mha:////4Algak24DOvM4Wg8lT3VBXbJEBnCiumaXXjzNjyBmdq/AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUsDAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD7WcRxfCAAAA[0m[Pipeline] {
 [8mha:////4HkT37UEwtzgvusXLM/sRjcwZb41MUGzCcC7QbE+gGM5AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUgoEBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfAARKflFwgAAAA==[0m[Pipeline] dir
-Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+Running in /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 [8mha:////4I/ZhbD1FiawT+sywIPVcit3nPhId/gHj8+nhjai9hdgAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AIkBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfABpxnKZwgAAAA==[0m[Pipeline] {
 [8mha:////4BMrHIvf0xjnzLwO1g+1ywoKjgJAkzf/PxPyN7+UZJk8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgCgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN/DO8Oq+AAAA[0m[Pipeline] sh
 + python -m venv venv
@@ -202,10 +202,10 @@ Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
 + unset VIRTUAL_ENV
 + unset VIRTUAL_ENV_PROMPT
 + [ ! nondestructive = nondestructive ]
-+ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv
++ VIRTUAL_ENV=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv
 + export VIRTUAL_ENV
 + _OLD_VIRTUAL_PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-+ PATH=/var/jenkins_home/jobs/lca-lite/workspace/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ PATH=/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 + export PATH
 + [ -n  ]
 + [ -z  ]
@@ -223,7 +223,7 @@ ERROR: file or directory not found: tests/
 
 ============================= test session starts ==============================
 platform linux -- Python 3.11.14, pytest-9.0.2, pluggy-1.6.0
-rootdir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+rootdir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 plugins: anyio-4.12.0, cov-7.0.0
 collected 0 items
 
@@ -234,19 +234,19 @@ collected 0 items
 Post stage
 [8mha:////4N5v6uQl2EaIPO6f4UWpNIIP3BmZYvs6qnWuffE0eAzSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0YCEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAGHhY48vgAAAA==[0m[Pipeline] publishHTML
 [htmlpublisher] Archiving HTML reports...
-[htmlpublisher] Archiving at BUILD level /var/jenkins_home/jobs/lca-lite/workspace/LCALite/htmlcov to Coverage_20Report
-ERROR: Specified HTML directory '/var/jenkins_home/jobs/lca-lite/workspace/LCALite/htmlcov' does not exist.
+[htmlpublisher] Archiving at BUILD level /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/htmlcov to Coverage_20Report
+ERROR: Specified HTML directory '/var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/htmlcov' does not exist.
 [htmlpublisher] Copying recursive using current thread
 [8mha:////4Pqj9i0YHf18FiwLJe3b5BRyadk0/C2rASTZhte9ImQXAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0SCEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgHhBWHqvgAAAA==[0m[Pipeline] }
-$ docker stop --time=1 65f00d63846bfefd6b0e90b13acef9bb6ef28195e277bccca035f74c020447d8
-$ docker rm -f --volumes 65f00d63846bfefd6b0e90b13acef9bb6ef28195e277bccca035f74c020447d8
+$ docker stop --time=1 2fecffa0fdbc2fe979d1262636536ba75e29b3ac1bb910ad863292eb615383e0
+$ docker rm -f --volumes 2fecffa0fdbc2fe979d1262636536ba75e29b3ac1bb910ad863292eb615383e0
 [8mha:////4NpJLd2jQb2KxzPZFA7enBWk3tGJlcCySC91g96t/BR/AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICFUgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDNtd+9wF6dS+ivgAAAA==[0m[Pipeline] // withDockerContainer
 [8mha:////4Gdv2Rq4Yxrux6EaBZPel/PPlmKw5prlCa+n5CuGKsemAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihISQUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKUh22u/e4DsvZmnr4AAAA=[0m[Pipeline] }
 [8mha:////4H0qHTZCfqnWgPPW+H6hgX/QV/C6IElOmvz9fOJp9SiuAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIipUBIiCqtlYYXmNgYJ9adsR2SihfxNf6ARSQqtljtbDOvN6xjgBMHg72mwVLsLHo3mrxw4jBcHU/Y8wU7pshOY6unlpVuFmw5aVhSlLASsNHUOY6WTIKt6OVDVk6Sqc4p5O8ooLTqDk8oRDYnGdIX5gC726gi08/zVwCz9wnKQ51rX38AirT1b74AAAA=[0m[Pipeline] // stage
 [8mha:////4O3oWTk5KFCWIP/cXFVNzj7nlCk3Kxqup/vQBV6vCgTpAAAAqB+LCAAAAAAAAP9tjUEKwjAURH8rXbh16SFSRARBunIbuvEEsYkxafi/JqnpyhN5Ne9gtODKWQwzA8N7vqAKHhrymlmFvcHQGTa4UefEEvn+4igxS2fWEQZyirUqtSTVca4tRQWzihIWHJYKO0fBoI6w4lbcRe0E6voUfd4OHEojb/CAgmdyFD5+y+RhfR1lIPxx/gJgGiKUm122/fbzrN6b6bd1wgAAAA==[0m[Pipeline] stage
 [8mha:////4I1Fo2C3vM6QBW2vhQQ3zTYKotBT3yw7Qkt4mlxpRYk4AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0gAEJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfADxKa4dwgAAAA==[0m[Pipeline] { (SonarQube Analysis)
 [8mha:////4B44FWBy3AxlyPIucunW9ib8JIUTAYN18k2ES7MvqnLXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AQkJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfADX78n/wgAAAA==[0m[Pipeline] dir
-Running in /var/jenkins_home/jobs/lca-lite/workspace/LCALite
+Running in /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 [8mha:////4MSkNA3wIIwp3Nkd0mZH01Ot8A52RKlreRVSngK8Efn8AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AiEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD7lC07jCAAAA[0m[Pipeline] {
 [8mha:////4Lf9A7KxTQvNjEE80NA0Ea2NKJM73TPsnM9sjoCgVYQcAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AyTE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAR33berCAAAA[0m[Pipeline] script
 [8mha:////4GK4ra22Ikk60TlmWdCYkEOocKNgBmCIFzk3sAVnq9+qAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0pBJiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsPCJq12sIAAAA=[0m[Pipeline] {
@@ -255,37 +255,37 @@ Injecting SonarQube environment variables using the configuration: SonarQube
 [8mha:////4P57xAvO+Ecd0+UWcHfWJ80kRWnlLecyQJsRVBrRqFUdAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUkQoxdY2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XVDHAkYJlncHeYVSODX60ObGJQn/xNLGOzkwRRvKGCTMJ0qZdqqBkYFFRworD2qDyFB3aBBveybusvURbn1LI24FD6fQNHlDwTE4ypG+ZA2yvo46EP85fAMxDgnLfZGt2n2f1Btc458LCAAAA[0m[Pipeline] {
 [8mha:////4LgMf9HtkqpaLHS2sHwKqkt9RXIDbTzurCY7ZPdmmEu5AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICJUJUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfe3xDHZb4AAAA=[0m[Pipeline] sh
 + pwd
-+ echo Current directory: /var/jenkins_home/jobs/lca-lite/workspace/LCALite
-Current directory: /var/jenkins_home/jobs/lca-lite/workspace/LCALite
++ echo Current directory: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
+Current directory: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 + echo Files in current directory:
 Files in current directory:
 + ls -la
 total 16
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 .
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 ..
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 .pytest_cache
--rw-r--r-- 1 root root  498 Dec 28 00:09 Dockerfile
--rw-r--r-- 1 root root 6628 Dec 28 00:09 Jenkinsfile
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 app
-drwxr-xr-x 1 root root 4096 Dec 28 00:19 flake8-report
--rw-r--r-- 1 root root 4456 Dec 28 00:19 pylint-report.txt
--rw-r--r-- 1 root root   89 Dec 28 00:09 requirements.txt
--rw-r--r-- 1 root root  325 Dec 28 00:09 sonar-project.properties
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 venv
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 .
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 ..
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 .pytest_cache
+-rw-r--r-- 1 root root  498 Dec 28 00:23 Dockerfile
+-rw-r--r-- 1 root root 6582 Dec 28 00:23 Jenkinsfile
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 app
+drwxr-xr-x 1 root root 4096 Dec 28 00:33 flake8-report
+-rw-r--r-- 1 root root 4456 Dec 28 00:33 pylint-report.txt
+-rw-r--r-- 1 root root   89 Dec 28 00:23 requirements.txt
+-rw-r--r-- 1 root root  325 Dec 28 00:23 sonar-project.properties
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 venv
 + echo Checking app directory:
 Checking app directory:
 + ls -la app/
 total 24
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 .
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 ..
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 __pycache__
--rw-r--r-- 1 root root  329 Dec 28 00:09 config.py
--rw-r--r-- 1 root root  568 Dec 28 00:09 db.py
--rw-r--r-- 1 root root 1201 Dec 28 00:09 db_models.py
--rw-r--r-- 1 root root 6023 Dec 28 00:09 lca_calculator.py
--rw-r--r-- 1 root root 2728 Dec 28 00:09 main.py
--rw-r--r-- 1 root root  834 Dec 28 00:09 models.py
--rw-r--r-- 1 root root  736 Dec 28 00:09 scoring_client.py
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 .
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 ..
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 __pycache__
+-rw-r--r-- 1 root root  329 Dec 28 00:23 config.py
+-rw-r--r-- 1 root root  568 Dec 28 00:23 db.py
+-rw-r--r-- 1 root root 1201 Dec 28 00:23 db_models.py
+-rw-r--r-- 1 root root 6023 Dec 28 00:23 lca_calculator.py
+-rw-r--r-- 1 root root 2728 Dec 28 00:23 main.py
+-rw-r--r-- 1 root root  834 Dec 28 00:23 models.py
+-rw-r--r-- 1 root root  736 Dec 28 00:23 scoring_client.py
 + echo 
 
 + echo Running SonarQube Analysis...
@@ -293,54 +293,54 @@ Running SonarQube Analysis...
 + cat /etc/hostname
 + JENKINS_CONTAINER_ID=bf87b26cf65f
 + pwd
-+ docker run --rm --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network --volumes-from bf87b26cf65f -w /var/jenkins_home/jobs/lca-lite/workspace/LCALite -e SONAR_HOST_URL=http://sonarqube:9000 -e SONAR_TOKEN=****** sonarsource/sonar-scanner-cli:latest sh -c echo "Working directory: $(pwd)"; ls -la; echo "---"; ls -la app/ 2>&1 || echo "app not found"; sonar-scanner                                         -Dsonar.projectKey=lca-lite                                         -Dsonar.projectName=LCA-Lite                                         -Dsonar.sources=app                                         -Dsonar.host.url=http://sonarqube:9000                                         -Dsonar.login=${SONAR_TOKEN}                                         -Dsonar.python.version=${PYTHON_VERSION}                                         -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/**                                         -Dsonar.python.coverage.reportPaths=coverage.xml
-Working directory: /var/jenkins_home/jobs/lca-lite/workspace/LCALite
++ docker run --rm --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network --volumes-from bf87b26cf65f -w /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite -e SONAR_HOST_URL=http://sonarqube:9000 -e SONAR_TOKEN=****** sonarsource/sonar-scanner-cli:latest sh -c echo "Working directory: $(pwd)"; ls -la; echo "---"; ls -la app/ 2>&1 || echo "app not found"; sonar-scanner                                         -Dsonar.projectKey=lca-lite                                         -Dsonar.projectName=LCA-Lite                                         -Dsonar.sources=app                                         -Dsonar.host.url=http://sonarqube:9000                                         -Dsonar.login=${SONAR_TOKEN}                                         -Dsonar.python.version=${PYTHON_VERSION}                                         -Dsonar.coverage.exclusions=**/tests/**,**/__pycache__/**                                         -Dsonar.python.coverage.reportPaths=coverage.xml
+Working directory: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
 total 16
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 .
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 ..
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 .pytest_cache
--rw-r--r-- 1 root root  498 Dec 28 00:09 Dockerfile
--rw-r--r-- 1 root root 6628 Dec 28 00:09 Jenkinsfile
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 app
-drwxr-xr-x 1 root root 4096 Dec 28 00:19 flake8-report
--rw-r--r-- 1 root root 4456 Dec 28 00:19 pylint-report.txt
--rw-r--r-- 1 root root   89 Dec 28 00:09 requirements.txt
--rw-r--r-- 1 root root  325 Dec 28 00:09 sonar-project.properties
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 venv
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 .
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 ..
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 .pytest_cache
+-rw-r--r-- 1 root root  498 Dec 28 00:23 Dockerfile
+-rw-r--r-- 1 root root 6582 Dec 28 00:23 Jenkinsfile
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 app
+drwxr-xr-x 1 root root 4096 Dec 28 00:33 flake8-report
+-rw-r--r-- 1 root root 4456 Dec 28 00:33 pylint-report.txt
+-rw-r--r-- 1 root root   89 Dec 28 00:23 requirements.txt
+-rw-r--r-- 1 root root  325 Dec 28 00:23 sonar-project.properties
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 venv
 ---
 total 24
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 .
-drwxr-xr-x 1 root root 4096 Dec 28 00:20 ..
-drwxr-xr-x 1 root root 4096 Dec 28 00:09 __pycache__
--rw-r--r-- 1 root root  329 Dec 28 00:09 config.py
--rw-r--r-- 1 root root  568 Dec 28 00:09 db.py
--rw-r--r-- 1 root root 1201 Dec 28 00:09 db_models.py
--rw-r--r-- 1 root root 6023 Dec 28 00:09 lca_calculator.py
--rw-r--r-- 1 root root 2728 Dec 28 00:09 main.py
--rw-r--r-- 1 root root  834 Dec 28 00:09 models.py
--rw-r--r-- 1 root root  736 Dec 28 00:09 scoring_client.py
-00:20:29.533 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
-00:20:29.539 INFO  Project root configuration file: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/sonar-project.properties
-00:20:29.561 INFO  SonarScanner CLI 8.0.1.6346
-00:20:29.573 INFO  Linux 5.15.167.4-microsoft-standard-WSL2 amd64
-00:20:29.625 WARN  Both 'sonar.login' and 'sonar.token' (or the 'SONAR_TOKEN' env variable) are set, but only the latter will be used.
-00:20:30.911 INFO  Communicating with SonarQube Community Build 25.12.0.117093
-00:20:30.912 WARN  Use of 'sonar.login' property has been deprecated in favor of 'sonar.token' (or the env variable alternative 'SONAR_TOKEN'). Please use the latter when passing a token.
-00:20:30.913 INFO  JRE provisioning: os[linux], arch[x86_64]
-00:20:34.824 INFO  Starting SonarScanner Engine...
-00:20:34.824 INFO  Java 21.0.9 Eclipse Adoptium (64-bit)
-00:20:36.998 INFO  Load global settings
-00:20:37.137 INFO  Load global settings (done) | time=139ms
-00:20:37.141 INFO  Server id: 9B767396-AZthQB1A4wPBEALG8fLC
-00:20:37.159 INFO  Loading required plugins
-00:20:37.160 INFO  Load plugins index
-00:20:37.184 INFO  Load plugins index (done) | time=24ms
-00:20:37.185 INFO  Load/download plugins
-00:20:37.675 INFO  Load/download plugins (done) | time=490ms
-00:20:38.128 INFO  Process project properties
-00:20:38.151 INFO  Process project properties (done) | time=24ms
-00:20:38.246 ERROR Error during SonarScanner Engine execution
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ClassRealm{iac}-org.sonar.iac.helm.HelmEvaluator': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'AnalysisTempFolder' defined in org.sonar.scanner.analysis.AnalysisTempFolderProvider: Unsatisfied dependency expressed through method 'provide' parameter 0: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 .
+drwxr-xr-x 1 root root 4096 Dec 28 00:34 ..
+drwxr-xr-x 1 root root 4096 Dec 28 00:23 __pycache__
+-rw-r--r-- 1 root root  329 Dec 28 00:23 config.py
+-rw-r--r-- 1 root root  568 Dec 28 00:23 db.py
+-rw-r--r-- 1 root root 1201 Dec 28 00:23 db_models.py
+-rw-r--r-- 1 root root 6023 Dec 28 00:23 lca_calculator.py
+-rw-r--r-- 1 root root 2728 Dec 28 00:23 main.py
+-rw-r--r-- 1 root root  834 Dec 28 00:23 models.py
+-rw-r--r-- 1 root root  736 Dec 28 00:23 scoring_client.py
+00:34:35.213 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+00:34:35.219 INFO  Project root configuration file: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/sonar-project.properties
+00:34:35.250 INFO  SonarScanner CLI 8.0.1.6346
+00:34:35.265 INFO  Linux 5.15.167.4-microsoft-standard-WSL2 amd64
+00:34:35.327 WARN  Both 'sonar.login' and 'sonar.token' (or the 'SONAR_TOKEN' env variable) are set, but only the latter will be used.
+00:34:37.089 INFO  Communicating with SonarQube Community Build 25.12.0.117093
+00:34:37.089 WARN  Use of 'sonar.login' property has been deprecated in favor of 'sonar.token' (or the env variable alternative 'SONAR_TOKEN'). Please use the latter when passing a token.
+00:34:37.091 INFO  JRE provisioning: os[linux], arch[x86_64]
+00:34:39.778 INFO  Starting SonarScanner Engine...
+00:34:39.780 INFO  Java 21.0.9 Eclipse Adoptium (64-bit)
+00:34:41.265 INFO  Load global settings
+00:34:41.418 INFO  Load global settings (done) | time=151ms
+00:34:41.423 INFO  Server id: 9B767396-AZthQB1A4wPBEALG8fLC
+00:34:41.443 INFO  Loading required plugins
+00:34:41.444 INFO  Load plugins index
+00:34:41.485 INFO  Load plugins index (done) | time=42ms
+00:34:41.486 INFO  Load/download plugins
+00:34:42.039 INFO  Load/download plugins (done) | time=552ms
+00:34:42.428 INFO  Process project properties
+00:34:42.441 INFO  Process project properties (done) | time=13ms
+00:34:42.505 ERROR Error during SonarScanner Engine execution
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ClassRealm{iac}-org.sonar.iac.helm.HelmEvaluator': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'AnalysisTempFolder' defined in org.sonar.scanner.analysis.AnalysisTempFolderProvider: Unsatisfied dependency expressed through method 'provide' parameter 0: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
@@ -364,7 +364,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.sonar.scanner.bootstrap.ScannerMain.runScannerEngine(ScannerMain.java:157)
 	at org.sonar.scanner.bootstrap.ScannerMain.run(ScannerMain.java:72)
 	at org.sonar.scanner.bootstrap.ScannerMain.main(ScannerMain.java:56)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'AnalysisTempFolder' defined in org.sonar.scanner.analysis.AnalysisTempFolderProvider: Unsatisfied dependency expressed through method 'provide' parameter 0: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'AnalysisTempFolder' defined in org.sonar.scanner.analysis.AnalysisTempFolderProvider: Unsatisfied dependency expressed through method 'provide' parameter 0: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
@@ -381,7 +381,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 22 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'DefaultInputProject' defined in org.sonar.scanner.scan.InputProjectProvider: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
@@ -398,13 +398,13 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 36 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.sonar.api.batch.fs.internal.DefaultInputProject]: Factory method 'provide' threw exception with message: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	... 50 common frames omitted
-Caused by: java.lang.IllegalStateException: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+Caused by: java.lang.IllegalStateException: Fail to create working dir: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at org.sonar.scanner.scan.WorkDirectoriesInitializer.mkdirWorkingDir(WorkDirectoriesInitializer.java:79)
 	at org.sonar.scanner.scan.WorkDirectoriesInitializer.execute(WorkDirectoriesInitializer.java:52)
 	at org.sonar.scanner.scan.InputProjectProvider.provide(InputProjectProvider.java:44)
@@ -412,7 +412,7 @@ Caused by: java.lang.IllegalStateException: Fail to create working dir: /var/jen
 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172)
 	... 53 common frames omitted
-Caused by: java.nio.file.AccessDeniedException: /var/jenkins_home/jobs/lca-lite/workspace/LCALite/.scannerwork
+Caused by: java.nio.file.AccessDeniedException: /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite/.scannerwork
 	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
@@ -423,11 +423,11 @@ Caused by: java.nio.file.AccessDeniedException: /var/jenkins_home/jobs/lca-lite/
 	at org.sonar.scanner.scan.WorkDirectoriesInitializer.mkdirWorkingDir(WorkDirectoriesInitializer.java:77)
 	... 58 common frames omitted
 
-00:20:38.285 INFO  EXECUTION FAILURE
-00:20:38.286 INFO  Total time: 8.758s
+00:34:42.528 INFO  EXECUTION FAILURE
+00:34:42.529 INFO  Total time: 7.323s
 + true
 [8mha:////4AnW0N6IS2VxzaEwnMNlUw/nqvB29hdykDCIU9HptsJkAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC6BCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nffWr7Bt3CFKC+AAAA[0m[Pipeline] }
-Aborted by [8mha:////4AZtx10kWA60yeGpRc4zLp/FsYoAOgZ2Gp/wSQC5aVkeAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZe/dLi1CL91OT8nMSkVAARuP7GwgAAAA==[0meco
+WARN: Unable to locate 'report-task.txt' in the workspace. Did the SonarScanner succeed?
 [8mha:////4J92cSobKD5umHrfQTC5D07uWFS2SiSaXKmUr/BjgtIMAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJS0BAhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrfa5D/QGdmI8LvgAAAA==[0m[Pipeline] // withSonarQubeEnv
 [8mha:////4GdGY0ZmpDxwwJBDXn0gIBX7OiwSx7j4yiODphagjPAnAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpKIIQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJygP+1x1/QGzmI1hvgAAAA==[0m[Pipeline] }
 [8mha:////4IwSf7tHuCKnu0f85RxELXHq57H3Z/935MFovIaF63DoAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIUAoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDNtd+9wGHVm46vgAAAA==[0m[Pipeline] // script
@@ -437,33 +437,181 @@ Aborted by [8mha:////4AZtx10kWA60yeGpRc4zLp/FsYoAOgZ2Gp/wSQC5aVkeAAAAmR+LCAAAAA
 [8mha:////4L4QVAtuA9s2i2eNol5wt3No/hfGD3slf+KMNj1z0CTfAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJS0BAhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrOtdh/wHlUsFKvgAAAA==[0m[Pipeline] // stage
 [8mha:////4FLW2IouBV49OI/ndJbSErC6eoHfo9aMFK9r7O9MExvtAAAAqB+LCAAAAAAAAP9tjTESgjAQRRcYCltLDxGgsHKsaDM0niCGGAOZXUwWofJEXs07iDJj5a/++zN/3vMFeQxwpGBFZ7B3GLUTgx/t0sREob94mkRHZ6EJI3kjGjM11Jp6xYbYwJokhUzCxqD2FB1ahq3s1F0VXqEtThyW7SAhde0NHpDIxcwq8BfmALvr2EbCn+evAOaBIa32DFlVlp9r/gbUhVJUwwAAAA==[0m[Pipeline] stage
 [8mha:////4P3jPa0hFCiFV9cI16wktoV266mreK0JGvt3RlxG+dYAAAAAph+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkSB2Ti5Nl18gkprbWn+H9oiTD6Rr+Y7iJA4ecPl7pLL93pDGQOcKBjmNHYWY2tZ70ezJDZR6G6eJuboylrCSF4zoSdBSp+3Kihp2JTlUHDYaWw9RYsmwZ47+ZCVl2iqSwrLduSQWzXAEzK+kJMMaS1zgMN9VJHwx/kLgLlPUDR1vXrz/ZYfJWyAvsQAAAA=[0m[Pipeline] { (Build Docker Image)
-Stage "Build Docker Image" skipped due to earlier failure(s)
-[8mha:////4GXAcYx4POGJZUm/XK5JIUsEgFj/lRjpXNajvrtFOADHAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLD7GIrWNFm0njCWKIMZDZxSQIlSfyat5BBmas/MWf/37z3h/YxABnDhZbQ52jqB32frDzwpFDd/M8YstX1EyRvUFpRsmNqVeUnAysyXIoBGwNac/RkU2wE616qtIrsuUlhfk7Cchd84AXZGI2JxXSAlOA/X1oItPP81cAU5+gqA7V0sf+C6iwe5rAAAAA[0m[Pipeline] getContext
-[8mha:////4KJwlQiXrzVWOY5sa76qNso8ivzbJTv3MUQL8NC0aYDlAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLD7HIWDpWtJk0niCGGAOZXUyCUHkir+YdZGDGyl/8+e837/2BTQxw5mCxNdQ5itph7wc7Lxw5dDfPI7Z8Rc0U2RuUZpTcmHpFycnAmiyHQsDWkPYcHdkEO9Gqpyq9IlteUpi/k4DcNQ94QSZmc1IhLTAF2N+HJjL9PH8FMPV9gqI6HJeuvgV3CW3AAAAA[0m[Pipeline] }
-[8mha:////4FW/+UHK3f4czT8sZnfFD1hPxrj7HN4Z8UNh4c+4JZZSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQTJDpEldZKwwtMbIwd687YDknFi/gaf8BKJCq2WO1sM+8PbGKAMwXNrMLBYOwN827UebGJwnBzNDFLV9YTRnKKdWrqSKp2xY6SgjVFCRWHrcLeUTSoE+y4FU9RO4G6vqSQvxOH0sgHvKDg2ZxESAvMAfb3UUbCn+evAGbvE1SH5rh08wUdeanfwAAAAA==[0m[Pipeline] // stage
-[8mha:////4IWdNrtKbwA1IF7qFwYTMB9tDxKL/kPuV34V6yxNomEHAAAAqB+LCAAAAAAAAP9tjTESgjAQRRcYCltLDxGkoHKsaDM0niCGGAOZXUwWofJEXs07iDJj5a/++zN/3vMFeQxwpGBFZ7B3GLUTgx/t0sREob94mkRHZ6EJI3kjGjM11Jp6xYbYwJokhUzCxqD2FB1ahq3s1F0VXqEtThyW7SAhde0NHpDIxcwq8BfmALvr2EbCn+evAOaBIS0rhqzcV59r/gZnFJ8EwwAAAA==[0m[Pipeline] stage
-[8mha:////4Aaw/xEcHiw0bCzc2WMA6EYC2ZnwzTo6j5XX8T30Dgg6AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BApDLCgTqxRF04QkhCSRv+XJKWdOBFX4w6UVmLCg2Vbst7rDWUMUFMwzGlsLUZpWed7MyU2UGivngbm6MIkYSSvWaOHhpQ+LbWhpGFRlkPBYaVReooWTYI1d+IhKi/QVOcUpu3IIbfqDk/I+EROIqS5jAE2t15Fwh/nLwDGLkGx2+5nP3y/5QeNKyY7xAAAAA==[0m[Pipeline] { (Quality Gate)
-Stage "Quality Gate" skipped due to earlier failure(s)
-[8mha:////4FEF+UbJ6DzytB58IKfaXyulUyOojBgnXCLFByecZJ1dAAAApR+LCAAAAAAAAP9tjTESwiAURH+SsbC19BBEGy2cVLZMGk+AgAhh/o9AJJUn8mrewUwyY+UWO/u2ee8PrGKAhoJhTmNnMUrLej+YabFMobt5yszRlUnCSF6zVueWlD4v2FLSsKQooeKw1ig9RYsmwYY78RS1F2jqSwrTd+JQWvWAFxR8MicR0gxjgO19UJHw5/krgLFPUO13h7mP/Rf0TcntwAAAAA==[0m[Pipeline] getContext
-[8mha:////4H3M7VQ8bzZqYEtjPt1UCClLyv+YfLwxAX0DxgRNgf0QAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDDUJCqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7PkG13x3nPnwBXLZq8cAAAAA=[0m[Pipeline] }
-[8mha:////4ICzcPykE/9JpWo0KdYfLw8V6QyxquGszF4An7VF1re2AAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDBQVCqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7PkG13x3nPnwBUuwUzsAAAAA=[0m[Pipeline] // stage
-[8mha:////4F20RdfCwkGOoxZTog4OJ1PZkO3bCA9HtAaP9NfnxIgpAAAAqB+LCAAAAAAAAP9tjTEOwjAQBC+JUtBS8giHFFSIitZKwwuMY4wT6y7YF5KKF/E1/oAhEhVb7ay0mucLyhjgQMGKzmDvMGonBj/a1MREob94mkRHZ6EJI3kjGjM11Jrjgg2xgSVZDoWElUHtKTq0DGvZqbuqvEJbnTikbS8hd+0NHpDJZGYV+AtzgM11bCPhz/NXAPPAkNc7hqKut59r+QZgjiXywwAAAA==[0m[Pipeline] stage
-[8mha:////4H0xvgA9jOPxMQeK9Apzf4LWj4vEYqYz2V594G8/wpq4AAAAph+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BApnRETa5SFE4QkhLTR/yVJaSdOxNW4A6GVmPBg2Zas93pDHQMcKVjWGewdRuXY4EebE5so9FdPE+vowhRhJG+YMJMgbU5rFZQMrCpKqDhsDCpP0aFNsOWdfMjGS7TNOYW8HTiUTt/hCQXP5CRDWsocYHcbdST8cf4CYB4SVG27X7z9fusPFL5hxcQAAAA=[0m[Pipeline] { (Declarative: Post Actions)
-[8mha:////4BiYLYBFgJMO3JMjpbKRXk5P4mbFz6C98OnTR+TJ2o55AAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSj0CIqWisNLzCJMXasO3N2SCpexNf4A1YiUbHFamebeX9gExlOxEY4jYPF2FkR/GjyEhPxcPM0CUdX0RFG8lq0emqp1+cVW0oa1hQlVBK2GjtP0aJJsJNOPVXtFZr6kjh/Rwml7R/wgkJmc1KcFpgZ9vexj4Q/z18BzCFB1TTN0ofwBdzOwozAAAAA[0m[Pipeline] cleanWs
+[8mha:////4K+yLbWEmLNKgmnEdpDgCXqssWM3wHVr0jOMSmZgWIxuAAAApx+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQRV+PE2rD4BLXUWmj+H9timXwiX813sELi5A2Xu0su3+sNpXdwIqdZr3Aw6KVho510SiySG66WIuvpwiShJ6tYq2JLnWrW2lJQsCrLoeCwUSgteYM6wJb34iEqK1BX5+DSduSQm+4OT8h4IgfhwlJmB7vb1HnCH+cvAOYxQFHv68UP32/5AeRSsaPEAAAA[0m[Pipeline] dir
+Running in /var/jenkins_home/jobs/lca-lite/workspace@2/LCALite
+[8mha:////4GrLK7tqvj5gP7wsx2O2KpHcyxcDDo6+xnkaF5aebb2HAAAAqB+LCAAAAAAAAP9tjT0OwjAUg19bdWBl5BApPyPqxBp14QQhCSFp9F5JUtqJE3E17kBpJSY8WLYl63u9oYwBagqGOY2txSgt63xvpsQGCu3V08AcXZgkjOQ1a/TQkNKnpTaUNCzKcig4rDRKT9GiSbDmTjxE5QWa6pzCtB055Fbd4QkZn8hJhDSXMcDm1qtI+OP8BcDYJSh22/3sh++3/ACxU3MfxAAAAA==[0m[Pipeline] {
+[8mha:////4PyOc11kiFeS9ExRQrTHKA+leD01zxsOL0k2zToNcOMRAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BApCDbUiTXqwglCEkLS6P+SpLQTJ+Jq3IHSSkx4sGxL1nu9oYwBagqGOY2txSgt63xvpsQGCu3V08AcXZgkjOQ1a/TQkNKnpTaUNCzKcig4rDRKT9GiSbDmTjxE5QWa6pzCtB055Fbd4QkZn8hJhDSXMcDm1qtI+OP8BcDYJSh22/3sh++3/ABmL9OZxAAAAA==[0m[Pipeline] script
+[8mha:////4CR5OkW98NyVPE9zkzv5p/yo0VJ6IjLEq5VoLEhDZJidAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BApSDChTqxRF04QkhCSRv+XJKWdOBFX4w6UVmLCg2Vbst7rDWUMUFMwzGlsLUZpWed7MyU2UGivngbm6MIkYSSvWaOHhpQ+LbWhpGFRlkPBYaVReooWTYI1d+IhKi/QVOcUpu3IIbfqDk/I+EROIqS5jAE2t15Fwh/nLwDGLkGx2+5nP3y/5QdMFRcmxAAAAA==[0m[Pipeline] {
+[8mha:////4I9f+OKC8md2Nxgk5j0lk19w2Qe7purtwMJPZHz94dh/AAAApR+LCAAAAAAAAP9tjTESwiAURH+SsbC19BBEC22cVLZMGk+AgAhh/o9AJJUn8mrewUwyY+UWO/u2ee8PrGKAhoJhTmNnMUrLej+YabFMobt5yszRlUnCSF6zVueWlD4v2FLSsKQooeKw1ig9RYsmwYY78RS1F2jqSwrTd+JQWvWAFxR8MicR0gxjgO19UJHw5/krgLFPUO13h7mP/RdWe116wAAAAA==[0m[Pipeline] sh
++ docker build -t ecolabel-lca-lite:17 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 537B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/6] FROM docker.io/library/python:3.11-slim@sha256:158caf0e080e2cd74ef2879ed3c4e697792ee65251c8208b7afb56683c32ea6c
+#5 resolve docker.io/library/python:3.11-slim@sha256:158caf0e080e2cd74ef2879ed3c4e697792ee65251c8208b7afb56683c32ea6c 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 17.43MB 5.0s
+#4 transferring context: 37.35MB 10.2s
+#4 transferring context: 56.70MB 15.3s
+#4 transferring context: 102.20MB 20.3s
+#4 transferring context: 139.46MB 25.3s
+#4 transferring context: 152.22MB 30.4s
+#4 transferring context: 164.15MB 35.5s
+#4 transferring context: 175.12MB 40.5s
+#4 transferring context: 184.44MB 45.5s
+#4 transferring context: 210.21MB 50.6s
+#4 transferring context: 220.29MB 55.6s
+#4 transferring context: 224.27MB 60.6s
+#4 transferring context: 234.99MB 65.6s
+#4 transferring context: 255.31MB 70.7s
+#4 transferring context: 271.44MB 75.8s
+#4 transferring context: 275.84MB 76.7s done
+#4 DONE 76.8s
+
+#6 [2/6] WORKDIR /app
+#6 CACHED
+
+#7 [3/6] RUN apt-get update && apt-get install -y     gcc     postgresql-client     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [4/6] COPY requirements.txt .
+#8 CACHED
+
+#9 [5/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [6/6] COPY . .
+#10 DONE 4.8s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 15.2s done
+#11 exporting manifest sha256:19335120c297cd80d0ed3dfd25a72b33c16e9ec9b3897ab873c1c9fe14069c03 0.0s done
+#11 exporting config sha256:8e4912dd1830a20eac46477437b765aff3ec181e4599e537cc4ade05305f9ace 0.0s done
+#11 exporting attestation manifest sha256:16b4d882e5a6b8059e39aed3752926304e0b539698b7d1498969fa7dd4207afe
+#11 exporting attestation manifest sha256:16b4d882e5a6b8059e39aed3752926304e0b539698b7d1498969fa7dd4207afe 0.1s done
+#11 exporting manifest list sha256:9fd29bd4cd2bfca38b1d9ce72d96328f0579f8e1683500cf5ff327123619f335 0.0s done
+#11 naming to docker.io/library/ecolabel-lca-lite:17 done
+#11 unpacking to docker.io/library/ecolabel-lca-lite:17
+#11 unpacking to docker.io/library/ecolabel-lca-lite:17 4.6s done
+#11 DONE 20.1s
++ docker tag ecolabel-lca-lite:17 ecolabel-lca-lite:latest
+[8mha:////4BzIL28ppPp7wSIysH5yAlyc1L1ZOdYi/nYvaAZkY7qbAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDBaJAqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7PkG13x3nPnwBD5crnsAAAAA=[0m[Pipeline] }
+[8mha:////4O1y/NYfJZh/Wd3J34j0CWomt45W4/oVynWVckYayxTUAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDEgUSSkVrpeEFxjbGjnUXbAen4kV8jT8QJRIVW6x2tpn3B1YxQEPBMKexsxilZb0fzLRYptDdPGXm6MokYSSvWatzS0qfF2wpaVhSlFBxWGuUnqJFk2DDnXiK2gs09SWF6TtxKK16wAsKPpmTCGmGMcD2PqhI+PP8FcDY9wmq/e449+ELcNdkH8AAAAA=[0m[Pipeline] // script
+[8mha:////4Ltc2QvhzjNPY4p67Vbcfs+rD1Sko7Mxx1zJB0MHNt0MAAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQDokIoFa2VhhcY2xg71l2wHZyKF/E1/kCUSFRssdrZZt4fWMUADQXDnMbOYpSW9X4w02KZQnfzlJmjK5OEkbxmrc4tKX1esKWkYUlRQsVhrVF6ihZNgg134ilqL9DUlxSm78ShtOoBLyj4ZE4ipBnGANv7oCLhz/NXAGPfJ6j2u+Pchy9nSXcnwAAAAA==[0m[Pipeline] }
+[8mha:////4PQTUimgpmlAbV7A3mru6pdN3gy6ikKsdnb5gU2Na8TGAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHA1rGyzdB4gkhiDGR2MVmEyhN5Ne9glBkrf/Hnv9+85wtWMcCBghWdwd5hbJ0Y/GjTEhOF/uJpEh2dRUsYyRvRmKkhbY4LNsQGlmQ5FBLWBltP0aFl2MhO3VXpFdryxCF9ewm50zd4QCaTmVXgL8wBttdRR8Kf568A5mFgKOq6+nS1ewO8PEIJwAAAAA==[0m[Pipeline] // dir
+[8mha:////4A/o9VGaMjWA+CmkYMYihMY7yCax8FTzSGOO+0c9aql/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSDa0RFa6XhBcY5jBPrLtgOScWL+Bp/wBCJii1WO9vM8wWrGODAwYoOqXcUjRODH21eYuLQXzxPouOzMEyRPYoGp4ZbPC7YcEJYUpRQKVgjGc/RkU2wUZ2+69prsvUphfztFZSuvcEDCpXNSYf0hTnA9jq2kenn+SuAeRgSVFLKT+/kG7JmPDbAAAAA[0m[Pipeline] }
+[8mha:////4OB/iS+ek2fueJqfv5CmZw/sYoQ98H9JjntY8+SCas5bAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHA1rGyzdB4gkhiDGR2MVmEyhN5Ne9glBkrf/Hnv9+85wtWMcCBghWdwd5hbJ0Y/GjTEhOF/uJpEh2dRUsYyRvRmKkhbY4LNsQGlmQ5FBLWBltP0aFl2MhO3VXpFdryxCF9ewm50zd4QCaTmVXgL8wBttdRR8Kf568A5mFgKOp69+mqegO5TNNwwAAAAA==[0m[Pipeline] // stage
+[8mha:////4KC8uMV4Qc+58PsNxSoh6X979UtatUSCee3GIdDZMXLNAAAAqB+LCAAAAAAAAP9tjTEOwjAQBC+JUtBS8ghHFqJCVLRWGl5gHGOcWHfBvpBUvIiv8QcCkajYamel1TxfUKYIB4pOtBY7j8l40YfBzU2MFLtLoFG0dBaGMFGworZjTY09LlgTW1iS5VAoWFk0gZJHx7BWrb7rKmh01YnjvO0V5L65wQMyNZtZR/7CFGFzHZpE+PP8FcDUM+Ryx1BIuf1cyzfO/LF0wwAAAA==[0m[Pipeline] stage
+[8mha:////4Dy8CLUQBLs9oD4xJljjInfKKRJiscudG/y7076ezaRMAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJ0c04sTYsPkEttRaa/8e2WCafyFfzHayQOHnD5e6Sy/d6Q+kdnMhp1iscDHpp2GgnnRKL5Iarpch6ujBJ6Mkq1qrYUqeatbYUFKzKcig4bBRKS96gDrDlvXiIygrU1Tm4tB055Ka7wxMynshBuLCU2cHuNnWe8Mf5C4B5DFDU9X7xw/dbfgBX/TLixAAAAA==[0m[Pipeline] { (Quality Gate)
+[8mha:////4E6MclBX+n4n5QxqqnffPxTA49VeVOrjx1CIBsENA7QdAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJiU7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gN9x/ZdxAAAAA==[0m[Pipeline] script
+[8mha:////4ASyExRnKjR1GDAR1wHOVmJrRmo4BMvQMQ1WP8t6FRJiAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJgy7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gO8+cdAxAAAAA==[0m[Pipeline] {
+[8mha:////4Cuyi/eu6rEEfPRZsDaruQstI+HRhRtND0Tve9V4eypbAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJiw7GibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gPp+AX8xAAAAA==[0m[Pipeline] timeout
+Timeout set to expire in 5 min 0 sec
+[8mha:////4JNU7d+5OxFc4HEHjcJOGsRzVmeYV4oiFjvir0ip0zbkAAAAqB+LCAAAAAAAAP9tjbEOgjAYhH8gDK6OPkQJkybGibVh8QlqqbXQ/D+2xTL5RL6a72CFxMkbLneXXL7XG0rv4EROs17hYNBLw0Y76ZRYJDdcLUXW04VJQk9WsVbFljrVrLWloGBVlkPBYaNQWvIGdYAt78VDVFagrs7Bpe3IITfdHZ6Q8UQOwoWlzA52t6nzhD/OXwDMY4CirveLH77f8gNTBvaWxAAAAA==[0m[Pipeline] {
+[8mha:////4FXaAEYwkIGabNgrtiHWH5wo4ZhLi5WWDuI7mfxdFpo+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjdCBEldZKwwtMbIwd687YDknFi/gaf8BKJCq2WO1sM+8PbGKAMwXNrMLBYOwN827UebGJwnBzNDFLV9YTRnKKdWrqSKp2xY6SgjVFCRWHrcLeUTSoE+y4FU9RO4G6vqSQvxOH0sgHvKDg2ZxESAvMAfb3UUbCn+evAGafoGqaw9JH/wU8DHlwwAAAAA==[0m[Pipeline] waitForQualityGate
+[8mha:////4Np3OcvGayEyIwWrz2OVJvERpOjOoVOme7kdpSG7dIKYAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYRDqJAQFa2VhheYxBg71p2xLyQVL+Jr/IFAJCq2WO1sM88XLFKEA0UjnMbOYmqsCL430xIDxe7iaRCOzqIhTOS1qPVQU6uPM9bEGuZkORQSlhobT8miYVhJp+6q9ApNeeI4fXsJuW1v8IBMTmZWkb8wRlhf+zYR/jx/BTCGwFBU282nq90bAOMDfsAAAAA=[0m[Pipeline] }
+[8mha:////4A1RRVA27aRlatbvDJLgmFxsIedXcy5HGGu5V1u6DdnXAAAAph+LCAAAAAAAAP9tjTESwiAURH+SsbC19BBksLFwrNIyaTwBAiKE+T8CMak8kVfzDkYzY+UWO/u2ec8XrFKEI0XLvMHOYVKO9WGw82Ijxe4SaGSezkwRJgqGtWZsSZtmwZaygSVFCZWAtUEVKDm0GTbCy7usg0Rbn3Kcv4OA0ukbPKAQsznLmL8wRdheB50If56/Apj6PkPFd/zTfP8GJfXLSMAAAAA=[0m[Pipeline] // timeout
+[8mha:////4CsbrSOdN4y2rN5b/BPMaCJeRl71d/CXo3sLkaPM5vnfAAAAph+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxEGChvHyjZD4wkiiTGQ2cVkESpP5NW8g1FmrPzFn/9+854vWMUABwpWdAZ7h7F1YvCjTUtMFPqLp0l0dBYtYSRvRGOmhrQ5LtgQG1iS5VBIWBtsPUWHlmEjO3VXpVdoyxOH9O0l5E7f4AGZTGZWgb8wB9heRx0Jf56/ApiHgaGo6vrT1e4NLt8kDsAAAAA=[0m[Pipeline] }
+[8mha:////4JtJui8145Tb6aCdoVene1T+sS5N5pENEIbLGjqcPYyMAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjgKgQFa3lhhcY2xgn1l2wHZyKF/E1/kAgEhVbrHa2mecLFjHAgYJlrcHOYVSO9X6w02KZQnfxlFlLZ6YII3nDhMmCtDnOKCgZmFOUUHFYGlSeokObYMVbeZe1l2jrUwrTt+dQOn2DBxR8MicZ0hfGAOvroCPhz/NXAGPfJ6iazfbTze4NIIVaMcAAAAA=[0m[Pipeline] // script
+[8mha:////4AGw+FLBaQtjBcg6xIqKKTOC93FRI4sFu3X7dtvBhDvWAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjoHSIitZKwwtMbIwT6y7YF5KKF/E1/oAhEhVbrHa2mecLVjHAgYIVncHeYWydGPxo0xIThf7iaRIdnUVLGMkb0ZipIW2OCzbEBpZkORQS1gZbT9GhZdjITt1V6RXa8sQhfXsJudM3eEAmk5lV4C/MAbbXUUfCn+evAOZhYCiqXf3pqn4DOIv6g8AAAAA=[0m[Pipeline] }
+[8mha:////4NGet0MS2TkqvfOya0uz2jmpl/Nyy8l8smQ9FNBtXEYsAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjgKgQFa3lhhcY2xgn1l2wHZyKF/E1/kAgEhVbrHa2mecLFjHAgYJlrcHOYVSO9X6w02KZQnfxlFlLZ6YII3nDhMmCtDnOKCgZmFOUUHFYGlSeokObYMVbeZe1l2jrUwrTt+dQOn2DBxR8MicZ0hfGAOvroCPhz/NXAGPfJ6iaze7TzfYNLxXpu8AAAAA=[0m[Pipeline] // stage
+[8mha:////4F4+PcrQR7mgvbNLewZ7cVOZO5oP7pGCWxqGGKS4LDwMAAAAqR+LCAAAAAAAAP9tjbEOgjAURR8QBldHP6IEE10Mk2vTxS+oUGuheQ/bhzD5Rf6a/yBK4uSd7rnJzXm+II8BKgpWtAY7h7F2oveDnZsYKXQXT6No6SxqwkjeCGVGRY05LqiIDSxJUsgkrAzWnqJDy7CWrb7rwmu0xYnDvB0kpK65wQMSOZtZB/7CFGBzHZpI+PP8FcDUM6TljiErt/vPNX8D4HeUFcMAAAA=[0m[Pipeline] stage
+[8mha:////4FsxgZy8qt8g9i3b0GKTnmJ+tfAsLVYcQrfCXSpeu1lDAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ39bdWBl5BCpYIABdWKNunCCkISQNPq/JCntxIm4GnegtBITHizbkvVebyhjgJqCYU5jazFKyzrfmymxgUJ79TQwRxcmCSN5zRo9NKT0aakNJQ2LshwKDiuN0lO0aBKsuRMPUXmBpjqnMG1HDrlVd3hCxidyEiHNZQywufUqEv44fwEwdgmK7W4/++H7LT+6jidwxAAAAA==[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4Aji3eRg4hahUjrGZ9NUqWxFnj5N1TY9SnQM+isYgpXgAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjaEBCqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7BNVuf5j72H8BTa2Ji8AAAAA=[0m[Pipeline] cleanWs
 [WS-CLEANUP] Deleting project workspace...
 [WS-CLEANUP] Deferred wipeout is used...
 [WS-CLEANUP] done
-WARN: Unable to locate 'report-task.txt' in the workspace. Did the SonarScanner succeed?
-[8mha:////4NAZWLkMiXFPdg0ZYVf45S+d/mcQrk4ZqcV6aw9sjjlbAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjiBJR0VppeIFJjLFj3ZmzQ1LxIr7GH7ASiYotVjvbzPsDm8hwIjbCaRwsxs6K4EeTl5iIh5unSTi6io4wktei1VNLvT6v2FLSsKYooZKw1dh5ihZNgp106qlqr9DUl8T5O0oobf+AFxQym5PitMDMsL+PfST8ef4KYA4hQdU0h6WbL9pGuLjAAAAA[0m[Pipeline] }
-[8mha:////4G9A06DSWjU+GVsKNyowvXhWt4zPGpL1QStFS8O6VPw+AAAApR+LCAAAAAAAAP9tjbEOgjAURR8QB1dHP+IhiZtxYm26+AW11Fpo3sO2CJNf5K/5DxJInLzDzT13Oe8PbGKAMweLraHOUdQOez/YeeHIobt5HrHlK2qmyN6gNKPkxtQrSk4G1mQ5FAK2hrTn6Mgm2IlWPVXpFdnyksL8nQTkrnnACzIxm5MKaYEpwP4+NJHp5/krgKnvExRVdVz68AXCSBgKwAAAAA==[0m[Pipeline] // stage
-[8mha:////4O7jzfoz6qTE8u7yDqCCJPQ32abf7c6JulRe+9c84W3VAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGGgsqxss2k8QQRYgxkdmOyCJUn8mrewYzMWPmr/17zXm/YpAhHilYMBkeHqXMi+MnmJ2aK49XTLAa6iI4wkTdCmVlRb04rKmID64oSKglbg52n5NAy7OSgH7r2Gm195pjdQULp+js8oZC5zDryF5YI+9vUJ8Jf528AlhAYqqZpGcqm/QAT6H/avwAAAA==[0m[Pipeline] }
-[8mha:////4JkCdQ7gtd699NMjIAz0fryasphWLMh1loLkUcqFvRTjAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjSIgGUdFaaXiBiY1xYt0Z+4JT8SK+xh+IiETFVjvTzOsNqxThSNGK3uDgMHVOBD/a+YlMcbh6yqKni+gIE3kjWpNb0ua0YEtsYFlRQiVhbbDzlBxaho3s1UPVXqGtzxxnd5BQOn2HJxRyLrOK/IUpwvY26kT46/wNwBQCQ9U0e4ay2X0AK6rsK78AAAA=[0m[Pipeline] // withEnv
-[8mha:////4Dr0qacxaOpl5UZnj5nyHsrJQk3GOTKO/afYbSInbB3HAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjiIICUdFaaXiBiY1xYt0Z+4JT8SK+xh+IiETFVjvTzOsNqxThSNGK3uDgMHVOBD/a+YlMcbh6yqKni+gIE3kjWpNb0ua0YEtsYFlRQiVhbbDzlBxaho3s1UPVXqGtzxxnd5BQOn2HJxRyLrOK/IUpwvY26kT46/wNwBQCQ9U0e4ay2X0ALezUfr8AAAA=[0m[Pipeline] }
-[8mha:////4KgB1oY7a0rS/ljJDW+xWZJAk/yOrPHWpUbsZ3NEHzUeAAAApR+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjUCEhKlorDS8wsTFOrDtjX3AqXsTX+AMRkajYameaeb1hlSIcKVrRGxwcps6J4Ec7P5EpDldPWfR0ER1hIm9Ea3JL2pwWbIkNLCtKqCSsDXaekkPLsJG9eqjaK7T1mePsDhJKp+/whELOZVaRvzBF2N5GnQh/nb8BmEJgqJpmz1A2uw9uboX4vwAAAA==[0m[Pipeline] // withCredentials
-[8mha:////4MADuzsm8yY2RPdsZex+j4EcBNhm+kSl4hheNIfNS4o8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjlwhR0VppeIFxjHFi3SX2haTiRXyNP2ARiYqtdqaZ1xs2KcKJohOdxd5jMl4MYXL5iZlifws0i46uwhAmClY0dm6otecVG2IL64oSKgVbiyZQ8ugYdqrTD10Hja6+cMzuqKD07QhPKFQus478hSXC/j61ifDX+RuAZRgYKikPDKWUH3Hs0Kq/AAAA[0m[Pipeline] }
-[8mha:////4L/3wm11PDW6rlcvJo3gzvG0shVnWNd8km696xE3OkRcAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHA1rGizdB4gpjEGMjsYrIIlSfyat5BRmas/NV/r3mvN2xShBNFJzqLvcekvRjC6JYnJor9NdAkOroITZgoWNHaqSVjmxVbYgvrshwKCVuLOlDy6Bh2slMPVQaFrjxzXNxRQu7NHZ6QyaXMKvIX5gj722gS4a/zNwDzMDAU9aFiyOvqA7KXMMu/AAAA[0m[Pipeline] // withEnv
-[8mha:////4A7YODppxHN+3YcSNxrXvngeUjNp88wkn6JUBTpN4CqfAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYSjIDpERWul4QUmNsaJdRfsC07Fi/gafyAiEhVb7UwzrzesUoQjRSc7i73H1Ho5hNHNT2aK/TVQlh1dZEuYKFjZ2NyQsacFG2ILy0QBpYK1xTZQ8ugYNqrTD10Fja46c5zdQUHhzR2eINRcZh35C1OE7W00ifDX+RuAaRgYynpXM4j9B1rAaTi+AAAA[0m[Pipeline] }
-[8mha:////4P5XnC1S9BfSZCBaHCYZ33t8mfd28kEKoeOew5tPDeD+AAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjQomoaK00vMDExjix7ox9wal4EV/jD0REomKrnWnm9YZVinCkaEVvcHCYOieCH+38RKY4XD1l0dNFdISJvBGtyS1pc1qwJTawrCihkrA22HlKDi3DRvbqoWqv0NZnjrM7SCidvsMTCjmXWUX+whRhext1Ivx1/gZgCoGh2jUNQ7H/ACkvreG+AAAA[0m[Pipeline] // node
-[8mha:////4AvSpjiPVQqrBOuCgEg5oi0zas0qwgck8VUPMZOzd8LVAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjQomoaK00vMDExjix7ox9wal4EV/jD0REomKrnWnm9YZVinCkaEVvcHCYOieCH+38RKY4XD1l0dNFdISJvBGtyS1pc1qwJTawrCihkrA22HlKDi3DRvbqoWqv0NZnjrM7SCidvsMTCjmXWUX+whRhext1Ivx1/gZgCoGh2jV7hqL5AA82yqu+AAAA[0m[Pipeline] End of Pipeline
-org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 7f0f4163-3a95-487b-b934-2834153f7039
-Finished: ABORTED
+[8mha:////4GrFFoDHahSlgVXW6o1ZGySNuZhviKC0ncswq8EPsy9TAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjaBBCqWitNLzA2MbYse6C7eBUvIiv8QeiRKJii9XONvP+wCoGaCgY5jR2FqO0rPeDmRbLFLqbp8wcXZkkjOQ1a3VuSenzgi0lDUuKEioOa43SU7RoEmy4E09Re4GmvqQwfScOpVUPeEHBJ3MSIc0wBtjeBxUJf56/Ahj7BNVuf5j72H8BDJySksAAAAA=[0m[Pipeline] echo
+Pipeline LCA-Lite échoué! ❌
+[8mha:////4H9TBtwazfzvyVeWzADLP1sdWmEhnpq1nkqJMIwQEiZBAAAApx+LCAAAAAAAAP9tjT0SwiAUhF+SsbC19BDEn8LCsbJlaDwBAiIJ814EYlJ5Iq/mHUQzY+UWO/tt8z1fMIsBDhQsawy2DqNyrPO9zYsNFNqLp4E1dGaKMJI3TJhBkDbHCQUlA1OKEioOc4PKU3RoEyx4I++y9hJtfUohf3sOpdM3eEDBsznJkL4wBlheex0Jf56/Ahi7LkG13q4+vdm9AcytOwnAAAAA[0m[Pipeline] }
+[8mha:////4IrTkzNwyqbRWToakRdp0Xac9R7KblhEu4X6Uvs8ROfIAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjgESDqGgtN7zA2MY4se6C7eBUvIiv8QcCkajYYrWzzTxfsIgBDhQsaw12DqNyrPeDnRbLFLqLp8xaOjNFGMkbJkwWpM1xRkHJwJyihIrD0qDyFB3aBCveyrusvURbn1KYvj2H0ukbPKDgkznJkL4wBlhfBx0Jf56/Ahj7PkHVbJtPb3Zv7pZL2MAAAAA=[0m[Pipeline] // stage
+[8mha:////4GwokxqrgwPlzPnJiwhb6G/kxB/+eR1B3Y77dZFJLXIaAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxEGHSuHyjZD4wliiDGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHUTsx+NGmJyYK/dXTJDq6CE0YyRvRmKmh1pwWbIgNLMtyKCSsDWpP0aFl2MhOPVTpFdryzCG5o4TctXd4QiZTmVXgL8wBtrexjYS/zt8AzMPAUFT7HUNeHT6CyeVQvwAAAA==[0m[Pipeline] }
+[8mha:////4EKcGUfg9YvybmA8x1HkxyY4+ZtBIi83LTde3S6q0KtoAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGGwc6xos3QeIKYxBjI7GKyCJUn8mreQUZmrPzVf695rzdsUoQTRSc6i73HpL0YwuiWJyaK/TXQJDq6CE2YKFjR2qklY5sVW2IL67IcCglbizpQ8ugYdrJTD1UGha48c1zcUULuzR2ekMmlzCryF+YI+9toEuGv8zcA8zAwFFVdM+TV4QOxKr7svwAAAA==[0m[Pipeline] // withEnv
+[8mha:////4Ifq2CymqEFQU71zQkco5Nx9mSLUwhyrHTKsKTRszgWPAAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxGGwc6xos3QeIKYxBjI7GKyCJUn8mreQUZmrPzVf695rzdsUoQTRSc6i73HpL0YwuiWJyaK/TXQJDq6CE2YKFjR2qklY5sVW2IL67IcCglbizpQ8ugYdrJTD1UGha48c1zcUULuzR2ekMmlzCryF+YI+9toEuGv8zcA8zAwFFV9YMir+gOqj99vvwAAAA==[0m[Pipeline] }
+[8mha:////4CQ1HdRfSNQSjom6DfDkVPRkDczMkqqCbnFyZ7nF4k/7AAAApR+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxEGHSuHyjZD4wliiDGQ2cVkESpP5NW8gxmZsfJX/73mvd6wigFqClZ0BnuHUTsx+NGmJyYK/dXTJDq6CE0YyRvRmKmh1pwWbIgNLMtyKCSsDWpP0aFl2MhOPVTpFdryzCG5o4TctXd4QiZTmVXgL8wBtrexjYS/zt8AzMPAUFT7A0Ne7T6ZbITTvwAAAA==[0m[Pipeline] // withCredentials
+[8mha:////4GlhcFSKv6jdRjTwLARk1uwB0FZXQOFtvOQVQUzY3WsrAAAAph+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYSjCIkGUdFaaXiBiY1xYt0Z+4JT8SK+xh+IiETFVjvTzOsNqxThSNGK3uDgMHVOBD/a+YlMcbh6yqKni+gIE3kjWpNb0ua0YEtsYFlRQiVhbbDzlBxaho3s1UPVXqGtzxxnd5BQOn2HJxRyLrOK/IUpwvY26kT46/wNwBQCQ9Xs9gxl03wAjU8ZzL8AAAA=[0m[Pipeline] }
+[8mha:////4GtJCxJas71/efVdz0fRZuR4KBDNLPtWWVLXiNE+4LSpAAAAph+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxFkLCwcKtsMjSeIJMZAZheTRag8kVfzDmZkxspf/fea93rDKgaoKVjRGewdxtaJwY82PTFR6K+eJtHRRbSEkbwRjZka0ua0YENsYFmWQyFhbbD1FB1aho3s1EOVXqEtzxySO0rInb7DEzKZyqwCf2EOsL2NOhL+On8DMA8DQ1HtDwx5tfsAvqxCcL8AAAA=[0m[Pipeline] // withEnv
+[8mha:////4F3OtKMz5BqxddJlAYcwQt25i6KDkITuzzJu5CrNndOKAAAApR+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQjBAUSoqK10vAC4xjjxLoL9gWn4kV8jT8QEYmKrXammdcbFinCkaKTrcXOYzJe9mFw05OZYncNlGVLF2kIEwUra5trauxpxprYwjxRQKlgadEESh4dw0q1+qGroNFVZ46TOygofHOHJwg1lVlH/sIYYX0bmkT46/wNwNj3DOVmu2cQuw+OcSX+vgAAAA==[0m[Pipeline] }
+[8mha:////4FTCSaWrKNuDD4x5xHZLd54ewVkPxitR45CLOzMwssaYAAAApB+LCAAAAAAAAP9tjTEOwjAQBC+JKGgpeYQjlAohKlorDS8wsTFOrDtjX3AqXsTX+AMRkajYameaeb1hlSIcKVrRGxwcps6J4Ec7P5EpDldPWfR0ER1hIm9Ea3JL2pwWbIkNLCtKqCSsDXaekkPLsJG9eqjaK7T1mePsDhJKp+/whELOZVaRvzBF2N5GnQh/nb8BmEJgqHbNnqFoPp3NIV2+AAAA[0m[Pipeline] // node
+[8mha:////4DUjES5SB6jAKqS2ksP0CkLj+/Ou5gW1b7Pc5Bcz5KMMAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDiA5R0VppeIFxjHFi3QX7glPxIr7GH4iIRMVWO9PM6w2LFOFI0cnWYucxGS/7MLjpyUyxuwbKsqWLNISJgpW1zTU19jRjTWxhniigVLC0aAIlj45hpVr90FXQ6Kozx8kdFBS+ucMThJrKrCN/YYywvg1NIvx1/gZg7HuGcrvfMIjdB8KvMzq+AAAA[0m[Pipeline] End of Pipeline
+Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 1a88eebe-8505-44b2-99b5-6ea5230f8988
+java.lang.IllegalStateException: Unable to guess SonarQube task id and/or SQ server details. Please use the 'withSonarQubeEnv' wrapper to run your analysis.
+	at PluginClassLoader for sonar//org.sonarsource.scanner.jenkins.pipeline.WaitForQualityGateStep$Execution.processStepParameters(WaitForQualityGateStep.java:221)
+	at PluginClassLoader for sonar//org.sonarsource.scanner.jenkins.pipeline.WaitForQualityGateStep$Execution.start(WaitForQualityGateStep.java:179)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.DSL.invokeStep(DSL.java:333)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:194)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:180)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:23)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:163)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:178)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:182)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
+	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:120)
+	at WorkflowScript.run(WorkflowScript:162)
+	at ___cps.transform___(Native Method)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:107)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:118)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:71)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.CollectionLiteralBlock$ContinuationImpl.dispatch(CollectionLiteralBlock.java:54)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.CollectionLiteralBlock$ContinuationImpl.item(CollectionLiteralBlock.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:71)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Next.step(Next.java:84)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:142)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:17)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:48)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:188)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:464)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:372)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:302)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$4(CpsVmExecutorService.java:143)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:68)
+	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Finished: FAILURE

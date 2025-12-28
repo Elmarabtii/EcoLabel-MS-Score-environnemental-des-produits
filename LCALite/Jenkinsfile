@@ -118,6 +118,8 @@ pipeline {
                                 ls -la app/ || echo "app directory not found"
                                 echo ""
                                 echo "Running SonarQube Analysis..."
+                                mkdir -p .scannerwork
+                                chmod 777 .scannerwork
                                 JENKINS_CONTAINER_ID=$(cat /etc/hostname)
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
