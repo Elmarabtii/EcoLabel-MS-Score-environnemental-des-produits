@@ -9,10 +9,6 @@ pipeline {
         FRONTEND_DIR = 'WidgetAPI/WidgetAPI_frontend'
     }
     
-    tools {
-        nodejs "${NODE_VERSION}"
-    }
-    
     stages {
         stage('Checkout') {
             steps {
@@ -21,6 +17,12 @@ pipeline {
         }
         
         stage('Install Dependencies') {
+            agent {
+                docker {
+                    image 'node:18-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(FRONTEND_DIR) {
                     sh 'npm ci'
@@ -29,6 +31,12 @@ pipeline {
         }
         
         stage('Build') {
+            agent {
+                docker {
+                    image 'node:18-slim'
+                    reuseNode true
+                }
+            }
             steps {
                 dir(FRONTEND_DIR) {
                     sh 'npm run build'
