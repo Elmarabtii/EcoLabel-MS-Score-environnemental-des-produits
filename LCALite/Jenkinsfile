@@ -122,11 +122,12 @@ pipeline {
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
                                     --volumes-from ${JENKINS_CONTAINER_ID} \
+                                    --user root \
                                     -w $(pwd) \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c 'echo "Working directory: $(pwd)"; ls -la; echo "---"; ls -la app/ 2>&1 || echo "app not found"; sonar-scanner \
+                                    sh -c 'sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \

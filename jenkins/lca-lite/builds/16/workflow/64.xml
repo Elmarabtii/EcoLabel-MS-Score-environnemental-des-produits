@@ -1,0 +1,28 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@1010.vb_b_39488a_9841">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@4238.va_6fb_65c1f699">
+    <parentIds>
+      <string>63</string>
+    </parentIds>
+    <id>64</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.GetContextStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@4238.va_6fb_65c1f699">
+      <arguments>
+        <entry>
+          <string>type</string>
+          <wf.a.ArgumentsAction_-NotStoredReason>UNSERIALIZABLE</wf.a.ArgumentsAction_-NotStoredReason>
+        </entry>
+      </arguments>
+      <sensitiveVariables>
+        <string>SONAR_TOKEN</string>
+      </sensitiveVariables>
+      <isUnmodifiedBySanitization>false</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1384.vdc05a_48f535f">
+      <startTime>1766881170234</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>

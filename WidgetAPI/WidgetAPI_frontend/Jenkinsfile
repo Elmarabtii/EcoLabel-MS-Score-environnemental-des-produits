@@ -79,6 +79,7 @@ pipeline {
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
                                     --volumes-from ${JENKINS_CONTAINER_ID} \
+                                    --user root \
                                     -w $(pwd) \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
