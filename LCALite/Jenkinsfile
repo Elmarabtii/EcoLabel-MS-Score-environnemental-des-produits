@@ -118,14 +118,15 @@ pipeline {
                                 ls -la app/ || echo "app directory not found"
                                 echo ""
                                 echo "Running SonarQube Analysis..."
+                                JENKINS_CONTAINER_ID=$(cat /etc/hostname)
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
-                                    -v $(pwd):/usr/src \
-                                    -w /usr/src \
+                                    --volumes-from ${JENKINS_CONTAINER_ID} \
+                                    -w $(pwd) \
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sh -c 'ls -la /usr/src && echo "---" && ls -la /usr/src/app 2>&1 || echo "app not found in container" && sonar-scanner \
+                                    sh -c 'echo "Working directory: $(pwd)"; ls -la; echo "---"; ls -la app/ 2>&1 || echo "app not found"; sonar-scanner \
                                         -Dsonar.projectKey=lca-lite \
                                         -Dsonar.projectName=LCA-Lite \
                                         -Dsonar.sources=app \
