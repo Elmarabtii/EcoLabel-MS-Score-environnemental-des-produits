@@ -75,7 +75,6 @@ pipeline {
                     script {
                         withSonarQubeEnv('SonarQube') {
                             sh '''
-                                mkdir -p .scannerwork && chmod 777 .scannerwork
                                 JENKINS_CONTAINER_ID=$(cat /etc/hostname)
                                 docker run --rm \
                                     --network ecolabel-ms-score-environnemental-des-produits_ecolabel-network \
@@ -85,14 +84,14 @@ pipeline {
                                     -e SONAR_HOST_URL=http://sonarqube:9000 \
                                     -e SONAR_TOKEN=${SONAR_TOKEN} \
                                     sonarsource/sonar-scanner-cli:latest \
-                                    sonar-scanner \
+                                    sh -c 'mkdir -p .scannerwork && chmod 777 .scannerwork && sonar-scanner \
                                         -Dsonar.projectKey=widget-frontend \
                                         -Dsonar.projectName=Widget-Frontend \
                                         -Dsonar.sources=src \
                                         -Dsonar.host.url=http://sonarqube:9000 \
                                         -Dsonar.login=${SONAR_TOKEN} \
                                         -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
-                                        -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.* || true
+                                        -Dsonar.coverage.exclusions=**/*.test.*,**/node_modules/**,**/*.spec.*' || true
                             '''
                         }
                     }
