@@ -1,0 +1,5 @@
+model,best_params,cv_rmse,test_rmse,test_mae,test_r2
+polynomial_regression,{'poly__degree': 2},5.209351822844333,5.178554076611138,4.131769594749621,0.968497309123911
+linear_regression,{},5.221433956490488,5.175601621180534,4.1303556860602,0.9685332202200757
+xgboost,"{'colsample_bytree': 0.8, 'learning_rate': 0.03, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.8}",5.234042236722206,5.207424439845654,4.149501876676649,0.9681450759239881
+random_forest,"{'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200}",5.3328031943263765,5.294129333279129,4.214418128762793,0.9670754601731687

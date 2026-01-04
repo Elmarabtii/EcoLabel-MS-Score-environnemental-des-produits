@@ -1,0 +1,20 @@
+{
+  "model_name": "gradient_boosting",
+  "feature_names": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ],
+  "metrics": {
+    "rmse": 5.234462159832815,
+    "r2": 0.9678134261858772,
+    "mae": 4.161504576273685
+  }
+}

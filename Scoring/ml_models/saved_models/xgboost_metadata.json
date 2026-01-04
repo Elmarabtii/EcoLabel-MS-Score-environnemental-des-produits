@@ -1,0 +1,21 @@
+{
+  "model_name": "xgboost",
+  "feature_names": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ],
+  "metrics": {
+    "rmse": 5.2860599457233,
+    "r2": 0.9671757517897717,
+    "mae": 4.2147770588135485
+  },
+  "extras_saved": []
+}

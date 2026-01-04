@@ -1,0 +1,32 @@
+{
+  "dataset_path": "c:\\Users\\hp\\Desktop\\EcoLabel-MS-Score-environnemental-des-produits\\Scoring\\ml_models\\datasets\\dataset_scoring.csv",
+  "best_model_path": "c:\\Users\\hp\\Desktop\\EcoLabel-MS-Score-environnemental-des-produits\\Scoring\\ml_models\\saved_models\\best_model.pkl",
+  "n_samples_total": 10000,
+  "n_train": 8000,
+  "n_test": 2000,
+  "metrics": {
+    "rmse": 5.17560162118052,
+    "mae": 4.130355686060208,
+    "r2": 0.9685332202200759
+  },
+  "residuals_summary": {
+    "residual_mean": 0.03558143170314589,
+    "residual_std": 5.175479311414971,
+    "residual_min": -18.766308579592092,
+    "residual_max": 19.19516089008426,
+    "abs_error_mean": 4.130355686060208,
+    "abs_error_median": 3.4300505739837757
+  },
+  "features": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ]
+}

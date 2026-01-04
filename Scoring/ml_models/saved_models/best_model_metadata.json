@@ -1,0 +1,24 @@
+{
+  "model_name": "linear_regression",
+  "display_name": "Linear Regression",
+  "feature_names": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ],
+  "metrics": {
+    "rmse": 5.17560162118052,
+    "r2": 0.9685332202200759,
+    "mae": 4.130355686060208
+  },
+  "rank": 1,
+  "selection_criteria": "Highest R\u00b2 score",
+  "extras_saved": []
+}

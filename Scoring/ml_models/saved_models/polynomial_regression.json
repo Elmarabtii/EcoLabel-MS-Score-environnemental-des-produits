@@ -1,0 +1,19 @@
+{
+  "model": "polynomial_regression",
+  "best_params": {
+    "poly__degree": 2
+  },
+  "cv_rmse": 5.209351822844333,
+  "features": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ]
+}

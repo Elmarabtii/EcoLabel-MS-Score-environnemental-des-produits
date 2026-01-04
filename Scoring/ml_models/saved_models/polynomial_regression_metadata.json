@@ -1,0 +1,24 @@
+{
+  "model_name": "polynomial_regression",
+  "feature_names": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ],
+  "metrics": {
+    "rmse": 5.178554076611137,
+    "r2": 0.968497309123911,
+    "mae": 4.131769594749621
+  },
+  "extras_saved": [
+    "scaler",
+    "poly_features"
+  ]
+}

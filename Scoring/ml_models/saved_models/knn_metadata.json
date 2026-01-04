@@ -1,0 +1,20 @@
+{
+  "model_name": "knn",
+  "feature_names": [
+    "co2_kg",
+    "water_l",
+    "energy_mj",
+    "packaging_plastic",
+    "packaging_glass",
+    "packaging_paper",
+    "packaging_other",
+    "data_completeness",
+    "ingredient_count",
+    "transport_distance_km"
+  ],
+  "metrics": {
+    "rmse": 8.400566657475391,
+    "r2": 0.9171012876556922,
+    "mae": 6.694539662141007
+  }
+}
